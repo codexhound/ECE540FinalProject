@@ -1,0 +1,6 @@
+bot31_if.v,verilog,xil_defaultlib,../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_if.v,
+bot31_pgm.v,verilog,xil_defaultlib,../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_pgm.v,
+kcpsm6.v,verilog,xil_defaultlib,../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/kcpsm6.v,
+bot31_top.v,verilog,xil_defaultlib,../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_top.v,
+rojobot31_0.v,verilog,xil_defaultlib,../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/sim/rojobot31_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
