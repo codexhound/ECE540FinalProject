@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/VivadoProjects/ECE540FinalProject/ECE540FinalProject.runs/synth_1'
+HD_PWD='C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log mfp_nexys4_ddr.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mfp_nexys4_ddr.tcl
+EAStep vivado -log mhp_axdl362.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mhp_axdl362.tcl

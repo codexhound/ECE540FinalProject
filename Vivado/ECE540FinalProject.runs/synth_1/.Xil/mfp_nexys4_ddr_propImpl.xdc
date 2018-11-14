@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/VivadoProjects/ECE540FinalProject/Source/hdl/ip/clk_wiz_1/clk_wiz_1.xdc rfile:../../../Source/hdl/ip/clk_wiz_1/clk_wiz_1.xdc id:1 order:EARLY scoped_inst:clk_wiz_1/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/VivadoProjects/ECE540FinalProject/Source/hdl/constraints/mfp_nexys4_ddr.xdc rfile:../../../Source/hdl/constraints/mfp_nexys4_ddr.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc rfile:../../../ECE540FinalProject.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc id:1 order:EARLY scoped_inst:clk_wiz_1/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc rfile:../../../ECE540FinalProject.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc id:2} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
 set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log mfp_nexys4_ddr.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mfp_nexys4_ddr.tcl" );
+         "-log mhp_axdl362.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mhp_axdl362.tcl" );
 
 
 
