@@ -11,19 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="230541fs"></ZoomStartTime>
-      <ZoomEndTime time="249942fs"></ZoomEndTime>
+      <ZoomStartTime time="159917fs"></ZoomStartTime>
+      <ZoomEndTime time="239118fs"></ZoomEndTime>
       <Cursor1Time time="228000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="21" />
-   <wvobject fp_name="/adxl362test/clk_50" type="logic">
-      <obj_property name="ElementShortName">clk_50</obj_property>
-      <obj_property name="ObjectShortName">clk_50</obj_property>
-   </wvobject>
    <wvobject fp_name="/adxl362test/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -47,6 +43,10 @@
       <obj_property name="ElementShortName">n_CS</obj_property>
       <obj_property name="ObjectShortName">n_CS</obj_property>
    </wvobject>
+   <wvobject fp_name="/adxl362test/clk_50" type="logic">
+      <obj_property name="ElementShortName">clk_50</obj_property>
+      <obj_property name="ObjectShortName">clk_50</obj_property>
+   </wvobject>
    <wvobject fp_name="/adxl362test/clk_SPI" type="logic">
       <obj_property name="ElementShortName">clk_SPI</obj_property>
       <obj_property name="ObjectShortName">clk_SPI</obj_property>
@@ -65,8 +65,8 @@
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/adxl362test/accel_test/readState" type="array">
-      <obj_property name="ElementShortName">readState[1:0]</obj_property>
-      <obj_property name="ObjectShortName">readState[1:0]</obj_property>
+      <obj_property name="ElementShortName">readState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">readState[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/adxl362test/accel_test/done" type="logic">
       <obj_property name="ElementShortName">done</obj_property>
@@ -112,5 +112,6 @@
    <wvobject fp_name="/adxl362test/accel_test/address" type="array">
       <obj_property name="ElementShortName">address[7:0]</obj_property>
       <obj_property name="ObjectShortName">address[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

@@ -2,5 +2,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/RampantVelcro/Desktop/Clas
 INFO: [VRFC 10-311] analyzing module mhp_axdl362
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.srcs/sim_1/new/adxl362test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module adxl362test
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

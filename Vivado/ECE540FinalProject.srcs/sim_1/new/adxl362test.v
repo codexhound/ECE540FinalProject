@@ -35,9 +35,10 @@ module adxl362test;
         clk_SPI = 0;
         forever begin
             #1 clk_50 = ~clk_50;
-            #3 clk_SPI = ~clk_SPI;
         end
     end
+    
+    initial forever #4 clk_SPI = ~clk_SPI;
     
     always@(posedge clk_50) begin
         if(readState == 2'd3) begin

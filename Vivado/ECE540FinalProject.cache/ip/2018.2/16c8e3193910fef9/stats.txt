@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Wed Nov 14 05:28:05 UTC 2018
+VLNV: xilinx.com:ip:axi_quad_spi:3.2
+SynthRuntime: 73

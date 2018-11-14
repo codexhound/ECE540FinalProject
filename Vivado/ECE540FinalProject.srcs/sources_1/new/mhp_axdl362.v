@@ -55,8 +55,8 @@ module mhp_axdl362(
     reg [7:0] instruction_reg;
     //reg [1:0] readState;
     
-    always@(negedge clk_SPI or posedge clk_SPI) begin
-        if(clk_SPI && !reset) begin
+    always@(posedge clk_SPI) begin
+        if(!reset) begin
             x_acc_reg_temp <= 0;
             y_acc_reg_temp <= 0;
             z_acc_reg_temp <= 0;
@@ -70,75 +70,78 @@ module mhp_axdl362(
             MISI <= 0;
             accel_data <= 0;
         end
-        else if(clk_SPI && done) begin //on posedge if reset or last read done start another read, CS latches on posedge
-           done <= 0;
-           n_CS <= 0;
+        else begin
+        	if(done) begin
+        		done <= 0;
+            	n_CS <= 0;
+        	end
+        	else begin
+        	    if(readState == DATA) begin //posedge triggers, read data at posedges of clk when valid
+        	       accel_data[counter] <= MISO;
+        	   
+        	       if(counter == 0) begin
+        	           counter <= 7;
+        	           readState <= SAVEDATA;
+        	           n_CS <= 1; //done with read turn of CS
+        	       end
+        	       else counter <= counter - 1;
+        	    end
+        	    else if(readState == SAVEDATA) begin //save read data
+        	        done <= 1; //ready to start next Read
+        	        readState <= INSTRUCTION;
+        	        //latch last data when done
+        	        accel_data <= 0;
+        	        case(address) //update read address once done reading one of them and data is saved
+        	            X_L_REG : begin
+        	                x_acc_reg_temp[7:0] <= accel_data;
+        	                address <=  X_H_REG;
+        	            end
+        	            X_H_REG : begin
+        	                x_acc_reg_temp[11:8] <= accel_data[3:0];
+        	                address <=  Y_L_REG;
+        	            end
+        	            Y_L_REG : begin
+        	                y_acc_reg_temp[7:0] <= accel_data;
+        	                address <=  Y_H_REG;
+        	            end
+        	            Y_H_REG : begin
+        	                y_acc_reg_temp[11:8] <= accel_data[3:0];
+        	                address <=  Z_L_REG;
+        	            end
+        	            Z_L_REG : begin
+        	                z_acc_reg_temp[7:0] <= accel_data;
+        	                address <=  Z_H_REG;
+        	            end
+        	            Z_H_REG : begin
+        	                z_acc_reg_temp[11:8] <= accel_data[3:0];
+        	                roundDone <= 1;
+        	                address <=  X_L_REG;
+        	            end
+        	            default : begin 
+        	                address <= X_L_REG;
+        	            end
+        	        endcase
+        	    end
+        	end
         end
-    
-        if(!done && !clk_SPI) begin //negedge triggers, next instruction latch in on negedge after cs down, will be read by ADXL on posedge
+     end
+     
+     always@(negedge clk_SPI) begin //start negedge Logic (instruction and address bytes)
+        if(!done) begin
             if(readState == INSTRUCTION || readState == ADDRESS) begin
-            	if(readState == INSTRUCTION) MISI <= instruction_reg[counter];
-            	else MISI <= address[counter];
+                if(readState == INSTRUCTION) MISI <= instruction_reg[counter];
+                else MISI <= address[counter];
                 
-            	if(counter == 0) begin
-            	   counter <= 7;
-            	   if(readState == INSTRUCTION) readState <= ADDRESS;
-            	   else readState <= DATATRANSITION; //wait another neg edge before recieving data, data comes in starting in 2 clock edges
-            	end
-            	else counter <= counter - 1;
-           	end
-            else if(readState == DATATRANSITION) readState <= DATA;
-        end
-            
-        if(!done && clk_SPI) begin
-            if(readState == DATA) begin //posedge triggers, read data at posedges of clk when valid
-                accel_data[counter] <= MISO;
-            
                 if(counter == 0) begin
-                    counter <= 7;
-                    readState <= SAVEDATA;
-                    n_CS <= 1; //done with read turn of CS
+                   counter <= 7;
+                   if(readState == INSTRUCTION) readState <= ADDRESS;
+                   else readState <= DATATRANSITION; //wait another neg edge before recieving data, data comes in starting in 2 clock edges
                 end
                 else counter <= counter - 1;
             end
-            else if(readState == SAVEDATA) begin //save read data
-                done <= 1; //ready to start next Read
-                readState <= INSTRUCTION;
-                //latch last data when done
-                accel_data <= 0;
-                        case(address) //update read address once done reading one of them and data is saved
-                                                    X_L_REG : begin
-                                                        x_acc_reg_temp[7:0] <= accel_data;
-                                                        address <=  X_H_REG;
-                                                    end
-                                                    X_H_REG : begin
-                                                        x_acc_reg_temp[11:8] <= accel_data[3:0];
-                                                        address <=  Y_L_REG;
-                                                    end
-                                                    Y_L_REG : begin
-                                                        y_acc_reg_temp[7:0] <= accel_data;
-                                                        address <=  Y_H_REG;
-                                                    end
-                                                    Y_H_REG : begin
-                                                        y_acc_reg_temp[11:8] <= accel_data[3:0];
-                                                        address <=  Z_L_REG;
-                                                    end
-                                                    Z_L_REG : begin
-                                                        z_acc_reg_temp[7:0] <= accel_data;
-                                                        address <=  Z_H_REG;
-                                                    end
-                                                    Z_H_REG : begin
-                                                        z_acc_reg_temp[11:8] <= accel_data[3:0];
-                                                        roundDone <= 1;
-                                                        address <=  X_L_REG;
-                                                    end
-                                                    default : begin 
-                                                        address <= X_L_REG;
-                                                    end
-                                                endcase
-            end
+            else if(readState == DATATRANSITION) readState <= DATA;
         end
-    end
+     end
     
     always@(posedge clk_50) begin
         if(!reset) begin
