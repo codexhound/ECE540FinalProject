@@ -87,7 +87,6 @@ module mhp_axdl362(
         	end
         	else if(SPI_state == END) begin
         	   SPI_state <= BEGIN;
-        	   n_CS <= 1;
         	   accel_data <= 0;
         	   case(address) //determine next address and if next step is read/write
                    X_L_REG : begin
@@ -149,7 +148,10 @@ module mhp_axdl362(
             else counter <= counter - 1;
         end
         else if(SPI_state == DATATRANSITION) SPI_state <= DATAIN;
-        else if(SPI_state == END1) SPI_state <= END;
+        else if(SPI_state == END1) begin 
+        	SPI_state <= END;
+        	n_CS <= 1;
+       	end
      end
     
     always@(posedge clk_50) begin
