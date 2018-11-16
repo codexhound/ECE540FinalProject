@@ -1,0 +1,187 @@
+/*
+
+Xilinx Vivado v2018.2.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2348494 on Mon Oct  1 18:25:44 MDT 2018
+IP Build: 2318053 on Mon Oct  1 21:44:26 MDT 2018
+
+Process ID: 11988
+License: Customer
+
+Current time: 	Wed Nov 14 20:53:56 PST 2018
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 36 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	RampantVelcro
+User home directory: C:/Users/RampantVelcro
+User working directory: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/vivado.log
+Vivado journal file location: 	D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/vivado.jou
+Engine tmp dir: 	D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/.Xil/Vivado-11988-LAPTOP-8RH9CDEQ
+
+Xilinx Environment Variables
+----------------------------
+NO_XILINX_DATA_LICENSE: HIDDEN
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	165 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 468 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// aL (ck): Older Project Version: addNotify
+// [GUI Memory]: 60 MB (+60326kb) [00:00:08]
+// [Engine Memory]: 468 MB (+338917kb) [00:00:08]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aL)
+// Opening Vivado Project: D:\ECE540FinalProject-master\ECE540FinalProject-master\Vivado\runnable_project\runnable_project.xpr. Version: Vivado v2017.4.1 
+// bx (ck):  Open Project : addNotify
+dismissDialog("Older Project Version"); // aL (ck)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// HMemoryUtils.trashcanNow. Engine heap size: 500 MB. GUI used memory: 35 MB. Current time: 11/14/18 8:53:58 PM PST
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 507 MB (+16336kb) [00:00:13]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 583 MB (+53904kb) [00:00:19]
+// Tcl Message: open_project D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: INFO: [Project 1-230] Project 'runnable_project.xpr' upgraded for this version of Vivado. 
+// Project name: runnable_project; location: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 768.191 ; gain = 100.852 
+// Elapsed time: 14 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// al (ck): Project Upgraded: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.ReportIPStatusInfoDialog_REPORT_IP_STATUS, "Report IP Status"); // a (al)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+dismissDialog("Project Upgraded"); // al (ck)
+// [GUI Memory]: 64 MB (+999kb) [00:00:32]
+// Tcl Message: report_ip_status -name ip_status  
+// bx (ck):  Report IP Status : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 40 MB. Current time: 11/14/18 8:54:18 PM PST
+dismissDialog("Report IP Status"); // bx (ck)
+// [GUI Memory]: 67 MB (+161kb) [00:00:34]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 73 MB (+2458kb) [00:00:37]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// [GUI Memory]: 77 MB (+556kb) [00:00:40]
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 14 20:54:27 2018] Launched impl_1... Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2); // B (D, ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 34 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// aS (ck): Cancel Implementation: addNotify
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a (aS)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 82 MB (+1105kb) [00:01:25]
+dismissDialog("Cancel Implementation"); // aS (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// 'k' command handler elapsed time: 4 seconds
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_Cancel", "Cancel"); // JButton (A, G)
+// [GUI Memory]: 87 MB (+475kb) [00:01:47]
+// PAPropertyPanels.initPanels (mfp_nexys4_ddr.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// [Engine Memory]: 613 MB (+768kb) [00:01:55]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top mfp_nexys4_ddr [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// bx (ck):  Set as Top : addNotify
+dismissDialog("Set as Top"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bx (ck):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 14 20:55:56 2018] Launched synth_1... Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/synth_1/runme.log [Wed Nov 14 20:55:56 2018] Launched impl_1... Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 49 MB. Current time: 11/14/18 8:55:58 PM PST

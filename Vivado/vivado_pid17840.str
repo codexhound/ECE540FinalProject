@@ -1,0 +1,1667 @@
+/*
+
+Xilinx Vivado v2017.4.1 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2117270 on Tue Jan 30 15:32:00 MST 2018
+IP Build: 2095745 on Tue Jan 30 17:13:15 MST 2018
+
+Process ID: 17840
+License: Customer
+
+Current time: 	Wed Nov 14 18:43:32 PST 2018
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 574 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Jonathan
+User home directory: C:/Users/Jonathan
+User working directory: C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Jonathan/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Jonathan/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Jonathan/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/vivado.log
+Vivado journal file location: 	C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/vivado.jou
+Engine tmp dir: 	C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/.Xil/Vivado-17840-LAPTOP-K69KCL0Q
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 466 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HOptionPane Warning: 'This project was created with a future version of Vivado. It will be opened in read-only mode for the protection of unrecognized data. Please use 'File | Save Project As...' if you need to alter a copy of this project. The project may or may not open reliably with this version of Vivado. OK to proceed and open the project? (Future Project Version)'
+// [GUI Memory]: 47 MB (+46486kb) [00:00:10]
+// [Engine Memory]: 454 MB (+324995kb) [00:00:10]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Jonathan\Desktop\School\graduate\540\ECE540FinalProject-master\ECE540FinalProject-master\Vivado\ECE540FinalProject.xpr. Version: Vivado v2018.2 
+selectButton("PAResourceOtoP.PABaseTab_THIS_PROJECT_WILL_BE_OPENED_IN_READ_ONLY_OK", "OK"); // JButton (A, G)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 491 MB. GUI used memory: 34 MB. Current time: 11/14/18 6:43:34 PM PST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 569 MB (+95933kb) [00:00:15]
+// [GUI Memory]: 52 MB (+3134kb) [00:00:15]
+// [GUI Memory]: 55 MB (+226kb) [00:00:18]
+// Tcl Message: open_project C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado' INFO: [Project 1-313] Project file moved from 'C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 776.926 ; gain = 91.039 
+// Project name: ECE540FinalProject; location: C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado; part: xc7a100tcsg324-1
+// [GUI Memory]: 62 MB (+4650kb) [00:00:19]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// z (cj): Project is Read-Only: addNotify
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking too long to process. Increasing delay to 4000 ms.
+// a (cj): Critical Messages: addNotify
+// Elapsed time: 10 seconds
+selectButton(PAResourceOtoP.Project_SAVE_PROJECT_AS, "Save Project As..."); // a (z)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_PROJECT_AS
+// aE (cj): Save Project As: addNotify
+dismissDialog("Project is Read-Only"); // z (cj)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 66 MB (+545kb) [00:00:37]
+// Elapsed time: 23 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "runnable_project", true); // X (N, aE)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+// 'o' command handler elapsed time: 23 seconds
+// TclEventType: PROJECT_RENAME
+dismissDialog("Save Project As"); // aE (cj)
+dismissDialog("Critical Messages"); // a (cj)
+// bs (cj):  Save Project As : addNotify
+// Tcl Message: save_project_as runnable_project C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project -force 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 70 MB (+1027kb) [00:01:11]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_RENAME
+// Tcl Message: save_project_as: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 779.000 ; gain = 1.961 
+// bs (cj):  Save Constraints : addNotify
+// Elapsed time: 19 seconds
+dismissDialog("Save Constraints"); // bs (cj)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 74 MB (+495kb) [00:01:16]
+// TclEventType: DG_GRAPH_GENERATED
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// PAPropertyPanels.initPanels (mhp_axdl362.v) elapsed time: 0.2s
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mhp_axdl362 (mhp_axdl362.v)]", 9, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mhp_axdl362 (mhp_axdl362.v)]", 9, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mhp_axdl362 (mhp_axdl362.v)]", 9, false, false, false, false, false, true); // B (D, cj) - Double Click
+floatView(PAResourceOtoP.PAViews_CODE, "mhp_axdl362.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// [Engine Memory]: 598 MB (+1347kb) [00:01:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 598 MB. GUI used memory: 41 MB. Current time: 11/14/18 6:45:05 PM PST
+selectCodeEditor("mhp_axdl362.v", 130, 280); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 129, 280, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 160, 279); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 160, 279, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 190, 299); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 190, 299, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 271, 304); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 271, 304, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 318, 296); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 327, 298); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 327, 298, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 173, 316); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 173, 316, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 178, 329); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 178, 329, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 170, 265); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 170, 265, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 204, 270); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 204, 270, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 251, 259); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 251, 259, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 43 seconds
+selectCodeEditor("mhp_axdl362.v", 111, 259); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 111, 259, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// [GUI Memory]: 79 MB (+1153kb) [00:03:04]
+// [GUI Memory]: 83 MB (+135kb) [00:03:09]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 88 MB (+1313kb) [00:04:03]
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 578 seconds
+selectCodeEditor("mhp_axdl362.v", 192, 440); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 191, 439, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// Elapsed time: 41 seconds
+selectCodeEditor("mhp_axdl362.v", 156, 114); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 156, 114, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 201, 107); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 201, 107, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 241, 111); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 241, 111, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("mhp_axdl362.v", 296, 449); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 296, 446, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 83 seconds
+selectCodeEditor("mhp_axdl362.v", 242, 159); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 242, 159, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 154 seconds
+selectCodeEditor("mhp_axdl362.v", 556, 469); // cd (w, FrameFloatingContainer)
+// Elapsed time: 84 seconds
+selectCodeEditor("mhp_axdl362.v", 175, 216); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 174, 216, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 58 seconds
+selectCodeEditor("mhp_axdl362.v", 300, 186); // cd (w, FrameFloatingContainer)
+// [GUI Memory]: 94 MB (+892kb) [00:23:00]
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// Elapsed time: 661 seconds
+selectCodeEditor("mhp_axdl362.v", 122, 181); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 258, 164); // cd (w, FrameFloatingContainer)
+// HMemoryUtils.trashcanNow. Engine heap size: 616 MB. GUI used memory: 40 MB. Current time: 11/14/18 7:15:05 PM PST
+// Elapsed time: 141 seconds
+selectCodeEditor("mhp_axdl362.v", 94, 259); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 108, 275); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 304, 306); // cd (w, FrameFloatingContainer)
+// Elapsed time: 72 seconds
+selectCodeEditor("mhp_axdl362.v", 145, 206); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 145, 206, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 482, 352); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 145, 107); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 144, 107, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 248 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// f (cj): Launch Runs: addNotify
+dismissDialog("Save Project"); // am (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 14 19:22:32 2018] Launched synth_1... Run output will be captured here: C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 817.906 ; gain = 11.512 
+// 'k' command handler elapsed time: 10 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 618 MB. GUI used memory: 41 MB. Current time: 11/14/18 7:22:40 PM PST
+// Elapsed time: 45 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (N, cj)
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bs (cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testbench_sw2led (testbench_sw2led.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testbench_sw2led (testbench_sw2led.v)]", 7, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testbench_sw2led (testbench_sw2led.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testbench_sw2led (testbench_sw2led.v)]", 7, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 7, false); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'adxl362test' in fileset 'sim_1'... 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj adxl362test_vlog.prj" 
+// [Engine Memory]: 632 MB (+4347kb) [00:40:30]
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim' 
+// Tcl Message: Built simulation snapshot adxl362test_behav 
+// Tcl Message:  ****** Webtalk v2017.4.1 (64-bit)   **** SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018   **** IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.  source C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim/xsim.dir/adxl362test_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim/xsim.dir/adxl362test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Nov 14 19:24:04 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Wed Nov 14 19:24:04 2018... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 817.906 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "adxl362test_behav -key {Behavioral:sim_1:Functional:adxl362test} -tclbatch {adxl362test.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2017.4 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 23 seconds
+floatView(PAResourceOtoP.PAViews_CODE, "mhp_axdl362.v"); // ax (aF, cj)
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source adxl362test.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 645 MB. GUI used memory: 51 MB. Current time: 11/14/18 7:24:09 PM PST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # log_wave -r / # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'adxl362test_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 833.285 ; gain = 15.379 
+// 'd' command handler elapsed time: 25 seconds
+dismissDialog("Run Simulation"); // e (cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 0); // k (j, cj)
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+floatView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax (aF, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// RDIResource.RDIViews_WAVEFORM_VIEWER: Untitled 1: float view
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 51 MB. Current time: 11/14/18 7:24:22 PM PST
+maximizeFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax (aF, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 85 MB. Current time: 11/14/18 7:24:24 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 52 MB. Current time: 11/14/18 7:24:26 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 52 MB. Current time: 11/14/18 7:24:26 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+dockFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax (aF, FrameFloatingContainer)
+maximizeFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax (aF, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// RDIResource.RDIViews_WAVEFORM_VIEWER: Untitled 1: dock view
+// HMemoryUtils.trashcanNow. Engine heap size: 653 MB. GUI used memory: 51 MB. Current time: 11/14/18 7:24:28 PM PST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adxl362test.v", 0); // k (j, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_WAVEFORM_OPEN_CONFIGURATION, "Open Waveform Configuration..."); // ac (cj, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_OPEN_CONFIGURATION
+// [Engine Memory]: 664 MB (+184kb) [00:41:47]
+// Elapsed time: 37 seconds
+setFileChooser("C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.sim/sim_1/behav/adxl362test_behav.wcfg");
+// 'c' command handler elapsed time: 37 seconds
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Tcl Message: open_wave_config {C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.sim/sim_1/behav/adxl362test_behav.wcfg} 
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// bs (cj):  Open Waveform Configuration : addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+dismissDialog("Open Waveform Configuration"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 664 MB. GUI used memory: 52 MB. Current time: 11/14/18 7:25:19 PM PST
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+floatView(RDIResource.RDIViews_WAVEFORM_VIEWER, "adxl362test_behav.wcfg"); // ax (aF, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// RDIResource.RDIViews_WAVEFORM_VIEWER: adxl362test_behav.wcfg: float view
+maximizeFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "adxl362test_behav.wcfg"); // ax (aF, FrameFloatingContainer)
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 56 MB. Current time: 11/14/18 7:25:23 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 56 MB. Current time: 11/14/18 7:25:27 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 55 MB. Current time: 11/14/18 7:25:27 PM PST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 56 MB. Current time: 11/14/18 7:25:29 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 56 MB. Current time: 11/14/18 7:25:31 PM PST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 55 MB. Current time: 11/14/18 7:25:32 PM PST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 55 MB. Current time: 11/14/18 7:25:32 PM PST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 60 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 192, 429); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 252, 422); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 55 MB. Current time: 11/14/18 7:26:24 PM PST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 360, 419); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 45, 418); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 25, 416); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 669 MB. GUI used memory: 55 MB. Current time: 11/14/18 7:26:29 PM PST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1053, 738); // n (o, FrameFloatingContainer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 55 seconds
+selectCodeEditor("mhp_axdl362.v", 200, 176); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 200, 176, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 419, 238); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 220, 168); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 198, 184); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 224, 163); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 129, 184); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 219, 165); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 311, 271); // cd (w, FrameFloatingContainer)
+// [GUI Memory]: 98 MB (+40kb) [00:45:08]
+// Elapsed time: 166 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mhp_axdl362.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adxl362test.v", 0); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 1); // k (j, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 671 MB. GUI used memory: 56 MB. Current time: 11/14/18 7:30:56 PM PST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mhp_axdl362.v", 2); // k (j, cj)
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1053, 738); // n (o, cj)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1053, 738); // n (o, cj)Waveform: addNotify
+dockFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "adxl362test_behav.wcfg"); // ax (aF, FrameFloatingContainer)
+maximizeFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "adxl362test_behav.wcfg"); // ax (aF, FrameFloatingContainer)
+// [GUI Memory]: 108 MB (+4483kb) [00:48:20]
+// RDIResource.RDIViews_PROPERTIES: Source File Properties: close view
+// Elapsed time: 290 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mhp_axdl362 (mhp_axdl362.v)]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mhp_axdl362 (mhp_axdl362.v)]", 8, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("mhp_axdl362.v", 59, 120); // cd (w, cj)
+typeControlKey((HResource) null, "mhp_axdl362.v", 'c'); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adxl362test.v", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mhp_axdl362.v", 2); // k (j, cj)
+selectCodeEditor("mhp_axdl362.v", 136, 94); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 63, 128); // cd (w, cj)
+typeControlKey((HResource) null, "mhp_axdl362.v", 'c'); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), debounce : debounce (debounce.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 217, 67); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 338, 70); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 239, 45); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 239, 45); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 258, 75); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 62, 76); // cd (w, cj)
+// Elapsed time: 33 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 83, 93); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 107, 106); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 87, 91); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 233, 159); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 216, 159); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 238, 159); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 102, 98); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 112, 110); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 95, 126); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 319, 60); // cd (w, cj)
+// Elapsed time: 45 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 345, 95); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 117, 59); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 94, 65); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 166, 96); // cd (w, cj)
+// [GUI Memory]: 113 MB (+200kb) [00:56:12]
+selectCodeEditor("mfp_nexys4_ddr.v", 126, 96); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 124, 111); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 287, 54); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 147, 136); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 146, 101); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 92, 43); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 99, 66); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 86, 78); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 76, 94); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 112); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 77, 110); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 78, 127); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 215, 105); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 218, 77); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 109, 92); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 116, 122); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 111, 106); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 112, 130); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 175, 71); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 96); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 96, false, false, false, false, true); // cd (w, cj) - Double Click
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v *"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_nexys4_ddr.v", 415, 454); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 416, 453, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+// Elapsed time: 41 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 120, 84); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 118, 88, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 118, 88); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 120, 99); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 116, 94); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 116, 94, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+// Elapsed time: 11 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 407, 243); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 397, 191); // cd (w, FrameFloatingContainer)
+// Elapsed time: 16 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 203, 190); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 97, 212); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 155, 286); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 102, 236); // cd (w, FrameFloatingContainer)
+// Elapsed time: 448 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// Elapsed time: 223 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), debounce : debounce (debounce.v)]", 4, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE, "Re-customize IP..."); // ac (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE, "Re-customize IP..."); // ac (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE, "Re-customize IP..."); // ac (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE, "Re-customize IP..."); // ac (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE, "Re-customize IP..."); // ac (ai, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false); // B (D, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("mhp_axdl362.v", 112, 86); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mfp_nexys4_ddr.v", 368, 60); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 368, 60, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 254, 415); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 405, 427); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 409, 424, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 557, 422); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 558, 422, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 263, 418); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 264, 416, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 427, 417); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 704, 408); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 704, 408, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 10 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v*"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), clk_wiz_1 : clk_wiz_1 (clk_wiz_1.xci)]", 3, false); // B (D, cj)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cj): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+dismissDialog("Remove Sources"); // as (cj)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// as (cj): Remove Sources: addNotify
+// bs (as):  Remove Sources : addNotify
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci 
+dismissDialog("Remove Sources"); // bs (as)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bs (cj):  IP Catalog : addNotify
+// 'a' command handler elapsed time: 6 seconds
+dismissDialog("IP Catalog"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 77 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bs (cj):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // bs (cj)
+// [GUI Memory]: 122 MB (+2821kb) [01:12:55]
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:5.4", 3, "Clocking Wizard", 0, true); // O (O, cj) - Node
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clockin"); // OverlayTextField (P, cj)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:5.4", 3); // O (O, cj)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:5.4", 3, "Clocking Wizard", 0, true, false, false, false, false, true); // O (O, cj) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// l (cj):  Customize IP : addNotify
+// TclEventType: LOAD_FEATURE
+// [Engine Memory]: 737 MB (+41564kb) [01:13:13]
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// r (cj): Customize IP: addNotify
+dismissDialog("Customize IP"); // l (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 751 MB. GUI used memory: 77 MB. Current time: 11/14/18 7:56:37 PM PST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 3); // k (j, cj)
+// Elapsed time: 12 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cY (C, r)
+// Elapsed time: 16 seconds
+setText("CLKOUT1 REQUESTED OUT FREQ", "50.000"); // z (cZ)
+selectCheckBox((HResource) null, "clk_out2", true); // g (bB, r): TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out3", true); // g (bB, r): TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED OUT FREQ", "75.000"); // z (cZ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 772 MB. GUI used memory: 70 MB. Current time: 11/14/18 7:57:20 PM PST
+setText("CLKOUT3 REQUESTED OUT FREQ", "5.000"); // z (cZ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: CREATE_IP_CORE
+dismissDialog("Customize IP"); // r (cj)
+// bs (cj):  Customize IP : addNotify
+// Tcl Message: create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.4 -module_name clk_wiz_0 -dir c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {75.000} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {5.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {6.750} CONFIG.MMCM_CLKOUT0_DIVIDE_F {13.500} CONFIG.MMCM_CLKOUT1_DIVIDE {9} CONFIG.MMCM_CLKOUT2_DIVIDE {128} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT1_JITTER {164.990} CONFIG.CLKOUT1_PHASE_ERROR {121.138} CONFIG.CLKOUT2_JITTER {151.901} CONFIG.CLKOUT2_PHASE_ERROR {121.138} CONFIG.CLKOUT3_JITTER {257.926} CONFIG.CLKOUT3_PHASE_ERROR {121.138}] [get_ips clk_wiz_0] 
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'... 
+// au (cj): Generate Output Products: addNotify
+dismissDialog("Customize IP"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// bs (cj):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// [Engine Memory]: 777 MB (+2870kb) [01:14:20]
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs -jobs 4 clk_wiz_0_synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 14 19:57:41 2018] Launched clk_wiz_0_synth_1... Run output will be captured here: C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/clk_wiz_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (A, G)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mfp_nexys4_ddr.v", 75, 161); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 147, 164); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 127, 114); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 23 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 565, 84); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 565, 84, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 103, 95); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 329, 112); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 329, 112, false, false, false, false, true); // cd (w, cj) - Double Click
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 798 MB. GUI used memory: 71 MB. Current time: 11/14/18 7:59:00 PM PST
+selectCodeEditor("mfp_nexys4_ddr.v", 532, 114); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 532, 114, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 528, 112); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 502, 112); // cd (w, cj)
+// TclEventType: FILE_SET_CHANGE
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 89, 62); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 135, 87); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 128 MB (+626kb) [01:16:12]
+// [GUI Memory]: 141 MB (+6570kb) [01:16:14]
+// Elapsed time: 44 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 69, 94); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 69, 94, false, false, false, false, true); // cd (w, cj) - Double Click
+// [Engine Memory]: 818 MB (+2517kb) [01:17:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 824 MB. GUI used memory: 74 MB. Current time: 11/14/18 8:00:30 PM PST
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mhp_axdl362.v", 2); // k (j, cj)
+selectCodeEditor("mhp_axdl362.v", 131, 65); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 123, 57); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 123, 57, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("mhp_axdl362.v", 129, 63); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 129, 63); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 129, 63); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 129, 63, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mhp_axdl362.v", 388, 64); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 116, 56); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 116, 56, false, false, false, false, true); // cd (w, cj) - Double Click
+floatView(PAResourceOtoP.PAViews_CODE, "mhp_axdl362.v *"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mhp_axdl362.v", 347, 68); // cd (w, FrameFloatingContainer)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "misi", true); // l (aP, FrameFloatingContainer)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "misi"); // l (aP, FrameFloatingContainer)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "misi"); // l (aP, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 119, 24); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 119, 24, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 119, 24); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 130, 28); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 132, 23); // cd (w, FrameFloatingContainer)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mOSI", true); // l (aP, FrameFloatingContainer)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mOSI"); // l (aP, FrameFloatingContainer)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "MISI"); // l (aP, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 101, 449); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 101, 448, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 103, 449); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 100, 448); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 111, 448); // cd (w, FrameFloatingContainer)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "MISI"); // l (aP, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 325, 337); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 334, 348); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 333, 348, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mhp_axdl362.v", 160, 369); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 175, 368); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 243, 296); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mhp_axdl362.v", 305, 119); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mhp_axdl362.v", 397, 222); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+dockFrame(PAResourceOtoP.PAViews_CODE, "mhp_axdl362.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mfp_nexys4_ddr.v", 76, 108); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_IP_CATALOG, "IP Catalog"); // ad
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mhp_axdl362.v", 1); // k (j, cj)
+selectCodeEditor("mhp_axdl362.v", 116, 56); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 116, 56, false, false, false, false, true); // cd (w, cj) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 0); // k (j, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 464, 74); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mosi"); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 82, 21); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "MISO", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "MISO"); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 67, 27); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 66, 27, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 71, 26); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 46, 26); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 22); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "n_CS", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "n_CS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "n_CS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "n_CS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "n_CS"); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 72, 57); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 121, 65); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mhp_axdl362.v", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 0); // k (j, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 59); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 63, 61); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 62, 61, false, false, false, false, true); // cd (w, cj) - Double Click
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "CS", true); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 121, 145); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 121, 145, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "N_ADXCS"); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 84, 76); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("mfp_nexys4_ddr.v", 101, 96); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 100, 96, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "acc"); // l (aP, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 98, 47); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 98, 47, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 73, 53); // cd (w, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 10 seconds
+selectCodeEditor("mhp_axdl362.v", 175, 79); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 174, 77, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mhp_axdl362.v", 279, 78); // cd (w, cj)
+selectCodeEditor("mhp_axdl362.v", 107, 76); // cd (w, cj)
+typeControlKey((HResource) null, "mhp_axdl362.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 220, 242); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 257, 175); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 250, 162); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 11, 189); // cd (w, FrameFloatingContainer)
+// Elapsed time: 17 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 180, 262); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 111, 195); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 109, 195, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 120, 439); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 192, 192); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 192, 192, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 116, 450); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 254, 196); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 254, 196, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 118, 474); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 184, 475); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 321 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 134, 223); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 134, 223, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 140, 246); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 141, 246, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 145, 269); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 145, 269, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 178, 260); // cd (w, FrameFloatingContainer)
+// Elapsed time: 42 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 139, 231); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 139, 230, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 144, 245); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 144, 245, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 143, 267); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 143, 267, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 69 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 960, 177); // cd (w, FrameFloatingContainer)
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_nexys4_ddr.v", 355, 287); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 464, 380); // cd (w, FrameFloatingContainer)
+// Elapsed time: 16 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectCodeEditor("mfp_nexys4_ddr.v", 68, 12); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 68, 12, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 83, 7); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U (q, cj)
+selectMenuItem(RDIResourceCommand.RDICommands_REDO, "Redo"); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U (q, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 200, 136); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 70, 96); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 47, 95); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("mfp_nexys4_ddr.v", 86, 94); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 63, 84); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 209, 68); // cd (w, cj)
+selectCodeEditor("mfp_nexys4_ddr.v", 81, 93); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v)]", 2); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mhp_axd1362 : mhp_axdl362 (mhp_axdl362.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mhp_axd1362 : mhp_axdl362 (mhp_axdl362.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 70 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mfp_sys.v", 347, 201); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 341, 197); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_sys.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 313, 199); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 232, 244); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 385, 157); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 231, 216); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 243, 232); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 243, 232, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_sys.v", 265, 232); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 357, 233); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 367, 230); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 226, 247); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 223, 200); // cd (w, cj)
+// [GUI Memory]: 149 MB (+873kb) [01:33:17]
+selectCodeEditor("mfp_sys.v", 227, 165); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_sys.v", 'c'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mfp_ahb_withloader.v", 275, 125); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_withloader.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_withloader.v", 169, 184); // cd (w, cj)
+selectCodeEditor("mfp_ahb_withloader.v", 170, 200); // cd (w, cj)
+selectCodeEditor("mfp_ahb_withloader.v", 254, 229); // cd (w, cj)
+selectCodeEditor("mfp_ahb_withloader.v", 190, 203); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, false); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12); // B (D, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 843 MB. GUI used memory: 88 MB. Current time: 11/14/18 8:17:36 PM PST
+// Elapsed time: 10 seconds
+selectCodeEditor("mfp_ahb.v", 173, 192); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 264, 243); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 43, 157); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 1); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_nexys4_ddr.v", 375, 111); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mfp_nexys4_ddr.v", 260, 265); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 228, 226); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 137, 169); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 124, 186); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 272, 243); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 103, 224); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 104, 224, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 53, 214); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 28, 187); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 172, 218); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 185, 309); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 145, 246); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 145, 246, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 150, 266); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 150, 266, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 144, 278); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 144, 278, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 157, 264); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 157, 264, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 157, 251); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 157, 251, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 16 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mfp_sys.v", 255, 171); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6); // B (D, cj)
+selectCodeEditor("mfp_sys.v", 139, 137); // cd (w, cj)
+selectCodeEditor("mfp_sys.v", 226, 147); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, true); // B (D, cj) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 15, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 15, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 15, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 194, 178); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 25, 97); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 262, 146); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 290, 107); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 285, 178); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_withloader.v", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_sys.v", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 4); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 12 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 570, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 566, 436); // cd (w, FrameFloatingContainer)
+// Elapsed time: 28 seconds
+selectCodeEditor("mfp_nexys4_ddr.v", 579, 524); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 115, 124); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 115, 124, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_nexys4_ddr.v", 136, 128); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 136, 128, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 176, 149); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 141, 126); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 139, 126, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 468, 214); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 467, 229); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 469, 247); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 474, 211); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 475, 226); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 475, 253); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 556, 229); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("mfp_nexys4_ddr.v", 458, 265); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_nexys4_ddr.v", 536, 246); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "mfp_nexys4_ddr.v", 'c'); // cd (w, FrameFloatingContainer)
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_nexys4_ddr.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v)]", 6, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_sys.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 16 seconds
+selectCodeEditor("mfp_sys.v", 335, 299); // cd (w, FrameFloatingContainer)
+// Elapsed time: 17 seconds
+selectCodeEditor("mfp_sys.v", 80, 337); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 80, 337, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_sys.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 104, 333); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_sys.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 89, 343); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 89, 344, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_sys.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 103, 351); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_sys.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 84, 362); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 84, 362, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_sys.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_sys.v", 104, 366); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_sys.v", 'v'); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("mfp_sys.v", 131, 351); // cd (w, FrameFloatingContainer)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mfp_sys.v", 167, 369); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+typeControlKey((HResource) null, "mfp_sys.v", 'c'); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_sys.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 3); // k (j, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_sys.v", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_withloader.v", 1); // k (j, cj)
+selectCodeEditor("mfp_ahb_withloader.v", 305, 180); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_withloader.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb.v", 2); // k (j, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("mfp_ahb.v", 101, 189); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 99, 188, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb.v", 100, 177); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 99, 177, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb.v", 92, 184); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 92, 184, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb.v", 183, 175); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 183, 175, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb.v", 591, 127); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("mfp_ahb.v", 219, 116); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 268, 116); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 336, 129); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 414, 112); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 460, 125); // cd (w, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v *"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb.v", 792, 124); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_ahb.v", 'v'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 910, 130); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 845, 130); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 57, 146); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 904, 127); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 63, 146); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 952, 134); // cd (w, FrameFloatingContainer)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v)]", 8); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 12); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 15, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 15, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb.v", 5); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb.v", 279, 520); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 239, 392); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 269, 379); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 155, 559); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 122, 252); // cd (w, FrameFloatingContainer)
+// Elapsed time: 52 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// [Engine Memory]: 859 MB (+231kb) [01:43:16]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 2); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 16 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 158, 435); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 158, 435, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 125, 433, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+// Elapsed time: 35 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb.v", 4); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb.v", 230, 503); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 184, 347); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 184, 347, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 333, 462); // cd (w, FrameFloatingContainer)
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 158 MB (+1350kb) [01:45:20]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectCodeEditor("mfp_ahb_const.vh", 50, 52); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 336, 143); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 861 MB. GUI used memory: 86 MB. Current time: 11/14/18 8:28:51 PM PST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 62 seconds
+selectCodeEditor("mfp_ahb_const.vh", 317, 50); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 341, 162); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mfp_ahb_const.vh", 31, 169); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("mfp_ahb_const.vh", 325, 211); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 4); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 10 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectCodeEditor("mfp_ahb.v", 598, 267); // cd (w, FrameFloatingContainer)
+// Elapsed time: 17 seconds
+selectCodeEditor("mfp_ahb.v", 303, 300); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 303, 300, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 311, 299); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 311, 299, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 471, 296); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 471, 296, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 541, 301); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 541, 301, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 205, 302); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 205, 301, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 198, 298); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 199, 297, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 540, 296); // cd (w, FrameFloatingContainer)
+// Elapsed time: 11 seconds
+selectCodeEditor("mfp_ahb.v", 337, 301); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 337, 301, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb.v", 473, 338); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 353, 206); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb.v", 669, 191); // cd (w, FrameFloatingContainer)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 4); // k (j, cj)
+selectCodeEditor("mfp_ahb.v", 301, 232); // cd (w, FrameFloatingContainer)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("mfp_ahb_const.vh", 275, 197); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 55 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 4); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb_gpio.v", 86, 333); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 85, 414); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 82, 432); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 295, 435); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 295, 435, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 210, 439); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 210, 439, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 282, 433); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 282, 433, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 204, 434); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 204, 434, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 115, 399); // cd (w, FrameFloatingContainer)
+// Elapsed time: 12 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// Elapsed time: 18 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("mfp_ahb_const.vh", 286, 58); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 286, 58, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb_const.vh", 285, 67); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 260, 63); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'c'); // cd (w, cj)
+// Elapsed time: 66 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb.v", 6); // k (j, cj)
+selectCodeEditor("mfp_ahb.v", 343, 135); // cd (w, cj)
+selectCodeEditor("mfp_ahb.v", 343, 131); // cd (w, cj)
+// Elapsed time: 34 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 5); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb_gpio.v", 361, 458); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 461, 438); // cd (w, FrameFloatingContainer)
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_const.vh", 4); // k (j, cj)
+selectCodeEditor("mfp_ahb_const.vh", 85, 212); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 85, 212, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 6); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("mfp_ahb_gpio.v", 258, 447); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 226, 503); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, FrameFloatingContainer)
+// Elapsed time: 117 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 91, 385); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 91, 385, false, false, false, false, true); // cd (w, FrameFloatingContainer) - Double Click
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'c'); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 275, 499); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 266, 501); // cd (w, FrameFloatingContainer)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, FrameFloatingContainer)
+// Elapsed time: 21 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 279, 504); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 274, 503); // cd (w, FrameFloatingContainer)
+// Elapsed time: 10 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 224, 491); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 203, 515); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 177, 535); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 175, 544); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 165, 535); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 160, 522); // cd (w, FrameFloatingContainer)
+selectCodeEditor("mfp_ahb_gpio.v", 109, 555); // cd (w, FrameFloatingContainer)
+// Elapsed time: 27 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 249, 434); // cd (w, FrameFloatingContainer)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_const.vh", 4); // k (j, cj)
+selectCodeEditor("mfp_ahb_const.vh", 285, 209); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 274, 214); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 333, 64); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 313, 157); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 314, 176); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 320, 203); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 327, 215); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 146, 215); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 135, 210); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 121, 217); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 352, 114); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 240, 113); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 330, 115); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 338, 117); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 303, 121); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 299, 196); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 139, 177); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 141, 196); // cd (w, cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("mfp_ahb_const.vh", 94, 165); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 94, 165, false, false, false, false, true); // cd (w, cj) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("mfp_ahb_const.vh", 126, 176); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mfp_ahb_const.vh", 114, 158); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 11 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v)]", 17); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 20, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mfp_nexys4_ddr (mfp_nexys4_ddr.v), mfp_sys : mfp_sys (mfp_sys.v), mfp_ahb_withloader : mfp_ahb_withloader (mfp_ahb_withloader.v), mfp_ahb : mfp_ahb (mfp_ahb.v), mfp_ahb_gpio : mfp_ahb_gpio (mfp_ahb_gpio.v)]", 20, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 12 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb_gpio.v*"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectCodeEditor("mfp_ahb_gpio.v", 431, 4); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectCodeEditor("mfp_ahb_const.vh", 113, 226); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 237, 230); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 288, 230); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 279, 233); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 274, 231); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 279, 232); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 128, 229); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 128, 231, false, false, false, false, true); // cd (w, cj) - Double Click
+// [GUI Memory]: 166 MB (+40kb) [02:00:50]
+selectCodeEditor("mfp_ahb_const.vh", 119, 226); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 125, 228); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 122, 247); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 258, 229); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 256, 247); // cd (w, cj)
+selectCodeEditor("mfp_ahb_const.vh", 306, 205); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 6); // k (j, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 137, 145); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, mfp_ahb_const.vh]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("mfp_ahb_const.vh", 126, 196); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_const.vh", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb_gpio.v", 6); // k (j, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 140, 160); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 137, 178); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 138, 194); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 305, 182); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 263, 160); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 304, 163); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 298, 178); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 175, 163); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 165, 159); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 178, 164); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 173, 168); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 179, 168); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 181, 190); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 171, 163); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("mfp_ahb_gpio.v", 90, 210); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 89, 210, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mfp_ahb_gpio.v", 95, 216); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 95, 216, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 260, 111); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 248, 115); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 175, 111); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'c'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 211, 128); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 246, 131); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 213, 155); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 196, 142); // cd (w, cj)
+typeControlKey((HResource) null, "mfp_ahb_gpio.v", 'v'); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 244, 145); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 298, 111); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("mfp_ahb_gpio.v", 251, 126); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mfp_ahb_gpio.v", 253, 146); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 283, 125); // cd (w, cj)
+selectCodeEditor("mfp_ahb_gpio.v", 290, 141); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_ahb.v", 5); // k (j, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 39 seconds
+dockFrame(PAResourceOtoP.PAViews_CODE, "mfp_ahb.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Nov 14 20:48:20 2018] Launched synth_1... Run output will be captured here: C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 70 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ah (cj)
+// [GUI Memory]: 175 MB (+717kb) [02:06:20]
+// Elapsed time: 27 seconds
+selectCodeEditor("mfp_ahb.v", 101, 71); // cd (w, cj)

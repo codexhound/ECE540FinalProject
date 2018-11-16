@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Wed Nov 14 20:53:37 2018
+# Process ID: 11988
+# Current directory: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10056 D:\ECE540FinalProject-master\ECE540FinalProject-master\Vivado\runnable_project\runnable_project.xpr
+# Log file: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/vivado.log
+# Journal file: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mfp_nexys4_ddr [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1

@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Wed Nov 14 20:53:37 2018
+# Process ID: 11988
+# Current directory: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10056 D:\ECE540FinalProject-master\ECE540FinalProject-master\Vivado\runnable_project\runnable_project.xpr
+# Log file: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/vivado.log
+# Journal file: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Jonathan/Desktop/School/graduate/540/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.4)' for IP 'clk_wiz_0' (customized with software release 2017.4.1) has a newer major version in the IP Catalog.
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Project 1-230] Project 'runnable_project.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 768.191 ; gain = 100.852
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+[Wed Nov 14 20:54:27 2018] Launched impl_1...
+Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/impl_1/runme.log
+reset_run impl_1
+set_property top mfp_nexys4_ddr [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Wed Nov 14 20:55:56 2018] Launched synth_1...
+Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/synth_1/runme.log
+[Wed Nov 14 20:55:56 2018] Launched impl_1...
+Run output will be captured here: D:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/impl_1/runme.log
