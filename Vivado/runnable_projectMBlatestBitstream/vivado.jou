@@ -1,0 +1,171 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Fri Nov 16 11:13:21 2018
+# Process ID: 15344
+# Current directory: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12604
+# Log file: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project/runnable_project.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
+launch_simulation
+source adxl362test.tcl
+current_wave_config {Untitled 1}
+add_wave {{/adxl362test/accel_test/roundDone}} 
+current_wave_config {Untitled 1}
+add_wave {{/adxl362test/accel_test/address}} 
+current_wave_config {Untitled 1}
+add_wave {{/adxl362test/accel_test/accel_data}} 
+current_wave_config {Untitled 1}
+add_wave {{/adxl362test/accel_test/x_acc_reg_temp}} 
+close_sim
+launch_simulation
+source adxl362test.tcl
+current_wave_config {Untitled 2}
+add_wave {{/adxl362test/accel_test/roundDone}} 
+current_wave_config {Untitled 2}
+add_wave {{/adxl362test/accel_test/en2}} 
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/roundDone}} 
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/rw}} 
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/roundDone}} 
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/reset1}} 
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/en1}} 
+current_wave_config {Untitled 3}
+add_wave {{/adxl362test/accel_test/en2}} 
+reset_run synth_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/roundDone}} 
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/en1}} 
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/en2}} 
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/x_acc_reg_temp}} 
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/y_acc_reg_temp}} 
+current_wave_config {Untitled 4}
+add_wave {{/adxl362test/accel_test/z_acc_reg_temp}} 
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+current_design impl_1
+refresh_design
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/FSM_sequential_address_reg[1]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/counter_reg[0]/S}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/instruction_reg_reg[0]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins mhp_axd1362/n_CS_reg/S]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins mhp_axd1362/roundDone_reg/S]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/FSM_sequential_address_reg[0]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/FSM_sequential_address_reg[1]/R}]
+set_false_path -from [get_clocks -of_objects [get_pins clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0] -filter {IS_GENERATED && MASTER_CLOCK == sys_clk_pin}] -to [get_clocks -of_objects [get_pins clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2] -filter {IS_GENERATED && MASTER_CLOCK == sys_clk_pin}]
+set_property target_constrs_file C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project/runnable_project.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+current_design rtl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+reset_run synth_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source adxl362test.tcl
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+current_design impl_1
+refresh_design
+set_property STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE Default [get_runs impl_1]
+startgroup 
+set_property is_bel_fixed true [get_cells [list {mhp_axd1362/accel_data_reg[2]} {mhp_axd1362/accel_data_reg[5]} {mhp_axd1362/accel_data_reg[6]} {mhp_axd1362/accel_data_reg[7]} mhp_axd1362/reset1_reg {mhp_axd1362/y_acc_reg_temp_reg[10]} {mhp_axd1362/y_acc_reg_temp_reg[11]} mhp_axd1362/reset1_reg_replica {mhp_axd1362/accel_data[7]_i_1} {mhp_axd1362/accel_data_reg[0]} {mhp_axd1362/accel_data_reg[3]} {mhp_axd1362/accel_data_reg[4]} {mhp_axd1362/FSM_sequential_address[2]_i_1} {mhp_axd1362/y_acc_reg_temp_reg[8]}]]
+set_property is_loc_fixed true [get_cells [list {mhp_axd1362/accel_data_reg[2]} {mhp_axd1362/accel_data_reg[5]} {mhp_axd1362/accel_data_reg[6]} {mhp_axd1362/accel_data_reg[7]} mhp_axd1362/reset1_reg {mhp_axd1362/y_acc_reg_temp_reg[10]} {mhp_axd1362/y_acc_reg_temp_reg[11]} mhp_axd1362/reset1_reg_replica {mhp_axd1362/accel_data[7]_i_1} {mhp_axd1362/accel_data_reg[0]} {mhp_axd1362/accel_data_reg[3]} {mhp_axd1362/accel_data_reg[4]} {mhp_axd1362/FSM_sequential_address[2]_i_1} {mhp_axd1362/y_acc_reg_temp_reg[8]}]]
+endgroup
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[0]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[2]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[3]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[4]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[5]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[6]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[7]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[10]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[11]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[8]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[0]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[2]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[3]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[4]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[5]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[6]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[7]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[10]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[11]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[8]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[8]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[0]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[2]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[3]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[4]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[5]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[6]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg_replica/C] -to [get_pins {mhp_axd1362/accel_data_reg[7]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[10]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[11]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[11]/R}]
+set_false_path -from [get_pins mhp_axd1362/reset1_reg/C] -to [get_pins {mhp_axd1362/y_acc_reg_temp_reg[8]/R}]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+refresh_design
+set_property STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveFanoutOpt [get_runs impl_1]
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+archive_project C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project.xpr.zip -temp_dir C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15344-LAPTOP-8RH9CDEQ -force -include_local_ip_cache

@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Tue Nov 13 05:23:10 UTC 2018
-VLNV: ece.pdx.edu:user:rojobot31:1.0
-SynthRuntime: 32

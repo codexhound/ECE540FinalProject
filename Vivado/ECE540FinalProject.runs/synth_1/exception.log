@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\RampantVelcro\Desktop\Class\Fall2018\ECE540\ECE540FinalProject\Vivado\ECE540FinalProject.runs\synth_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied

@@ -71,14 +71,12 @@ extern void execute_27(char*, char *);
 extern void execute_28(char*, char *);
 extern void execute_29(char*, char *);
 extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-extern void transaction_10(char*, char*, unsigned, unsigned, unsigned);
-extern void transaction_12(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[29] = {(funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_14, (funcp)execute_15, (funcp)execute_16, (funcp)execute_17, (funcp)execute_18, (funcp)execute_19, (funcp)execute_20, (funcp)execute_21, (funcp)execute_22, (funcp)execute_23, (funcp)execute_24, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_11, (funcp)execute_12, (funcp)execute_13, (funcp)execute_25, (funcp)execute_26, (funcp)execute_27, (funcp)execute_28, (funcp)execute_29, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_10, (funcp)transaction_12};
-const int NumRelocateId= 29;
+funcp funcTab[27] = {(funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_14, (funcp)execute_15, (funcp)execute_16, (funcp)execute_17, (funcp)execute_18, (funcp)execute_19, (funcp)execute_20, (funcp)execute_21, (funcp)execute_22, (funcp)execute_23, (funcp)execute_24, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_11, (funcp)execute_12, (funcp)execute_13, (funcp)execute_25, (funcp)execute_26, (funcp)execute_27, (funcp)execute_28, (funcp)execute_29, (funcp)vlog_transfunc_eventcallback};
+const int NumRelocateId= 27;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/adxl362test_behav/xsim.reloc",  (void **)funcTab, 29);
+	iki_relocate(dp, "xsim.dir/adxl362test_behav/xsim.reloc",  (void **)funcTab, 27);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }
@@ -104,6 +102,12 @@ void relocate(char *);
 void sensitize(char *);
 
 void simulate(char *);
+
+extern SYSTEMCLIB_IMP_DLLSPEC void local_register_implicit_channel(int, char*);
+extern void implicit_HDL_SCinstatiate();
+
+extern SYSTEMCLIB_IMP_DLLSPEC int xsim_argc_copy ;
+extern SYSTEMCLIB_IMP_DLLSPEC char** xsim_argv_copy ;
 
 int main(int argc, char **argv)
 {

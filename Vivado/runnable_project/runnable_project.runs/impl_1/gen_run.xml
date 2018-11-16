@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1542259913">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1542407394">
   <File Type="BITSTR-BMM" Name="mfp_nexys4_ddr_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="mfp_nexys4_ddr_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="mfp_nexys4_ddr_timing_summary_init.rpt"/>
@@ -1822,19 +1822,24 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
-    <Step Id="phys_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">4</Option>
+    </Step>
     <Step Id="route_design"/>
-    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1"/>
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
