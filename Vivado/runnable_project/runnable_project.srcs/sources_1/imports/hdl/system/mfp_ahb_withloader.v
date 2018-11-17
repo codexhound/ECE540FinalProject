@@ -36,9 +36,9 @@ module mfp_ahb_withloader (
                         
                         
     // final project additions
-    input [11:0] x_acc,
-    input [11:0] y_acc,                    
-    input [11:0] z_acc
+    input x_acc,
+    input y_acc,                    
+    input z_acc
 );
 
     wire [7:0] char_data;

@@ -10,7 +10,7 @@ module adxl362test;
     wire MISI, n_CS;
     wire [11:0] x_acc_reg, y_acc_reg, z_acc_reg;
     wire [2:0] counter;
-    wire [2:0] readState;
+    wire [1:0] readState;
     reg [7:0] data;
     
     mhp_axdl362 accel_test (
@@ -18,13 +18,13 @@ module adxl362test;
         .clk_SPI(clk_SPI),
         .reset(reset),
         .MISO(MISO),
-        .MOSI(MISI),
+        .MISI(MISI),
         .n_CS(n_CS),
         .x_acc_reg(x_acc_reg),
         .y_acc_reg(y_acc_reg),
         .z_acc_reg(z_acc_reg),
         .counter(counter),
-        .SPI_state(readState)
+        .readState(readState)
     );
 
     initial
@@ -41,7 +41,7 @@ module adxl362test;
     initial forever #4 clk_SPI = ~clk_SPI;
     
     always@(posedge clk_50) begin
-        if(readState == 3'd3) begin
+        if(readState == 2'd3) begin
                     MISO <= data[counter];
                 end
     end

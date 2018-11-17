@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project/runnable_project.runs/synth_1'
+HD_PWD='E:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

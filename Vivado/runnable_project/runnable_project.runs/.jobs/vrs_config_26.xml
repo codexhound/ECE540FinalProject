@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="impl_1" LaunchDir="C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project/runnable_project.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="post_route_phys_opt_design"/>
-</Runs>
-

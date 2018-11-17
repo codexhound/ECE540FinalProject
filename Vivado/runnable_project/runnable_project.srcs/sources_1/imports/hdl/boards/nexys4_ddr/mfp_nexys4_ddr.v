@@ -28,8 +28,7 @@ module mfp_nexys4_ddr(
                         output [3:0]            VGA_R, VGA_G, VGA_B,
                         //ADXL362 Accelerometer PINS
                         output                  ACL_MOSI, ACL_SCLK, ACL_CSN,
-                        input                   ACL_MISO,
-                        input  [2:0]            ACL_INT
+                        input                   ACL_MISO, ACL_INT[2:1]
                         );
                         
   // Press btnCpuReset to reset the processor. 
@@ -45,10 +44,10 @@ module mfp_nexys4_ddr(
   
   assign ACL_SCLK = ADXCLK;
   assign ACL_CSN = N_ADXCS;
+  assign ACL_MISO = MISO;
   assign ACL_MOSI = MOSI;
-  assign MISO = ACL_MISO;
-  assign INT2 = ACL_INT[2];
-  assign INT1 = ACL_INT[1];
+  assign ACL_INT[2] = INT2;
+  assign ACL_INT[1] = INT1;
 
   clk_wiz_0 clk_wiz_0(.clk_in1(CLK100MHZ), .clk_out1(clk_out50), .clk_out2(clk_out75), .clk_out3(ADXCLK));
   IBUF IBUF1(.O(tck_in),.I(JB[4]));

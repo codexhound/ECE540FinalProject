@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_project/runnable_project.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc rfile:../../../runnable_project.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project/runnable_project.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc rfile:../../../runnable_project.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports CLK100MHZ]
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
@@ -150,16 +150,16 @@ set_property -dict {PACKAGE_PIN B11 IOSTANDARD LVCMOS33} [get_ports VGA_HS]
 set_property src_info {type:XDC file:1 line:178 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN B12 IOSTANDARD LVCMOS33} [get_ports VGA_VS]
 set_property src_info {type:XDC file:1 line:195 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN E15 IOSTANDARD LVCMOS33} [get_ports ACL_MISO]
+set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { ACL_MISO }]; #IO_L11P_T1_SRCC_15 Sch=acl_miso
 set_property src_info {type:XDC file:1 line:196 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN F14 IOSTANDARD LVCMOS33} [get_ports ACL_MOSI]
+set_property -dict { PACKAGE_PIN F14   IOSTANDARD LVCMOS33 } [get_ports { ACL_MOSI }]; #IO_L5N_T0_AD9N_15 Sch=acl_mosi
 set_property src_info {type:XDC file:1 line:197 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN F15 IOSTANDARD LVCMOS33} [get_ports ACL_SCLK]
+set_property -dict { PACKAGE_PIN F15   IOSTANDARD LVCMOS33 } [get_ports { ACL_SCLK }]; #IO_L14P_T2_SRCC_15 Sch=acl_sclk
 set_property src_info {type:XDC file:1 line:198 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN D15 IOSTANDARD LVCMOS33} [get_ports ACL_CSN]
+set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { ACL_CSN }]; #IO_L12P_T1_MRCC_15 Sch=acl_csn
 set_property src_info {type:XDC file:1 line:199 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN B13 IOSTANDARD LVCMOS33} [get_ports {ACL_INT[1]}]
+set_property -dict { PACKAGE_PIN B13   IOSTANDARD LVCMOS33 } [get_ports { ACL_INT[1] }]; #IO_L2P_T0_AD8P_15 Sch=acl_int[1]
 set_property src_info {type:XDC file:1 line:200 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN C16 IOSTANDARD LVCMOS33} [get_ports {ACL_INT[2]}]
+set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { ACL_INT[2] }]; #IO_L20P_T3_A20_15 Sch=acl_int[2]
 set_property src_info {type:XDC file:1 line:225 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN C4 IOSTANDARD LVCMOS33} [get_ports UART_TXD_IN]

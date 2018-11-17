@@ -27,9 +27,9 @@ module mfp_ahb_gpio(
                         
                         
     // final project additions
-    input [11:0] x_acc,
-    input [11:0] y_acc,                    
-    input [11:0] z_acc
+    input x_acc,
+    input y_acc,                    
+    input z_acc
 );
 
   reg  [3:0]  HADDR_d;
@@ -77,18 +77,9 @@ module mfp_ahb_gpio(
                 HRDATA[0] <= IO_BotUpdt_Sync;
             end
             
-            `H_IO_ACC_X: begin
-                HRDATA[11:0] <= x_acc;     
-                HRDATA[31:12] <= 0;
-            end  
-            `H_IO_ACC_Y: begin
-                HRDATA[11:0] <= y_acc;
-                HRDATA[31:12] <= 0;
-            end
-            `H_IO_ACC_Z: begin
-                HRDATA[11:0] <= z_acc;
-                HRDATA[31:12] <= 0;
-            end
+            `H_IO_ACC_X: HRDATA <= x_acc;       
+            `H_IO_ACC_Y: HRDATA <= y_acc;
+            `H_IO_ACC_Z: HRDATA <= z_acc;
             
             default:    HRDATA <= 32'h00000000;
          endcase
