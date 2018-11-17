@@ -50,22 +50,22 @@ module mhp_axdl362(
               DATAOUT = 3'd4,
               END = 3'd5,
               END1 = 3'd6,
+              BEGIN1 = 3'd7,
               //read/write
               WRITE = 1'b1,
               READ = 1'b0;
               
               
     reg [11:0] x_acc_reg_temp, y_acc_reg_temp, z_acc_reg_temp; //temp regs while reading
-    reg rw, roundDone, reset1, en1, en2, en3;
-    reg [5:0] holdCount;
+    reg rw, roundDone, roundDD, en1, en2, en3;
     reg [7:0] address; //command for which register to read
     reg [7:0] accel_data; //save the incoming accel SPI data here
     //reg [2:0] counter, SPI_state; //SPI counter
     reg [7:0] instruction_reg;
     reg runCounter;
     
-    always@(posedge clk_SPI) begin
-        if(!reset1) begin
+    always@(posedge clk_SPI or negedge reset) begin
+        if(!reset) begin
             rw <= WRITE;
             x_acc_reg_temp <= 0;
             y_acc_reg_temp <= 0;
@@ -74,13 +74,16 @@ module mhp_axdl362(
             instruction_reg <= REGISTER_WRITE;
             address <= CON_REG;
             roundDone <= 1;
-            SPI_state <= BEGIN;
+            roundDD <= 1;
+            SPI_state <= BEGIN1;
             counter <= 7; //counts down to 0
             //reset data for initial control write (measurement mode)
             accel_data[7:2] <= 0;
             accel_data[1:0] <= 2'b10; //measurement mode
         end
         else begin
+            roundDD <= roundDone;
+        
             if(SPI_state == INSTRUCTION || SPI_state == ADDRESS || SPI_state == DATAIN || SPI_state == DATAOUT) begin
            		if(counter == 0) begin //counter must reach 0 before moving onto next state          
             		counter <= 7;
@@ -96,8 +99,8 @@ module mhp_axdl362(
             	end
             	else counter <= counter - 1;
             end  
-            
-        	if(SPI_state == BEGIN) begin
+            if(SPI_state == BEGIN1) SPI_state <= BEGIN;
+        	else if(SPI_state == BEGIN) begin
         	   n_CS <= 0;
         	   SPI_state <= INSTRUCTION;
         	end
@@ -147,8 +150,8 @@ module mhp_axdl362(
         end
      end
      
-     always@(negedge clk_SPI) begin //start negedge Logic (output bit on negedge)
-        if(!reset1) begin
+     always@(negedge clk_SPI or negedge reset) begin //start negedge Logic (output bit on negedge)
+        if(!reset) begin
             MOSI <= 0;
         end
         else begin
@@ -164,19 +167,14 @@ module mhp_axdl362(
             x_acc_reg <= 0;
             y_acc_reg <= 0;
             z_acc_reg <= 0;
-            holdCount <= 0; //hold reset for awhile for slower clock domain
-            reset1 <= 0;
             en1 <= 0;
             en2 <= 0;
             en3 <= 0;
         end
         else begin
-            en1 <= roundDone;
+            en1 <= roundDD;
             en2 <= en1;
             en3 <= en2;
-        
-            if(holdCount == 62) reset1 <= 1;
-            else if(!reset1) holdCount = holdCount + 1;
             
             if(en3) begin //x,y,z are valid for sync while roundDone is held
                x_acc_reg <=  x_acc_reg_temp;
