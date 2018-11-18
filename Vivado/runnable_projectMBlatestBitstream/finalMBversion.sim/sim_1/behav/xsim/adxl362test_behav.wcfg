@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="adxl362test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="adxl362test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="214001fs"></ZoomEndTime>
+      <Cursor1Time time="400000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="107"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/adxl362test/clk_50" type="logic">
+      <obj_property name="ElementShortName">clk_50</obj_property>
+      <obj_property name="ObjectShortName">clk_50</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/clk_SPI" type="logic">
+      <obj_property name="ElementShortName">clk_SPI</obj_property>
+      <obj_property name="ObjectShortName">clk_SPI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/MISI" type="logic">
+      <obj_property name="ElementShortName">MISI</obj_property>
+      <obj_property name="ObjectShortName">MISI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/n_CS" type="logic">
+      <obj_property name="ElementShortName">n_CS</obj_property>
+      <obj_property name="ObjectShortName">n_CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/x_acc_reg" type="array">
+      <obj_property name="ElementShortName">x_acc_reg[11:0]</obj_property>
+      <obj_property name="ObjectShortName">x_acc_reg[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/y_acc_reg" type="array">
+      <obj_property name="ElementShortName">y_acc_reg[11:0]</obj_property>
+      <obj_property name="ObjectShortName">y_acc_reg[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/z_acc_reg" type="array">
+      <obj_property name="ElementShortName">z_acc_reg[11:0]</obj_property>
+      <obj_property name="ObjectShortName">z_acc_reg[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/counter" type="array">
+      <obj_property name="ElementShortName">counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/readState" type="array">
+      <obj_property name="ElementShortName">readState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">readState[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/data" type="array">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/roundDD" type="logic">
+      <obj_property name="ElementShortName">roundDD</obj_property>
+      <obj_property name="ObjectShortName">roundDD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/spi_sync/rstHold" type="array">
+      <obj_property name="ElementShortName">rstHold[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rstHold[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/x_acc_reg_temp" type="array">
+      <obj_property name="ElementShortName">x_acc_reg_temp[11:0]</obj_property>
+      <obj_property name="ObjectShortName">x_acc_reg_temp[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/y_acc_reg_temp" type="array">
+      <obj_property name="ElementShortName">y_acc_reg_temp[11:0]</obj_property>
+      <obj_property name="ObjectShortName">y_acc_reg_temp[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/z_acc_reg_temp" type="array">
+      <obj_property name="ElementShortName">z_acc_reg_temp[11:0]</obj_property>
+      <obj_property name="ObjectShortName">z_acc_reg_temp[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/accel_data" type="array">
+      <obj_property name="ElementShortName">accel_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">accel_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/instruction_reg" type="array">
+      <obj_property name="ElementShortName">instruction_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adxl362test/accel_test/SPI_driver/counter" type="array">
+      <obj_property name="ElementShortName">counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[2:0]</obj_property>
+   </wvobject>
+</wave_config>

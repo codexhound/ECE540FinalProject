@@ -2,172 +2,23 @@
 # Vivado v2018.2.2 (64-bit)
 # SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
 # IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
-# Start of session at: Fri Nov 16 20:21:19 2018
-# Process ID: 9532
+# Start of session at: Sat Nov 17 16:12:51 2018
+# Process ID: 10892
 # Current directory: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6908 C:\Users\RampantVelcro\Desktop\Class\Fall2018\ECE540\ECE540FinalProject\Vivado\runnable_projectMBlatestBitstream\runnable_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1956 C:\Users\RampantVelcro\Desktop\Class\Fall2018\ECE540\ECE540FinalProject\Vivado\runnable_projectMBlatestBitstream\finalMBversion.xpr
 # Log file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/vivado.log
 # Journal file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/runnable_project.xpr
+open_project C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.xpr
 update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-refresh_design
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top mhp_axdl362 [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-refresh_design
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 1}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 1}
-add_wave {{/adxl362test/accel_test/address}} 
-close_sim
-launch_simulation
-source adxl362test.tcl
-set_property -name {xsim.simulate.log_all_signals} -value {true} -objects [get_filesets sim_1]
-update_ip_catalog
-set_property -name {xsim.simulate.runtime} -value {1000ps} -objects [get_filesets sim_1]
-update_ip_catalog
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 3}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 3}
-add_wave {{/adxl362test/accel_test/address}} 
-current_wave_config {Untitled 3}
-add_wave {{/adxl362test/accel_test/x_acc_reg_temp}} 
-current_wave_config {Untitled 3}
-add_wave {{/adxl362test/accel_test/accel_data}} 
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 4}
-add_wave {{/adxl362test/accel_test/x_acc_reg_temp}} 
-refresh_design
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-save_wave_config {C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/adxl362test_behav.wcfg}
-close_sim
-launch_simulation
-source adxl362test.tcl
-close_sim
-launch_simulation
-source adxl362test.tcl
-close_sim
-launch_simulation
-source adxl362test.tcl
-close_sim
-launch_simulation
-source adxl362test.tcl
-set_property -name {xsim.simulate.runtime} -value {2500ps} -objects [get_filesets sim_1]
-update_ip_catalog
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 9}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 9}
-add_wave {{/adxl362test/accel_test/address}} 
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 10}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 10}
-add_wave {{/adxl362test/accel_test/x_acc_reg_temp}} 
-current_wave_config {Untitled 10}
-add_wave {{/adxl362test/accel_test/y_acc_reg_temp}} 
-current_wave_config {Untitled 10}
-add_wave {{/adxl362test/accel_test/z_acc_reg_temp}} 
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 11}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 11}
-add_wave {{/adxl362test/accel_test/rw}} 
-current_wave_config {Untitled 11}
-add_wave {{/adxl362test/accel_test/address}} 
-save_wave_config {C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/adxl362test_behav1.wcfg}
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 12}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-synth_design -rtl -name rtl_1
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-refresh_design
-close_design
 open_run impl_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top mfp_nexys4_ddr [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-reset_run synth_1
+reset_run impl_1
 launch_runs impl_1 -jobs 2
 wait_on_run impl_1
-current_design synth_1
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
-current_design impl_1
-current_design synth_1
-refresh_design
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 13}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 14}
-add_wave {{/adxl362test/accel_test/roundDD}} 
-current_wave_config {Untitled 14}
-add_wave {{/adxl362test/accel_test/z_acc_reg_temp}} 
-current_design impl_1
-refresh_design
-reset_run synth_1
+close_design
+synth_design -rtl -name rtl_1
+open_run synth_1 -name synth_1
+open_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-refresh_design
-set_property STEPS.OPT_DESIGN.ARGS.DIRECTIVE Explore [get_runs impl_1]
-set_property STEPS.SYNTH_DESIGN.ARGS.DIRECTIVE AlternateRoutability [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-close_sim
-launch_simulation
-source adxl362test.tcl
-close_sim
-launch_simulation
-source adxl362test.tcl
-current_wave_config {Untitled 16}
-add_wave {{/adxl362test/accel_test/roundDone}} 
-current_wave_config {Untitled 16}
-add_wave {{/adxl362test/accel_test/address}} 
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-refresh_design
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-close_sim

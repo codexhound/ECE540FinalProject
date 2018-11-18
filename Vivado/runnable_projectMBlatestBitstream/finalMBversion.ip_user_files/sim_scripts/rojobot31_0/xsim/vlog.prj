@@ -1,0 +1,10 @@
+verilog xil_defaultlib  \
+"../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_if.v" \
+"../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_pgm.v" \
+"../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/kcpsm6.v" \
+"../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/src/bot31_top.v" \
+"../../../../ECE540FinalProject.srcs/sources_1/ip/rojobot31_0/sim/rojobot31_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
