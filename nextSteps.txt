@@ -1,0 +1,19 @@
+Next Steps:
+
+1) Determine next rojobot direction from accelerometer values (determined by a range case statement) and/or idle
+2) Modify rojobot code to be able to set the direction of the rojobot from software
+3) Write software that sets rojobot forward and given direction when moving and stops otherwise
+4) Write software that resets rojobot when it hits a red wall
+
+------------------------------------------------
+Optional
+5) Implement Multiple levels
+
+
+
+
+
+
+
+
+
