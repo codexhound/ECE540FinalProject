@@ -104,7 +104,7 @@ always @(posedge clk) begin
 		4'b0000 :	DataOut = MotCtl;
 		4'b0001 :	DataOut = LocX_int;
 		4'b0010 :	DataOut = LocY_int;
-		4'b0011 :	DataOut = {BotInfo_int[7:3], new_orientation}; 
+		4'b0011 :	DataOut = BotInfo_int; 
 		4'b0100 :	DataOut = Sensors_int;
 		4'b0101 :	DataOut = 8'b01010101;		// shouldn't be read - reserved
 		4'b0110 : 	DataOut = 8'b01100110;		// shouldn't be read - reserved	
@@ -183,13 +183,13 @@ always @(posedge clk or posedge reset) begin
 			LocX <= LocX_int;
 			LocY <= LocY_int;
 			Sensors <= Sensors_int;
-			BotInfo <= {BotInfo_int[7:3], new_orientation};
+			BotInfo <= BotInfo_int;
 	end
 	else begin // refresh registers
 			LocX <= LocX;
 			LocY <= LocY;
 			Sensors <= Sensors;
-			BotInfo <= {BotInfo[7:3], new_orientation}; 
+			BotInfo <= BotInfo; 
 	end		
 end // always - synchronized system register interface
 
