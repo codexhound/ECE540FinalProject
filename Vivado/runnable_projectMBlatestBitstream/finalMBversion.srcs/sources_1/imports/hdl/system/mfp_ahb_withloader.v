@@ -23,11 +23,11 @@ module mfp_ahb_withloader (
     output     [`MFP_N_LED-1: 0] IO_LED,
     output     [7:0]            disenout,
     output     [7:0]            disout,
+    
     output [7:0] IO_BotCtrl,
     input [31:0] IO_BotInfo, 
-    output IO_INT_ACK,
-    input IO_BotUpdt_Sync,
-
+    output soft_reset,
+    
 	// for serial loading of memory using uart
     input         UART_RX,
 
@@ -137,10 +137,11 @@ module mfp_ahb_withloader (
         .IO_LED           ( IO_LED          ),
         .disenout(disenout),
         .disout(disout),
+        
         .IO_BotCtrl(IO_BotCtrl),
         .IO_BotInfo(IO_BotInfo), 
-        .IO_INT_ACK(IO_INT_ACK),
-        .IO_BotUpdt_Sync(IO_BotUpdt_Sync),
+        .soft_reset(soft_reset),
+        
         .x_acc(x_acc),
         .y_acc(y_acc),
         .z_acc(z_acc)

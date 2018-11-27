@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_maze_icon_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_maze_icon" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5663fs"></ZoomStartTime>
+      <ZoomEndTime time="79664fs"></ZoomEndTime>
+      <Cursor1Time time="23000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/test_maze_icon/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/soft_rst" type="logic">
+      <obj_property name="ElementShortName">soft_rst</obj_property>
+      <obj_property name="ObjectShortName">soft_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/x_speed" type="array">
+      <obj_property name="ElementShortName">x_speed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">x_speed[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/y_speed" type="array">
+      <obj_property name="ElementShortName">y_speed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">y_speed[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/ball_dir" type="array">
+      <obj_property name="ElementShortName">ball_dir[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ball_dir[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/LocX_reg" type="array">
+      <obj_property name="ElementShortName">LocX_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LocX_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/prev_LocX_reg" type="array">
+      <obj_property name="ElementShortName">prev_LocX_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_LocX_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/LocY_reg" type="array">
+      <obj_property name="ElementShortName">LocY_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LocY_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/prev_LocY_reg" type="array">
+      <obj_property name="ElementShortName">prev_LocY_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_LocY_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/worldmap_addr" type="array">
+      <obj_property name="ElementShortName">worldmap_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">worldmap_addr[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/worldmap_data" type="array">
+      <obj_property name="ElementShortName">worldmap_data[1:0]</obj_property>
+      <obj_property name="ObjectShortName">worldmap_data[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/mazeEnd" type="logic">
+      <obj_property name="ElementShortName">mazeEnd</obj_property>
+      <obj_property name="ObjectShortName">mazeEnd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/hitMazeWall" type="logic">
+      <obj_property name="ElementShortName">hitMazeWall</obj_property>
+      <obj_property name="ObjectShortName">hitMazeWall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/deadlock" type="logic">
+      <obj_property name="ElementShortName">deadlock</obj_property>
+      <obj_property name="ObjectShortName">deadlock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/counter_x" type="array">
+      <obj_property name="ElementShortName">counter_x[28:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_x[28:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/counter_y" type="array">
+      <obj_property name="ElementShortName">counter_y[28:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_y[28:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/count_limit_x" type="array">
+      <obj_property name="ElementShortName">count_limit_x[29:0]</obj_property>
+      <obj_property name="ObjectShortName">count_limit_x[29:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/count_limit_y" type="array">
+      <obj_property name="ElementShortName">count_limit_y[29:0]</obj_property>
+      <obj_property name="ObjectShortName">count_limit_y[29:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_maze_icon/Maze_Icon/internal_ball_direction" type="array">
+      <obj_property name="ElementShortName">internal_ball_direction[2:0]</obj_property>
+      <obj_property name="ObjectShortName">internal_ball_direction[2:0]</obj_property>
+   </wvobject>
+</wave_config>

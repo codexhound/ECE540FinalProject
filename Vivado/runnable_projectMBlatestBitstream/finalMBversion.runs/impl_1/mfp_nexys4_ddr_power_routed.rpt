@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date             : Sat Nov 17 16:30:47 2018
+| Date             : Tue Nov 27 15:19:17 2018
 | Host             : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
 | Command          : report_power -file mfp_nexys4_ddr_power_routed.rpt -pb mfp_nexys4_ddr_power_summary_routed.pb -rpx mfp_nexys4_ddr_power_routed.rpx
 | Design           : mfp_nexys4_ddr
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.368        |
+| Total On-Chip Power (W)  | 0.363        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.266        |
+| Dynamic (W)              | 0.261        |
 | Device Static (W)        | 0.102        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.3         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.019 |       14 |       --- |             --- |
-| Slice Logic              |     0.013 |    22924 |       --- |             --- |
-|   LUT as Logic           |     0.012 |    10783 |     63400 |           17.01 |
-|   Register               |    <0.001 |     9072 |    126800 |            7.15 |
-|   CARRY4                 |    <0.001 |      146 |     15850 |            0.92 |
-|   LUT as Distributed RAM |    <0.001 |       30 |     19000 |            0.16 |
+| Clocks                   |     0.017 |       14 |       --- |             --- |
+| Slice Logic              |     0.012 |    22706 |       --- |             --- |
+|   LUT as Logic           |     0.012 |    10712 |     63400 |           16.90 |
+|   Register               |    <0.001 |     8992 |    126800 |            7.09 |
+|   CARRY4                 |    <0.001 |      160 |     15850 |            1.01 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes            |    <0.001 |        3 |     63400 |           <0.01 |
 |   LUT as Shift Register  |    <0.001 |        9 |     19000 |            0.05 |
-|   Others                 |     0.000 |     1457 |       --- |             --- |
-| Signals                  |     0.024 |    19162 |       --- |             --- |
-| Block RAM                |     0.098 |     79.5 |       135 |           58.89 |
+|   LUT as Distributed RAM |    <0.001 |        6 |     19000 |            0.03 |
+|   F7/F8 Muxes            |    <0.001 |        3 |     63400 |           <0.01 |
+|   Others                 |     0.000 |     1436 |       --- |             --- |
+| Signals                  |     0.024 |    18980 |       --- |             --- |
+| Block RAM                |     0.098 |       79 |       135 |           58.52 |
 | MMCM                     |     0.100 |        1 |         6 |           16.67 |
-| I/O                      |     0.013 |       80 |       210 |           38.10 |
+| I/O                      |     0.010 |       80 |       210 |           38.10 |
 | Static Power             |     0.102 |          |           |                 |
-| Total                    |     0.368 |          |           |                 |
+| Total                    |     0.363 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,9 +77,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.163 |       0.145 |      0.018 |
+| Vccint    |       1.000 |     0.161 |       0.143 |      0.018 |
 | Vccaux    |       1.800 |     0.074 |       0.056 |      0.018 |
-| Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -155,14 +155,15 @@ Table of Contents
 +----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                         | Power (W) |
 +----------------------------------------------------------------------------------------------+-----------+
-| mfp_nexys4_ddr                                                                               |     0.266 |
+| mfp_nexys4_ddr                                                                               |     0.261 |
 |   clk_wiz_0                                                                                  |     0.100 |
 |     inst                                                                                     |     0.100 |
 |   colorizer                                                                                  |    <0.001 |
 |   debounce                                                                                   |    <0.001 |
-|   dtg                                                                                        |     0.002 |
-|   handshakeflipflop                                                                          |    <0.001 |
-|   icon1                                                                                      |     0.001 |
+|   delayWorldPixel                                                                            |    <0.001 |
+|   dtg                                                                                        |    <0.001 |
+|   icon1                                                                                      |    <0.001 |
+|   maze_bot                                                                                   |     0.002 |
 |   mfp_sys                                                                                    |     0.144 |
 |     mfp_ahb_withloader                                                                       |     0.088 |
 |       mfp_ahb                                                                                |     0.086 |
@@ -176,18 +177,18 @@ Table of Contents
 |             counter16                                                                        |    <0.001 |
 |             counterSel                                                                       |    <0.001 |
 |         mfp_ahb_gpio                                                                         |    <0.001 |
-|         mfp_ahb_p_ram                                                                        |     0.083 |
-|           ram_p0                                                                             |     0.021 |
-|           ram_p1                                                                             |     0.021 |
-|           ram_p2                                                                             |     0.021 |
-|           ram_p3                                                                             |     0.021 |
+|         mfp_ahb_p_ram                                                                        |     0.082 |
+|           ram_p0                                                                             |     0.020 |
+|           ram_p1                                                                             |     0.020 |
+|           ram_p2                                                                             |     0.020 |
+|           ram_p3                                                                             |     0.020 |
 |       mfp_srec_parser                                                                        |     0.001 |
 |       mfp_srec_parser_to_ahb_lite_bridge                                                     |    <0.001 |
 |       mfp_uart_receiver                                                                      |    <0.001 |
 |     mfp_ejtag_reset                                                                          |    <0.001 |
 |     top                                                                                      |     0.056 |
-|       cpu                                                                                    |     0.056 |
-|         core                                                                                 |     0.042 |
+|       cpu                                                                                    |     0.055 |
+|         core                                                                                 |     0.041 |
 |           biu                                                                                |     0.002 |
 |             _HADDR_31_0_                                                                     |    <0.001 |
 |               cregister                                                                      |    <0.001 |
@@ -400,6 +401,7 @@ Table of Contents
 |               cregister                                                                      |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
 |             _cpz_timerint                                                                    |    <0.001 |
+|             _dcc_dcopld_md                                                                   |    <0.001 |
 |             _debug_27_0_                                                                     |    <0.001 |
 |               cregister                                                                      |    <0.001 |
 |                 register_inst                                                                |    <0.001 |
@@ -577,7 +579,6 @@ Table of Contents
 |             _cachewrite_m                                                                    |    <0.001 |
 |             _dcc_copsync_m                                                                   |    <0.001 |
 |             _dcc_data_raw_31_0_                                                              |    <0.001 |
-|             _dcc_dcopld_md                                                                   |    <0.001 |
 |             _dcc_ddata_m_reg_31_0_                                                           |    <0.001 |
 |             _dcc_dmiss_m_ev_reg                                                              |    <0.001 |
 |             _dcc_dval_m_19_2_                                                                |    <0.001 |
@@ -948,7 +949,7 @@ Table of Contents
 |                 _ibm_31_0_                                                                   |    <0.001 |
 |                   cregister                                                                  |    <0.001 |
 |                     cregister                                                                |    <0.001 |
-|             ejt_tap                                                                          |    <0.001 |
+|             ejt_tap                                                                          |     0.001 |
 |               _EJ_PerRst                                                                     |    <0.001 |
 |               _EJ_PrRst                                                                      |    <0.001 |
 |               _b_prev                                                                        |    <0.001 |
@@ -1111,9 +1112,9 @@ Table of Contents
 |                   _data_ack_sync0                                                            |     0.000 |
 |                   _data_ack_sync1                                                            |     0.000 |
 |                   _sync_sample_st_3_0_                                                       |    <0.001 |
-|                   async_data_out_                                                            |     0.000 |
-|                     cregister                                                                |     0.000 |
-|                       cregister                                                              |     0.000 |
+|                   async_data_out_                                                            |    <0.001 |
+|                     cregister                                                                |    <0.001 |
+|                       cregister                                                              |    <0.001 |
 |                 fdctx_async_rec                                                              |    <0.001 |
 |                   _data_ack                                                                  |    <0.001 |
 |                   _data_rdy_sync0                                                            |     0.000 |
@@ -1246,7 +1247,7 @@ Table of Contents
 |               _uc_reg_out_20_0_                                                              |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
 |                   register_inst                                                              |    <0.001 |
-|             mdl_dp                                                                           |     0.002 |
+|             mdl_dp                                                                           |     0.003 |
 |               _dm_31_0_                                                                      |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
 |                   cregister                                                                  |    <0.001 |
@@ -1263,7 +1264,7 @@ Table of Contents
 |                 cregister                                                                    |    <0.001 |
 |                   register_inst                                                              |    <0.001 |
 |               mdl_add                                                                        |    <0.001 |
-|           mmu                                                                                |     0.015 |
+|           mmu                                                                                |     0.014 |
 |             mmuc                                                                             |     0.001 |
 |               _dcachem_reg_2_0_                                                              |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
@@ -1355,7 +1356,7 @@ Table of Contents
 |                 utlbentry1                                                                   |    <0.001 |
 |                 utlbentry2                                                                   |    <0.001 |
 |                 utlbentry3                                                                   |    <0.001 |
-|             tlbarray                                                                         |     0.009 |
+|             tlbarray                                                                         |     0.008 |
 |               _cmp_str                                                                       |    <0.001 |
 |               _gpm_en                                                                        |    <0.001 |
 |               _index_dis_bus_3_0_                                                            |    <0.001 |
@@ -1590,10 +1591,10 @@ Table of Contents
 |                 cregister                                                                    |    <0.001 |
 |                   cregister                                                                  |    <0.001 |
 |               _wr_dspc_m                                                                     |    <0.001 |
-|             mpc_dec                                                                          |     0.001 |
-|               _int_ir_e_31_0_                                                                |     0.001 |
-|                 cregister                                                                    |     0.001 |
-|                   cregister                                                                  |     0.001 |
+|             mpc_dec                                                                          |     0.002 |
+|               _int_ir_e_31_0_                                                                |     0.002 |
+|                 cregister                                                                    |     0.002 |
+|                   cregister                                                                  |     0.002 |
 |               _mpc_lnksel_e_countdown_1_0_                                                   |    <0.001 |
 |             mpc_exc                                                                          |    <0.001 |
 |               _atomic_w_reg                                                                  |    <0.001 |
@@ -1765,7 +1766,7 @@ Table of Contents
 |               mem_reg_0_127_0_0                                                              |    <0.001 |
 |             d_wsram___inst2                                                                  |    <0.001 |
 |               mem_reg_0_127_0_0                                                              |    <0.001 |
-|         icache                                                                               |     0.006 |
+|         icache                                                                               |     0.007 |
 |           dataram                                                                            |     0.004 |
 |             ram__data_inst0                                                                  |    <0.001 |
 |             ram__data_inst1                                                                  |    <0.001 |
@@ -1810,57 +1811,7 @@ Table of Contents
 |   mhp_axd1362                                                                                |    <0.001 |
 |     SPI_driver                                                                               |    <0.001 |
 |     spi_sync                                                                                 |    <0.001 |
-|   nolabel_line161                                                                            |    <0.001 |
-|   rojobot31_0                                                                                |     0.003 |
-|     inst                                                                                     |     0.003 |
-|       BOTCPU                                                                                 |     0.002 |
-|         address_loop[0].output_data.pc_vector_mux_lut                                        |    <0.001 |
-|         address_loop[10].output_data.pc_vector_mux_lut                                       |    <0.001 |
-|         address_loop[2].output_data.pc_vector_mux_lut                                        |    <0.001 |
-|         address_loop[4].output_data.pc_vector_mux_lut                                        |    <0.001 |
-|         address_loop[6].output_data.pc_vector_mux_lut                                        |    <0.001 |
-|         address_loop[8].output_data.pc_vector_mux_lut                                        |    <0.001 |
-|         alu_decode0_lut                                                                      |    <0.001 |
-|         alu_decode1_lut                                                                      |    <0.001 |
-|         alu_decode2_lut                                                                      |    <0.001 |
-|         carry_flag_lut                                                                       |    <0.001 |
-|         data_path_loop[0].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[0].lsb_shift_rotate.shift_rotate_lut                                  |    <0.001 |
-|         data_path_loop[0].output_data.sy_kk_mux_lut                                          |    <0.001 |
-|         data_path_loop[0].second_operand.out_port_lut                                        |    <0.001 |
-|         data_path_loop[0].small_spm.small_spm_ram.spm_ram                                    |    <0.001 |
-|         data_path_loop[1].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[2].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[2].mid_shift_rotate.shift_rotate_lut                                  |    <0.001 |
-|         data_path_loop[2].output_data.sy_kk_mux_lut                                          |    <0.001 |
-|         data_path_loop[2].second_operand.out_port_lut                                        |    <0.001 |
-|         data_path_loop[3].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[4].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[4].mid_shift_rotate.shift_rotate_lut                                  |    <0.001 |
-|         data_path_loop[4].output_data.sy_kk_mux_lut                                          |    <0.001 |
-|         data_path_loop[4].second_operand.out_port_lut                                        |    <0.001 |
-|         data_path_loop[4].small_spm.small_spm_ram.spm_ram                                    |    <0.001 |
-|         data_path_loop[5].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[6].arith_logical_lut                                                  |    <0.001 |
-|         data_path_loop[6].msb_shift_rotate.shift_rotate_lut                                  |    <0.001 |
-|         data_path_loop[6].output_data.sy_kk_mux_lut                                          |    <0.001 |
-|         data_path_loop[6].second_operand.out_port_lut                                        |    <0.001 |
-|         data_path_loop[7].arith_logical_lut                                                  |    <0.001 |
-|         lower_reg_banks                                                                      |    <0.001 |
-|         move_type_lut                                                                        |    <0.001 |
-|         pc_mode1_lut                                                                         |    <0.001 |
-|         push_pop_lut                                                                         |    <0.001 |
-|         register_enable_lut                                                                  |    <0.001 |
-|         register_enable_type_lut                                                             |    <0.001 |
-|         reset_lut                                                                            |    <0.001 |
-|         stack_ram_high                                                                       |    <0.001 |
-|         stack_ram_low                                                                        |    <0.001 |
-|         t_state_lut                                                                          |    <0.001 |
-|         upper_reg_banks                                                                      |    <0.001 |
-|         use_zero_flag_lut                                                                    |    <0.001 |
-|       BOTREGIF                                                                               |    <0.001 |
-|       BOTSIMPGM                                                                              |    <0.001 |
-|   world_map                                                                                  |     0.002 |
+|   world_map                                                                                  |     0.003 |
 +----------------------------------------------------------------------------------------------+-----------+
 
 

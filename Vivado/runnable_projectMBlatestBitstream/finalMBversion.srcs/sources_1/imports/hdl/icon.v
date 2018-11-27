@@ -22,12 +22,13 @@
 
 module icon(
     input clk,
-    input [7:0] locXReg, locYReg, botInfoReg,
+    input [7:0] locXReg, locYReg,
+    input [2:0] orientation1,
     //input [6:0] map_row, map_col,
     input [11:0] pixel_row, pixel_column,
     output reg [1:0] icon
     );
-    reg [2:0] orientation, orientation1;
+    reg [2:0] orientation;
     //store reg for each different icon orientation
     
     //icon registers (shifted and clked)
@@ -87,7 +88,6 @@ module icon(
     
     //combinatorial logic, to determine icon mem address and whether to read from the icon memory, output transparent
     always@(*) begin
-        orientation1 = botInfoReg[2:0];
         read1a = 0;
         read2a = 0; //both read1 and read2 must be 1 for icon memory to be read, says that the icon is within the 24X32 box range (display size)
         map_row1 = 0; //default row index

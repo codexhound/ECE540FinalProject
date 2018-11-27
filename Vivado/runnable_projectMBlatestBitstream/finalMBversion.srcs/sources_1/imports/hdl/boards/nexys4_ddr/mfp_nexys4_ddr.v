@@ -73,20 +73,40 @@ module mfp_nexys4_ddr(
   wire [31:0] haddr;
   wire [31:0] hrdata;
   wire [31:0] hwdata;
-  wire hwrite;
+  wire hwrite, video_on;
   wire [5:0] pbtn_in;
   wire [31:0] IO_BOTINFO;
   
-  wire [7:0] iobotcntr, LocX_reg, LocY_reg, Sensors_reg, iobotinfo;
-  wire iointack, iobotupdtsync, bot_update;
+  //ball bot signals//////////////////////////////////////
+  wire soft_rst, mazeEnd, hitMazeWall, deadlock;  
+  wire [11:0] x_acc_2sComp, y_acc_2sComp;    
+  wire [23:0] xy_acc_2sCmp;
+  wire [1:0] x_speed, y_speed;
+  wire [7:0] iobotcntr, LocX_reg, LocY_reg, iobotinfo;
+  wire [2:0] ball_dir, ball_direction_internal;
+
+  assign y_speed = iobotcntr[7:6];
+  assign x_speed = iobotcntr[5:4];
+  assign ball_dir = iobotcntr[2:0];
+
+  assign xy_acc_2sCmp[23:12] = x_acc_2sComp;
+  assign xy_acc_2sCmp[11:0] = y_acc_2sComp;
+
+  assign iobotinfo[7:6] = 0;
+  assign iobotinfo[5] = mazeEnd;
+  assign iobotinfo[4] = hitMazeWall;
+  assign iobotinfo[3] = deadlock;
+  assign iobotinfo[2:0] = ball_direction_internal;
+
+  assign IO_BOTINFO[31:24] = 0;
+  assign IO_BOTINFO[23:16] = LocX_reg;
+  assign IO_BOTINFO[15:8] = LocY_reg;
+  assign IO_BOTINFO[7:0] = iobotinfo;
+
+  /////////////////////////////////////////////////////////
   wire [13:0] worldmap_addr, vid_addr;
   wire [11:0] pixel_row, pixel_column;    
   wire [1:0] worldmap_data, world_pixel, icon, worldmap_data_shifted, world_pixel_shifted;    
-  
-  assign IO_BOTINFO[31:24] = LocX_reg;
-  assign IO_BOTINFO[23:16] = LocY_reg;
-  assign IO_BOTINFO[15:8] = Sensors_reg;
-  assign IO_BOTINFO[7:0] = iobotinfo;
   
   assign pbtn_in[5] = CPU_RESETN;
   assign pbtn_in[4] = BTNC;
@@ -105,8 +125,6 @@ module mfp_nexys4_ddr(
   assign CG = dispout[0];
   
   assign AN = dispenout;
-  
-
   
   ///////////////////////////////////////////////////
                                         
@@ -137,47 +155,44 @@ module mfp_nexys4_ddr(
                                                             .IO_LED(LED),
                                                             .disenout(dispenout),
                                                             .disout(dispout),
-                                                            .IO_BotCtrl(iobotcntr), 
-                                                            .IO_BotInfo(IO_BOTINFO), 
-                                                            .IO_INT_ACK(iointack),
-                                                            .IO_BotUpdt_Sync(iobotupdtsync),
                                                             .UART_RX(UART_TXD_IN),
                                                             
                                                             .x_acc(x_acc_w),
                                                             .y_acc(y_acc_w),
-                                                            .z_acc(z_acc_w)
-                                                            
-                                                            );
-                                                                                                       
-                                                            
-handshakeflipflop handshakeflipflop (
-    .clk50(clk_out50),
-    .IO_INT_ACK(iointack),
-    .IO_BotUpdt_Sync(iobotupdtsync), 
-    .IO_BotUpdt(bot_update));
+                                                            .z_acc(z_acc_w),
+
+                                                            //ball robot inputs/outputs
+                                                            .soft_reset(soft_rst), //(i)
+                                                            .IO_BotCtrl(iobotcntr), //(i)
+                                                            .IO_BotInfo(IO_BOTINFO) //(o)
+                                                            );                                                          
 
 //delay world pixel by 1 more clks after change in display in (2 total)
 //reason is it takes icon pixel 2 clks for valid data after change of display in(pipelining) 
-delayWorldPixel(
+delayWorldPixel delayWorldPixel(
        .clk(clk_out75),
        .dina(worldmap_data),
        .dinb(world_pixel),
        .douta(worldmap_data_shifted),
        .doutb(world_pixel_shifted)
-        );
-                                                            
-rojobot31_0 rojobot31_0 (
-                                                                .MotCtl_in(iobotcntr),
-                                                                .LocX_reg(LocX_reg),
-                                                                .LocY_reg(LocY_reg),
-                                                                .Sensors_reg(Sensors_reg),
-                                                                .BotInfo_reg(iobotinfo),
-                                                                .worldmap_addr(worldmap_addr),
-                                                                .worldmap_data(worldmap_data_shifted),
-                                                                .clk_in(clk_out75),
-                                                                .reset(~pbtn_db[5]),
-                                                                .upd_sysregs(bot_update),
-                                                                .Bot_Config_reg(switch_db[7:0]));
+        );                                          
+
+    maze_bot maze_bot(
+        .clk(clk_out75),
+        .ball_direction(ball_dir),
+        .LocX_reg(LocX_reg),
+        .LocY_reg(LocY_reg),
+        .rst(pbtn_db[5]),
+        .soft_rst(soft_rst),
+        .x_speed(x_speed),
+        .y_speed(y_speed),
+        .mapPixel(worldmap_data_shifted),
+        .mazeEnd(mazeEnd), 
+        .hitMazeWall(hitMazeWall), 
+        .deadlock(deadlock),
+        .mapAddress(worldmap_addr),
+        .internal_ball_direction(ball_direction_internal)
+    );                                       
                                                                 
 world_map world_map(
     .clka(clk_out75),
@@ -213,7 +228,7 @@ world_map world_map(
           .clk(clk_out75),
           .locXReg(LocX_reg),
           .locYReg(LocY_reg),
-          .botInfoReg(iobotinfo),
+          .orientation1(ball_direction_internal),
           .pixel_row(pixel_row),
           .pixel_column(pixel_column),
           .icon(icon));

@@ -22,9 +22,7 @@ module mfp_ahb_gpio(
     output reg [`MFP_N_LED-1 :0] IO_LED,
     output reg [7:0] IO_BotCtrl,
     input [31:0] IO_BotInfo, 
-    output reg IO_INT_ACK,
-    input IO_BotUpdt_Sync,
-                        
+    output reg soft_reset,                
                         
     // final project additions
     input [11:0] x_acc,
@@ -54,13 +52,13 @@ module mfp_ahb_gpio(
        if (~HRESETn) begin
          IO_LED <= `MFP_N_LED'b0; 
          IO_BotCtrl <= 0;
-         IO_INT_ACK <= 0;
+         soft_reset <= 1; //inactive high
        end
        else if (we)
          case (HADDR_d)
            `H_LED_IONUM: IO_LED <= HWDATA[`MFP_N_LED-1:0];
            `H_IO_BotCtrl: IO_BotCtrl <= HWDATA[7:0];
-           `H_IO_INT_ACK: IO_INT_ACK <= HWDATA[0];
+           `H_IO_SoftReset: soft_reset <= HWDATA[0];
          endcase
     
 	always @(posedge HCLK or negedge HRESETn)
@@ -72,10 +70,6 @@ module mfp_ahb_gpio(
            `H_SW_IONUM: HRDATA <= { {32 - `MFP_N_SW {1'b0}}, IO_Switch };
            `H_PB_IONUM: HRDATA <= { {32 - `MFP_N_PB {1'b0}}, IO_PB };
            `H_IO_BotInfo: HRDATA <= IO_BotInfo;
-           `H_IO_BotUpdt_Sync: begin
-                HRDATA[31:1] <= 0;
-                HRDATA[0] <= IO_BotUpdt_Sync;
-            end
             
             `H_IO_ACC_X: begin
                 HRDATA[11:0] <= x_acc;     
