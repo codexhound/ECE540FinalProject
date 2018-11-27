@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 26 17:36:02 2018
+# Process ID: 20036
+# Current directory: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18608 C:\Users\Chelsea\Documents\GitHub\ECE540FinalProject\Vivado\runnable_project\runnable_project.xpr
+# Log file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_project/vivado.log
+# Journal file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_project/runnable_project.xpr
+INFO: [Project 1-313] Project file moved from 'E:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/runnable_project' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/archive_project_summary.txt', nor could it be found using path 'E:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/archive_project_summary.txt'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0', nor could it be found using path 'E:/ECE540FinalProject-master/ECE540FinalProject-master/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'rojobot31_0' is locked:
+* IP definition 'rojobot31 (1.0)' for IP 'rojobot31_0' (customized with software release 2018.2) was not found in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.4)' for IP 'clk_wiz_0' (customized with software release 2017.4.1) has a newer major version in the IP Catalog.
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 919.184 ; gain = 223.406
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 15:48:23 2018...

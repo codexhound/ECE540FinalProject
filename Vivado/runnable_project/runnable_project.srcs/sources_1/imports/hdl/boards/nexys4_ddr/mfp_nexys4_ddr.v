@@ -80,7 +80,8 @@ module mfp_nexys4_ddr(
   wire iointack, iobotupdtsync, bot_update;
   wire [13:0] worldmap_addr, vid_addr;
   wire [11:0] pixel_row, pixel_column;    
-  wire [1:0] worldmap_data, world_pixel, icon, worldmap_data_shifted, world_pixel_shifted;    
+  wire [1:0] worldmap_data, world_pixel, icon, worldmap_data_shifted, world_pixel_shifted;  
+  wire video_on;
   
   assign IO_BOTINFO[31:24] = LocX_reg;
   assign IO_BOTINFO[23:16] = LocY_reg;
