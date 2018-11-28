@@ -39,12 +39,12 @@ reg wallHit;
 reg [1:0] resetState;
 
 parameter   NORTH = 3'd0,
-            SOUTH = 3'd1,
+            NORTHEAST = 3'd1,
             EAST = 3'd2,
-            WEST = 3'd3,
-            NORTHEAST = 3'd4,
-            SOUTHEAST = 3'd5,
-            SOUTHWEST = 3'd6,
+            SOUTHEAST = 3'd3,
+            SOUTH = 3'd4,
+            SOUTHWEST = 3'd5,
+            WEST = 3'd6,
             NORTHWEST = 3'd7;
 
 parameter   IDLE = 2'd0,
@@ -61,8 +61,6 @@ parameter   SLOWESTCOUNT = 29'd112500000,
             FASTCOUNT = 29'd56250000;
     
 initial begin
-	count_limit_x = 112500000; //every 1.5 seconds -> update
-    count_limit_y = 112500000; //every 1.5 seconds -> update
     counter_x = 0;
     counter_y = 0;
     prev_LocX_reg = 64;
@@ -102,7 +100,7 @@ end
 
 always @(posedge clk) begin
     if(!rst || !soft_rst) begin
-        internal_ball_direction = 0;
+        internal_ball_direction <= 0;
         counter_x <= 0;
         counter_y <= 0;
         LocX_reg <=  64;

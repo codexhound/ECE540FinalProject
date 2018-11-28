@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "post_route_phys_opt_design", "begin" );
 ISEStep( "vivado",
          "-log mfp_nexys4_ddr.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mfp_nexys4_ddr.tcl -notrace" );
 

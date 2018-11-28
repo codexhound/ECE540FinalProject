@@ -60,9 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -ruleid {1}  -id {filemgmt 56-3}  -string {{WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'.}}  -suppress 
 set_msg_config  -ruleid {2}  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/archive_project_summary.txt'.}}  -suppress 
 set_msg_config  -ruleid {3}  -id {IP_Flow 19-2162}  -string {{WARNING: [IP_Flow 19-2162] IP 'rojobot31_0' is locked:
@@ -73,12 +70,30 @@ If this directory should no longer be in your list of user repositories, go to t
 set_msg_config  -ruleid {5}  -id {Synth 8-4445}  -string {{CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'ram_b0.txt'; please make sure the file is added to project and has read permission, ignoring [C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/runnable_project.srcs/sources_1/imports/hdl/system/memories/ram_b0.v:19]}}  -suppress 
 set_msg_config  -ruleid {6}  -id {Synth 8-4442}  -string {{CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_wiz_0 has unconnected pin reset}}  -suppress 
 
+start_step post_route_phys_opt_design
+set ACTIVE_STEP post_route_phys_opt_design
+set rc [catch {
+  create_msg_db post_route_phys_opt_design.pb
+  open_checkpoint mfp_nexys4_ddr_routed.dcp
+  set_property webtalk.parent_dir C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.cache/wt [current_project]
+  phys_opt_design 
+  write_checkpoint -force mfp_nexys4_ddr_postroute_physopt.dcp
+  create_report "impl_1_post_route_phys_opt_report_timing_summary_0" "report_timing_summary -max_paths 10 -warn_on_violation -file mfp_nexys4_ddr_timing_summary_postroute_physopted.rpt -pb mfp_nexys4_ddr_timing_summary_postroute_physopted.pb -rpx mfp_nexys4_ddr_timing_summary_postroute_physopted.rpx"
+  create_report "impl_1_post_route_phys_opt_report_bus_skew_0" "report_bus_skew -warn_on_violation -file mfp_nexys4_ddr_bus_skew_postroute_physopted.rpt -pb mfp_nexys4_ddr_bus_skew_postroute_physopted.pb -rpx mfp_nexys4_ddr_bus_skew_postroute_physopted.rpx"
+  close_msg_db -file post_route_phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed post_route_phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step post_route_phys_opt_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  open_checkpoint mfp_nexys4_ddr_postroute_physopt.dcp
-  set_property webtalk.parent_dir C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force mfp_nexys4_ddr.mmi }
   write_bitstream -force mfp_nexys4_ddr.bit 
