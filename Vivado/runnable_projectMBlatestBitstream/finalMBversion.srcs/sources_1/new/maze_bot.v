@@ -56,9 +56,9 @@ parameter   BLACK = 2'd1,
             WHITE = 2'd0,
             RED = 2'd2;
 
-parameter   SLOWESTCOUNT = 29'd112500000,
-            SLOWCOUNT = 29'd75000000,
-            FASTCOUNT = 29'd56250000;
+parameter   SLOWESTCOUNT = 29'd8775000,
+            SLOWCOUNT = 29'd6442500,
+            FASTCOUNT = 29'd4050000;
     
 initial begin
     counter_x = 0;

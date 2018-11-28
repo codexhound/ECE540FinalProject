@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Tue Nov 27 17:56:44 2018
+| Date         : Wed Nov 28 11:47:43 2018
 | Host         : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
 | Command      : report_drc -file mfp_nexys4_ddr_drc_routed.rpt -pb mfp_nexys4_ddr_drc_routed.pb -rpx mfp_nexys4_ddr_drc_routed.rpx
 | Design       : mfp_nexys4_ddr
@@ -24,13 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 53
+             Violations found: 52
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 2          |
-| PDRC-61   | Warning  | SLICEM_5lutO5_C5                                    | 1          |
 | PLCK-12   | Warning  | Clock Placer Checks                                 | 1          |
 | PLIO-3    | Warning  | Placement Constraints Check for IO constraints      | 2          |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
@@ -61,11 +60,6 @@ Related violations: <none>
 CHECK-3#2 Warning
 Report rule limit reached  
 REQP-1840 rule limit reached: 20 violations have been found.
-Related violations: <none>
-
-PDRC-61#1 Warning
-SLICEM_5lutO5_C5  
-Dangling output pin O5 on site SLICE_X6Y7:C5LUT. For this programming the O5 output pin should have a signal.
 Related violations: <none>
 
 PLCK-12#1 Warning
