@@ -110,13 +110,13 @@ Disassembly of section .bootrom:
 9fc00144 <_start>:
 9fc00144:	03e08025 	move	s0,ra
 9fc00148:	3c1c8001 	lui	gp,0x8001
-9fc0014c:	279c8260 	addiu	gp,gp,-32160
+9fc0014c:	279c85a0 	addiu	gp,gp,-31328
 9fc00150:	3c1d8004 	lui	sp,0x8004
 9fc00154:	27bd0000 	addiu	sp,sp,0
 9fc00158:	3c028000 	lui	v0,0x8000
-9fc0015c:	24420260 	addiu	v0,v0,608
+9fc0015c:	244205a0 	addiu	v0,v0,1440
 9fc00160:	3c038000 	lui	v1,0x8000
-9fc00164:	24630260 	addiu	v1,v1,608
+9fc00164:	246305a0 	addiu	v1,v1,1440
 9fc00168:	10430004 	beq	v0,v1,9fc0017c <_start+0x38>
 9fc0016c:	00000000 	nop
 9fc00170:	24420004 	addiu	v0,v0,4
@@ -180,22 +180,296 @@ Disassembly of section .text:
 80000200:	00000000 	nop
 
 80000204 <main>:
-80000204:	3c14bf80 	lui	s4,0xbf80
-80000208:	3694001c 	ori	s4,s4,0x1c
-8000020c:	3c15bf80 	lui	s5,0xbf80
-80000210:	36b50020 	ori	s5,s5,0x20
-80000214:	3c16bf80 	lui	s6,0xbf80
-80000218:	36d60024 	ori	s6,s6,0x24
-8000021c:	24080000 	li	t0,0
-80000220:	24090000 	li	t1,0
-80000224:	240a0000 	li	t2,0
+80000204:	3c1bbf70 	lui	k1,0xbf70
+80000208:	377b0008 	ori	k1,k1,0x8
+8000020c:	241a0000 	li	k0,0
+80000210:	af7a0000 	sw	k0,0(k1)
+80000214:	3c1bbf70 	lui	k1,0xbf70
+80000218:	377b0004 	ori	k1,k1,0x4
+8000021c:	241a0000 	li	k0,0
+80000220:	af7a0000 	sw	k0,0(k1)
+80000224:	3c04bf70 	lui	a0,0xbf70
+80000228:	241a0000 	li	k0,0
+8000022c:	ac9a0000 	sw	k0,0(a0)
+80000230:	3c14bf80 	lui	s4,0xbf80
+80000234:	3694001c 	ori	s4,s4,0x1c
+80000238:	3c15bf80 	lui	s5,0xbf80
+8000023c:	36b50020 	ori	s5,s5,0x20
+80000240:	3c16bf80 	lui	s6,0xbf80
+80000244:	36d60024 	ori	s6,s6,0x24
+80000248:	8e900000 	lw	s0,0(s4)
+8000024c:	8eb10000 	lw	s1,0(s5)
+80000250:	8ed20000 	lw	s2,0(s6)
+80000254:	20170000 	addi	s7,zero,0
+80000258:	3c0abf80 	lui	t2,0xbf80
+8000025c:	a5570000 	sh	s7,0(t2)
 
-80000228 <readIO>:
-80000228:	8e880000 	lw	t0,0(s4)
-8000022c:	8ea90000 	lw	t1,0(s5)
-80000230:	1000fffd 	b	80000228 <readIO>
-80000234:	8eca0000 	lw	t2,0(s6)
-80000238:	00000000 	nop
+80000260 <readIO>:
+80000260:	240a0032 	li	t2,50
+80000264:	8e8c0000 	lw	t4,0(s4)
+80000268:	0c000113 	jal	8000044c <LT_TEMP_MINUS_TOLERANCE>
+8000026c:	00103820 	add	a3,zero,s0
+80000270:	00078020 	add	s0,zero,a3
+80000274:	8eac0000 	lw	t4,0(s5)
+80000278:	0c000113 	jal	8000044c <LT_TEMP_MINUS_TOLERANCE>
+8000027c:	00113820 	add	a3,zero,s1
+80000280:	00078820 	add	s1,zero,a3
+80000284:	8ecc0000 	lw	t4,0(s6)
+80000288:	0c000113 	jal	8000044c <LT_TEMP_MINUS_TOLERANCE>
+8000028c:	00123820 	add	a3,zero,s2
+80000290:	00079020 	add	s2,zero,a3
+80000294:	200c0001 	addi	t4,zero,1
+80000298:	200700fe 	addi	a3,zero,254
+8000029c:	0c000120 	jal	80000480 <LED_FUNCITON>
+800002a0:	00104020 	add	t0,zero,s0
+800002a4:	200c0002 	addi	t4,zero,2
+800002a8:	200700fd 	addi	a3,zero,253
+800002ac:	0c000120 	jal	80000480 <LED_FUNCITON>
+800002b0:	00114020 	add	t0,zero,s1
+800002b4:	200c0004 	addi	t4,zero,4
+800002b8:	200700fb 	addi	a3,zero,251
+800002bc:	0c000120 	jal	80000480 <LED_FUNCITON>
+800002c0:	00124020 	add	t0,zero,s2
+800002c4:	3c0cbf70 	lui	t4,0xbf70
+800002c8:	358c0008 	ori	t4,t4,0x8
+800002cc:	0c00012d 	jal	800004b4 <BCD_FUNCTION>
+800002d0:	00103820 	add	a3,zero,s0
+800002d4:	3c0cbf70 	lui	t4,0xbf70
+800002d8:	358c0004 	ori	t4,t4,0x4
+800002dc:	0c00012d 	jal	800004b4 <BCD_FUNCTION>
+800002e0:	00113820 	add	a3,zero,s1
+800002e4:	320e0800 	andi	t6,s0,0x800
+800002e8:	322f0800 	andi	t7,s1,0x800
+800002ec:	00103820 	add	a3,zero,s0
+800002f0:	15c00005 	bnez	t6,80000308 <CALCULATE_TWOS_COMPLEMENT_X>
+800002f4:	00114020 	add	t0,zero,s1
+800002f8:	15c00009 	bnez	t6,80000320 <CALCULATE_TWOS_COMPLEMENT_Y>
+800002fc:	00000000 	nop
+80000300:	080000cb 	j	8000032c <POST_TWO_COMPLEMENT_LOGIC>
+80000304:	00000000 	nop
+
+80000308 <CALCULATE_TWOS_COMPLEMENT_X>:
+80000308:	0c00015b 	jal	8000056c <TWOS_COMPLEMENT_FUNCTION>
+8000030c:	00101020 	add	v0,zero,s0
+80000310:	15e00003 	bnez	t7,80000320 <CALCULATE_TWOS_COMPLEMENT_Y>
+80000314:	00023820 	add	a3,zero,v0
+80000318:	080000cb 	j	8000032c <POST_TWO_COMPLEMENT_LOGIC>
+8000031c:	00000000 	nop
+
+80000320 <CALCULATE_TWOS_COMPLEMENT_Y>:
+80000320:	0c00015b 	jal	8000056c <TWOS_COMPLEMENT_FUNCTION>
+80000324:	00101020 	add	v0,zero,s0
+80000328:	00024020 	add	t0,zero,v0
+
+8000032c <POST_TWO_COMPLEMENT_LOGIC>:
+8000032c:	200b012c 	addi	t3,zero,300
+80000330:	00eb602a 	slt	t4,a3,t3
+80000334:	11800006 	beqz	t4,80000350 <X_GT_300>
+80000338:	00000000 	nop
+8000033c:	010b602a 	slt	t4,t0,t3
+80000340:	11800010 	beqz	t4,80000384 <Y_GT_300>
+80000344:	00000000 	nop
+80000348:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+8000034c:	24070000 	li	a3,0
+
+80000350 <X_GT_300>:
+80000350:	010b602a 	slt	t4,t0,t3
+80000354:	15800003 	bnez	t4,80000364 <X_GT_300_AND_Y_LT_300>
+80000358:	00000000 	nop
+8000035c:	080000ee 	j	800003b8 <X_GT_300_AND_Y_GT_300>
+80000360:	00000000 	nop
+
+80000364 <X_GT_300_AND_Y_LT_300>:
+80000364:	15c00003 	bnez	t6,80000374 <X_GT_300_AND_Y_LT_300_X_NEG>
+80000368:	00000000 	nop
+8000036c:	080000df 	j	8000037c <X_GT_300_AND_Y_LT_300_X_POS>
+80000370:	00000000 	nop
+
+80000374 <X_GT_300_AND_Y_LT_300_X_NEG>:
+80000374:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+80000378:	24070001 	li	a3,1
+
+8000037c <X_GT_300_AND_Y_LT_300_X_POS>:
+8000037c:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+80000380:	24070000 	li	a3,0
+
+80000384 <Y_GT_300>:
+80000384:	00eb602a 	slt	t4,a3,t3
+80000388:	15800003 	bnez	t4,80000398 <X_LT_300_AND_Y_GT_300>
+8000038c:	00000000 	nop
+80000390:	080000ee 	j	800003b8 <X_GT_300_AND_Y_GT_300>
+80000394:	00000000 	nop
+
+80000398 <X_LT_300_AND_Y_GT_300>:
+80000398:	15e00003 	bnez	t7,800003a8 <X_LT_300_AND_Y_GT_300_Y_NEG>
+8000039c:	00000000 	nop
+800003a0:	080000ec 	j	800003b0 <X_LT_300_AND_Y_GT_300_Y_POS>
+800003a4:	00000000 	nop
+
+800003a8 <X_LT_300_AND_Y_GT_300_Y_NEG>:
+800003a8:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003ac:	24070002 	li	a3,2
+
+800003b0 <X_LT_300_AND_Y_GT_300_Y_POS>:
+800003b0:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003b4:	24070003 	li	a3,3
+
+800003b8 <X_GT_300_AND_Y_GT_300>:
+800003b8:	15c00007 	bnez	t6,800003d8 <X_GT_300_AND_Y_GT_300_X_NEG>
+800003bc:	24070000 	li	a3,0
+800003c0:	15e00009 	bnez	t7,800003e8 <X_GT_300_AND_Y_GT_300_X_POS_Y_NEG>
+800003c4:	00000000 	nop
+800003c8:	080000fe 	j	800003f8 <X_GT_300_AND_Y_GT_300_X_POS_AND_Y_POS>
+800003cc:	00000000 	nop
+800003d0:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003d4:	00000000 	nop
+
+800003d8 <X_GT_300_AND_Y_GT_300_X_NEG>:
+800003d8:	15e00005 	bnez	t7,800003f0 <X_GT_300_AND_Y_GT_300_X_NEG_Y_NEG>
+800003dc:	00000000 	nop
+800003e0:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003e4:	24070006 	li	a3,6
+
+800003e8 <X_GT_300_AND_Y_GT_300_X_POS_Y_NEG>:
+800003e8:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003ec:	24070004 	li	a3,4
+
+800003f0 <X_GT_300_AND_Y_GT_300_X_NEG_Y_NEG>:
+800003f0:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003f4:	24070005 	li	a3,5
+
+800003f8 <X_GT_300_AND_Y_GT_300_X_POS_AND_Y_POS>:
+800003f8:	08000100 	j	80000400 <END_OF_DIRECTION_LOGIC>
+800003fc:	24070007 	li	a3,7
+
+80000400 <END_OF_DIRECTION_LOGIC>:
+80000400:	3c0cbf80 	lui	t4,0xbf80
+80000404:	358c0014 	ori	t4,t4,0x14
+80000408:	3c14bf80 	lui	s4,0xbf80
+8000040c:	3694001c 	ori	s4,s4,0x1c
+80000410:	3c15bf80 	lui	s5,0xbf80
+80000414:	36b50020 	ori	s5,s5,0x20
+80000418:	3c16bf80 	lui	s6,0xbf80
+8000041c:	36d60024 	ori	s6,s6,0x24
+80000420:	8e900000 	lw	s0,0(s4)
+80000424:	8eb10000 	lw	s1,0(s5)
+80000428:	8ed20000 	lw	s2,0(s6)
+8000042c:	24130001 	li	s3,1
+80000430:	00139980 	sll	s3,s3,0x6
+80000434:	00f33820 	add	a3,a3,s3
+80000438:	24130001 	li	s3,1
+8000043c:	00139900 	sll	s3,s3,0x4
+80000440:	00f33820 	add	a3,a3,s3
+80000444:	08000098 	j	80000260 <readIO>
+80000448:	ad870000 	sw	a3,0(t4)
+
+8000044c <LT_TEMP_MINUS_TOLERANCE>:
+8000044c:	00ea5822 	sub	t3,a3,t2
+80000450:	018b682a 	slt	t5,t4,t3
+80000454:	24010001 	li	at,1
+80000458:	11a10007 	beq	t5,at,80000478 <SET_XYZ>
+8000045c:	00000000 	nop
+
+80000460 <GT_TEMP_PLUS_TOLERANCE>:
+80000460:	00ea5820 	add	t3,a3,t2
+80000464:	018b682a 	slt	t5,t4,t3
+80000468:	11a00003 	beqz	t5,80000478 <SET_XYZ>
+8000046c:	00000000 	nop
+80000470:	03e00008 	jr	ra
+80000474:	00000000 	nop
+
+80000478 <SET_XYZ>:
+80000478:	03e00008 	jr	ra
+8000047c:	01803820 	add	a3,t4,zero
+
+80000480 <LED_FUNCITON>:
+80000480:	3c0abf80 	lui	t2,0xbf80
+80000484:	310e0800 	andi	t6,t0,0x800
+80000488:	15c00003 	bnez	t6,80000498 <NEGATIVE>
+8000048c:	00000000 	nop
+80000490:	08000128 	j	800004a0 <POSITIVE>
+80000494:	00000000 	nop
+
+80000498 <NEGATIVE>:
+80000498:	0800012a 	j	800004a8 <checkposEnd>
+8000049c:	02ecb825 	or	s7,s7,t4
+
+800004a0 <POSITIVE>:
+800004a0:	0800012a 	j	800004a8 <checkposEnd>
+800004a4:	02e7b824 	and	s7,s7,a3
+
+800004a8 <checkposEnd>:
+800004a8:	03e00008 	jr	ra
+800004ac:	a5570000 	sh	s7,0(t2)
+800004b0:	00000000 	nop
+
+800004b4 <BCD_FUNCTION>:
+800004b4:	00071020 	add	v0,zero,a3
+800004b8:	304e0800 	andi	t6,v0,0x800
+800004bc:	15c00003 	bnez	t6,800004cc <TWOS_COMPLEMENT>
+800004c0:	00000000 	nop
+800004c4:	08000136 	j	800004d8 <SKIP_TWOS_COMPLEMENT>
+800004c8:	00000000 	nop
+
+800004cc <TWOS_COMPLEMENT>:
+800004cc:	00401027 	nor	v0,v0,zero
+800004d0:	20420001 	addi	v0,v0,1
+800004d4:	30420fff 	andi	v0,v0,0xfff
+
+800004d8 <SKIP_TWOS_COMPLEMENT>:
+800004d8:	24050000 	li	a1,0
+800004dc:	24040000 	li	a0,0
+800004e0:	24180000 	li	t8,0
+800004e4:	24190000 	li	t9,0
+
+800004e8 <COUNT_1000S>:
+800004e8:	2043fc18 	addi	v1,v0,-1000
+800004ec:	04600004 	bltz	v1,80000500 <COUNT_100S>
+800004f0:	00000000 	nop
+800004f4:	20a50001 	addi	a1,a1,1
+800004f8:	0800013a 	j	800004e8 <COUNT_1000S>
+800004fc:	00031020 	add	v0,zero,v1
+
+80000500 <COUNT_100S>:
+80000500:	2043ff9c 	addi	v1,v0,-100
+80000504:	04600004 	bltz	v1,80000518 <COUNT_10S>
+80000508:	00000000 	nop
+8000050c:	20840001 	addi	a0,a0,1
+80000510:	08000140 	j	80000500 <COUNT_100S>
+80000514:	00031020 	add	v0,zero,v1
+
+80000518 <COUNT_10S>:
+80000518:	2043fff6 	addi	v1,v0,-10
+8000051c:	04600004 	bltz	v1,80000530 <COUNT_1S>
+80000520:	00000000 	nop
+80000524:	23180001 	addi	t8,t8,1
+80000528:	08000146 	j	80000518 <COUNT_10S>
+8000052c:	00031020 	add	v0,zero,v1
+
+80000530 <COUNT_1S>:
+80000530:	2043ffff 	addi	v1,v0,-1
+80000534:	04600004 	bltz	v1,80000548 <END_BCD>
+80000538:	00000000 	nop
+8000053c:	23390001 	addi	t9,t9,1
+80000540:	0800014c 	j	80000530 <COUNT_1S>
+80000544:	00031020 	add	v0,zero,v1
+
+80000548 <END_BCD>:
+80000548:	00052e00 	sll	a1,a1,0x18
+8000054c:	00042400 	sll	a0,a0,0x10
+80000550:	0018c200 	sll	t8,t8,0x8
+80000554:	00852825 	or	a1,a0,a1
+80000558:	03052825 	or	a1,t8,a1
+8000055c:	03252825 	or	a1,t9,a1
+80000560:	03e00008 	jr	ra
+80000564:	ad850000 	sw	a1,0(t4)
+80000568:	00000000 	nop
+
+8000056c <TWOS_COMPLEMENT_FUNCTION>:
+8000056c:	00401027 	nor	v0,v0,zero
+80000570:	20420001 	addi	v0,v0,1
+80000574:	03e00008 	jr	ra
+80000578:	30420fff 	andi	v0,v0,0xfff
 
 Disassembly of section .debug_aranges:
 
@@ -233,7 +507,7 @@ Disassembly of section .debug_aranges:
   88:	00040000 	sll	zero,a0,0x0
   8c:	00000000 	nop
   90:	80000204 	lb	zero,516(zero)
-  94:	00000038 	0x38
+  94:	00000378 	0x378
 	...
 
 Disassembly of section .debug_info:
@@ -250,7 +524,7 @@ Disassembly of section .debug_info:
   20:	73555c3a 	0x73555c3a
   24:	5c737265 	0x5c737265
   28:	706d6152 	udi2	v1,t5,t4,0x5
-  2c:	56746e61 	bnel	s3,s4,1b9b4 <__isr_vec_space+0x1b994>
+  2c:	56746e61 	bnel	s3,s4,1b9b4 <BIT_12_MASK+0x1b1b4>
   30:	72636c65 	s8sdi	xr1,s3,-37,ptn0
   34:	65445c6f 	0x65445c6f
   38:	6f746b73 	0x6f746b73
@@ -259,7 +533,7 @@ Disassembly of section .debug_info:
   44:	7463656a 	jalx	18d95a8 <__memory_size+0x18b9da8>
   48:	6f735c31 	0x6f735c31
   4c:	61777466 	0x61777466
-  50:	47006572 	bz.b	$w0,1961c <__isr_vec_space+0x195fc>
+  50:	47006572 	bz.b	$w0,1961c <BIT_12_MASK+0x18e1c>
   54:	4120554e 	0x4120554e
   58:	2e322053 	sltiu	s2,s1,8275
   5c:	392e3432 	xori	t6,t1,0x3432
@@ -275,7 +549,7 @@ Disassembly of section .debug_info:
   84:	73555c3a 	0x73555c3a
   88:	5c737265 	0x5c737265
   8c:	706d6152 	udi2	v1,t5,t4,0x5
-  90:	56746e61 	bnel	s3,s4,1ba18 <__isr_vec_space+0x1b9f8>
+  90:	56746e61 	bnel	s3,s4,1ba18 <BIT_12_MASK+0x1b218>
   94:	72636c65 	s8sdi	xr1,s3,-37,ptn0
   98:	65445c6f 	0x65445c6f
   9c:	6f746b73 	0x6f746b73
@@ -284,7 +558,7 @@ Disassembly of section .debug_info:
   a8:	7463656a 	jalx	18d95a8 <__memory_size+0x18b9da8>
   ac:	6f735c31 	0x6f735c31
   b0:	61777466 	0x61777466
-  b4:	47006572 	bz.b	$w0,19680 <__isr_vec_space+0x19660>
+  b4:	47006572 	bz.b	$w0,19680 <BIT_12_MASK+0x18e80>
   b8:	4120554e 	0x4120554e
   bc:	2e322053 	sltiu	s2,s1,8275
   c0:	392e3432 	xori	t6,t1,0x3432
@@ -297,7 +571,7 @@ Disassembly of section .debug_info:
   dc:	80000198 	lb	zero,408(zero)
   e0:	65637865 	0x65637865
   e4:	6f697470 	0x6f697470
-  e8:	532e736e 	beql	t9,t6,1cea4 <__isr_vec_space+0x1ce84>
+  e8:	532e736e 	beql	t9,t6,1cea4 <BIT_12_MASK+0x1c6a4>
   ec:	5c3a4300 	0x5c3a4300
   f0:	72657355 	s32sdi	xr13,s3,1392
   f4:	61525c73 	0x61525c73
@@ -306,12 +580,12 @@ Disassembly of section .debug_info:
  100:	5c6f7263 	0x5c6f7263
  104:	6b736544 	0x6b736544
  108:	5c706f74 	0x5c706f74
- 10c:	50636f53 	beql	v1,v1,1be5c <__isr_vec_space+0x1be3c>
+ 10c:	50636f53 	beql	v1,v1,1be5c <BIT_12_MASK+0x1b65c>
  110:	656a6f72 	0x656a6f72
  114:	5c317463 	0x5c317463
  118:	74666f73 	jalx	199bdcc <__memory_size+0x197c5cc>
  11c:	65726177 	0x65726177
- 120:	554e4700 	bnel	t2,t6,11d24 <__isr_vec_space+0x11d04>
+ 120:	554e4700 	bnel	t2,t6,11d24 <BIT_12_MASK+0x11524>
  124:	20534120 	addi	s3,v0,16672
  128:	34322e32 	ori	s2,at,0x2e32
  12c:	0030392e 	0x30392e
@@ -325,7 +599,7 @@ Disassembly of section .debug_info:
  14c:	2e796d6d 	sltiu	t9,s3,28013
  150:	3a430053 	xori	v1,s2,0x53
  154:	6573555c 	0x6573555c
- 158:	525c7372 	beql	s2,gp,1cf24 <__isr_vec_space+0x1cf04>
+ 158:	525c7372 	beql	s2,gp,1cf24 <BIT_12_MASK+0x1c724>
  15c:	61706d61 	0x61706d61
  160:	6556746e 	0x6556746e
  164:	6f72636c 	0x6f72636c
@@ -337,20 +611,20 @@ Disassembly of section .debug_info:
  17c:	666f735c 	0x666f735c
  180:	72617774 	q16sll	xr13,xr13,xr5,xr8,9
  184:	4e470065 	c3	0x470065
- 188:	53412055 	beql	k0,at,82e0 <__isr_vec_space+0x82c0>
+ 188:	53412055 	beql	k0,at,82e0 <BIT_12_MASK+0x7ae0>
  18c:	322e3220 	andi	t6,s1,0x3220
  190:	30392e34 	andi	t9,at,0x2e34
  194:	91800100 	lbu	zero,256(t4)
  198:	02000000 	0x2000000
  19c:	00005000 	sll	t2,zero,0x0
- 1a0:	52010400 	beql	s0,at,11a4 <__isr_vec_space+0x1184>
- 1a4:	04000001 	bltz	zero,1ac <__isr_vec_space+0x18c>
- 1a8:	3c800002 	0x3c800002
- 1ac:	6d800002 	0x6d800002
+ 1a0:	52010400 	beql	s0,at,11a4 <BIT_12_MASK+0x9a4>
+ 1a4:	04000001 	bltz	zero,1ac <LED0_OFF+0xae>
+ 1a8:	7c800002 	0x7c800002
+ 1ac:	6d800005 	0x6d800005
  1b0:	2e6e6961 	sltiu	t6,s3,26977
  1b4:	3a430053 	xori	v1,s2,0x53
  1b8:	6573555c 	0x6573555c
- 1bc:	525c7372 	beql	s2,gp,1cf88 <__isr_vec_space+0x1cf68>
+ 1bc:	525c7372 	beql	s2,gp,1cf88 <BIT_12_MASK+0x1c788>
  1c0:	61706d61 	0x61706d61
  1c4:	6556746e 	0x6556746e
  1c8:	6f72636c 	0x6f72636c
@@ -361,7 +635,7 @@ Disassembly of section .debug_info:
  1dc:	326c6c61 	andi	t4,s3,0x6c61
  1e0:	5c383130 	0x5c383130
  1e4:	35454345 	ori	a1,t2,0x4345
- 1e8:	455c3034 	bc1any4f	$fcc7,c2bc <__isr_vec_space+0xc29c>
+ 1e8:	455c3034 	bc1any4f	$fcc7,c2bc <BIT_12_MASK+0xbabc>
  1ec:	34354543 	ori	s5,at,0x4543
  1f0:	6e694630 	0x6e694630
  1f4:	72506c61 	0x72506c61
@@ -373,7 +647,7 @@ Disassembly of section .debug_info:
  20c:	63615c65 	0x63615c65
  210:	5f6c6563 	0x5f6c6563
  214:	725f6f74 	q16sll	xr13,xr11,xr13,xr7,9
- 218:	47006765 	bz.b	$w0,19fb0 <__isr_vec_space+0x19f90>
+ 218:	47006765 	bz.b	$w0,19fb0 <BIT_12_MASK+0x197b0>
  21c:	4120554e 	0x4120554e
  220:	2e322053 	sltiu	s2,s1,8275
  224:	392e3432 	xori	t6,t1,0x3432
@@ -382,30 +656,30 @@ Disassembly of section .debug_info:
 Disassembly of section .debug_abbrev:
 
 00000000 <.debug_abbrev>:
-   0:	10001101 	b	4408 <__isr_vec_space+0x43e8>
-   4:	12011106 	beq	s0,at,4420 <__isr_vec_space+0x4400>
+   0:	10001101 	b	4408 <BIT_12_MASK+0x3c08>
+   4:	12011106 	beq	s0,at,4420 <BIT_12_MASK+0x3c20>
    8:	1b080301 	0x1b080301
-   c:	13082508 	beq	t8,t0,9430 <__isr_vec_space+0x9410>
+   c:	13082508 	beq	t8,t0,9430 <BIT_12_MASK+0x8c30>
   10:	00000005 	lsa	zero,zero,zero,0x1
-  14:	10001101 	b	441c <__isr_vec_space+0x43fc>
-  18:	12011106 	beq	s0,at,4434 <__isr_vec_space+0x4414>
+  14:	10001101 	b	441c <BIT_12_MASK+0x3c1c>
+  18:	12011106 	beq	s0,at,4434 <BIT_12_MASK+0x3c34>
   1c:	1b080301 	0x1b080301
-  20:	13082508 	beq	t8,t0,9444 <__isr_vec_space+0x9424>
+  20:	13082508 	beq	t8,t0,9444 <BIT_12_MASK+0x8c44>
   24:	00000005 	lsa	zero,zero,zero,0x1
-  28:	10001101 	b	4430 <__isr_vec_space+0x4410>
-  2c:	12011106 	beq	s0,at,4448 <__isr_vec_space+0x4428>
+  28:	10001101 	b	4430 <BIT_12_MASK+0x3c30>
+  2c:	12011106 	beq	s0,at,4448 <BIT_12_MASK+0x3c48>
   30:	1b080301 	0x1b080301
-  34:	13082508 	beq	t8,t0,9458 <__isr_vec_space+0x9438>
+  34:	13082508 	beq	t8,t0,9458 <BIT_12_MASK+0x8c58>
   38:	00000005 	lsa	zero,zero,zero,0x1
-  3c:	10001101 	b	4444 <__isr_vec_space+0x4424>
-  40:	12011106 	beq	s0,at,445c <__isr_vec_space+0x443c>
+  3c:	10001101 	b	4444 <BIT_12_MASK+0x3c44>
+  40:	12011106 	beq	s0,at,445c <BIT_12_MASK+0x3c5c>
   44:	1b080301 	0x1b080301
-  48:	13082508 	beq	t8,t0,946c <__isr_vec_space+0x944c>
+  48:	13082508 	beq	t8,t0,946c <BIT_12_MASK+0x8c6c>
   4c:	00000005 	lsa	zero,zero,zero,0x1
-  50:	10001101 	b	4458 <__isr_vec_space+0x4438>
-  54:	12011106 	beq	s0,at,4470 <__isr_vec_space+0x4450>
+  50:	10001101 	b	4458 <BIT_12_MASK+0x3c58>
+  54:	12011106 	beq	s0,at,4470 <BIT_12_MASK+0x3c70>
   58:	1b080301 	0x1b080301
-  5c:	13082508 	beq	t8,t0,9480 <__isr_vec_space+0x9460>
+  5c:	13082508 	beq	t8,t0,9480 <BIT_12_MASK+0x8c80>
   60:	00000005 	lsa	zero,zero,zero,0x1
 
 Disassembly of section .debug_line:
@@ -460,7 +734,7 @@ Disassembly of section .debug_line:
   b8:	4b4c4b4b 	c2	0x14c4b4b
   bc:	4b4b4f4b 	c2	0x14b4f4b
   c0:	4c834f4b 	0x4c834f4b
-  c4:	504e4b83 	beql	v0,t6,12ed4 <__isr_vec_space+0x12eb4>
+  c4:	504e4b83 	beql	v0,t6,12ed4 <BIT_12_MASK+0x126d4>
   c8:	0004024b 	0x4024b
   cc:	00490101 	0x490101
   d0:	00020000 	sll	zero,v0,0x0
@@ -479,7 +753,7 @@ Disassembly of section .debug_line:
  104:	02838301 	0x2838301
  108:	83831770 	lb	v1,6000(gp)
  10c:	83177002 	lb	s7,28674(t8)
- 110:	17700283 	bne	k1,s0,b20 <__isr_vec_space+0xb00>
+ 110:	17700283 	bne	k1,s0,b20 <BIT_12_MASK+0x320>
  114:	08028383 	j	a0e0c <__memory_size+0x8160c>
  118:	33010100 	andi	at,t8,0x100
  11c:	02000000 	0x2000000
@@ -495,7 +769,7 @@ Disassembly of section .debug_line:
  144:	02000205 	0x2000205
  148:	3a038000 	xori	v1,s0,0x8000
  14c:	00040201 	0x40201
- 150:	003c0101 	0x3c0101
+ 150:	00ec0101 	0xec0101
  154:	00020000 	sll	zero,v0,0x0
  158:	0000001d 	0x1d
  15c:	0efb0101 	jal	bec0404 <__memory_size+0xbea0c04>
@@ -503,15 +777,59 @@ Disassembly of section .debug_line:
  164:	00000101 	0x101
  168:	00000100 	sll	zero,zero,0x4
  16c:	616d0001 	0x616d0001
- 170:	532e6e69 	beql	t9,t6,1bb18 <__isr_vec_space+0x1baf8>
+ 170:	532e6e69 	beql	t9,t6,1bb18 <BIT_12_MASK+0x1b318>
  174:	00000000 	nop
  178:	02050000 	0x2050000
  17c:	80000204 	lb	zero,516(zero)
- 180:	83012e03 	lb	at,11779(t8)
- 184:	4b4b8383 	c2	0x14b8383
- 188:	144b4b4d 	bne	v0,t3,12ec0 <__isr_vec_space+0x12ea0>
- 18c:	00040283 	sra	zero,a0,0xa
- 190:	Address 0x0000000000000190 is out of bounds.
+ 180:	0100d803 	0x100d803
+ 184:	834d4b83 	lb	t5,19331(k0)
+ 188:	4b4b4d4b 	c2	0x14b4d4b
+ 18c:	8483834c 	lh	v1,-31924(a0)
+ 190:	4b4d4b4b 	c2	0x14d4b4b
+ 194:	4b4c4d4b 	c2	0x14c4d4b
+ 198:	4b4d8313 	c2	0x14d8313
+ 19c:	4b4d8313 	c2	0x14d8313
+ 1a0:	4b4e8313 	c2	0x14e8313
+ 1a4:	4b85134b 	c2	0x185134b
+ 1a8:	4b85134b 	c2	0x185134b
+ 1ac:	8385134b 	lb	a1,4939(gp)
+ 1b0:	13838513 	beq	gp,v1,fffe1600 <__entry+0x403e1600>
+ 1b4:	4b4d4b86 	c2	0x14d4b86
+ 1b8:	85838313 	lh	v1,-31981(t4)
+ 1bc:	83138313 	lb	s3,-31981(t8)
+ 1c0:	4d831385 	0x4d831385
+ 1c4:	4b844b4b 	c2	0x1844b4b
+ 1c8:	4b861384 	c2	0x1861384
+ 1cc:	85838583 	lh	v1,-31357(t4)
+ 1d0:	86138513 	lh	s3,-31469(s0)
+ 1d4:	8385834b 	lb	a1,-31925(gp)
+ 1d8:	13851385 	beq	gp,a1,4ff0 <BIT_12_MASK+0x47f0>
+ 1dc:	83831386 	lb	v1,4998(gp)
+ 1e0:	13838583 	beq	gp,v1,fffe17f0 <__entry+0x403e17f0>
+ 1e4:	13851385 	beq	gp,a1,4ffc <BIT_12_MASK+0x47fc>
+ 1e8:	84851385 	lh	a1,4997(a0)
+ 1ec:	4b848383 	c2	0x1848383
+ 1f0:	4b4b4c4b 	c2	0x14b4c4b
+ 1f4:	4c4b4b4b 	0x4c4b4b4b
+ 1f8:	82120315 	lb	s2,789(s0)
+ 1fc:	4bbd4b4b 	c2	0x1bd4b4b
+ 200:	1385834b 	beq	gp,a1,fffe0f30 <__entry+0x403e0f30>
+ 204:	834b4b8a 	lb	t3,19338(k0)
+ 208:	13851385 	beq	gp,a1,5020 <BIT_12_MASK+0x4820>
+ 20c:	52831385 	beql	s4,v1,5024 <BIT_12_MASK+0x4824>
+ 210:	85834b4b 	lh	v1,19275(t4)
+ 214:	4b4c4b4b 	c2	0x14c4b4b
+ 218:	4b4c4b4b 	c2	0x14c4b4b
+ 21c:	85134b83 	lh	s3,19331(t0)
+ 220:	134b834b 	beq	k0,t3,fffe0f50 <__entry+0x403e0f50>
+ 224:	4b834b85 	c2	0x1834b85
+ 228:	834b8513 	lb	t3,-31469(k0)
+ 22c:	4b85134b 	c2	0x185134b
+ 230:	4b4b4b4b 	c2	0x14b4b4b
+ 234:	0383134b 	0x383134b
+ 238:	4b4b4a09 	c2	0x14b4a09
+ 23c:	00080213 	0x80213
+ 240:	Address 0x0000000000000240 is out of bounds.
 
 
 Disassembly of section .pdr:
