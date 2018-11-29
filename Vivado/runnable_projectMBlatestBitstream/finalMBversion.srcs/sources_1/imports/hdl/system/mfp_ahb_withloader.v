@@ -38,7 +38,10 @@ module mfp_ahb_withloader (
     // final project additions
     input [11:0] x_acc,
     input [11:0] y_acc,                    
-    input [11:0] z_acc
+    input [11:0] z_acc,
+    
+    // World Map Select
+    output [1:0] LSEL
 );
 
     wire [7:0] char_data;
@@ -144,7 +147,9 @@ module mfp_ahb_withloader (
         
         .x_acc(x_acc),
         .y_acc(y_acc),
-        .z_acc(z_acc)
+        .z_acc(z_acc),
+        
+        .LSEL(LSEL)
     );
 
 endmodule

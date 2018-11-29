@@ -106,8 +106,18 @@ module mfp_nexys4_ddr(
   /////////////////////////////////////////////////////////
   wire [13:0] worldmap_addr, vid_addr;
   wire [11:0] pixel_row, pixel_column;    
-  wire [1:0] worldmap_data, world_pixel, icon, worldmap_data_shifted, world_pixel_shifted;    
+  wire [1:0] icon, worldmap_data_shifted, world_pixel_shifted;    
   
+  reg [1:0] worldmap_data, world_pixel;
+ 
+  wire [1:0] LSEL;                          // Level Select
+  wire [1:0] world_pixel_level1;
+  wire [1:0] world_pixel_level2;
+  wire [1:0] world_pixel_level3;
+  wire [1:0] worldmap_data_level1;
+  wire [1:0] worldmap_data_level2;
+  wire [1:0] worldmap_data_level3;
+    
   assign pbtn_in[5] = CPU_RESETN;
   assign pbtn_in[4] = BTNC;
   assign pbtn_in[3] = BTNL;
@@ -126,6 +136,8 @@ module mfp_nexys4_ddr(
   
   assign AN = dispenout;
   
+ 
+ 
   ///////////////////////////////////////////////////
                                         
   debounce debounce(
@@ -164,20 +176,75 @@ module mfp_nexys4_ddr(
                                                             //ball robot inputs/outputs
                                                             .soft_reset(soft_rst), //(i)
                                                             .IO_BotCtrl(iobotcntr), //(i)
-                                                            .IO_BotInfo(IO_BOTINFO) //(o)
+                                                            .IO_BotInfo(IO_BOTINFO), //(o)
+                                                            
+                                                            // world map level select
+                                                            .LSEL(LSEL)
                                                             );                                                          
 
 //delay world pixel by 1 more clks after change in display in (2 total)
 //reason is it takes icon pixel 2 clks for valid data after change of display in(pipelining) 
-delayWorldPixel delayWorldPixel(
+/*delayWorldPixel delayWorldPixel(
        .clk(clk_out75),
        .dina(worldmap_data),
        .dinb(world_pixel),
        .douta(worldmap_data_shifted),
        .doutb(world_pixel_shifted)
         );                                          
+*/
+/////////////////////////////WORLD MAPS///////////////////////////////////
 
-    maze_bot maze_bot(
+
+worldmap_level1 worldmap_level1(
+    .clka(clk_out75),
+    .addra(worldmap_addr),
+    .douta(worldmap_data_level1),
+    .clkb(clk_out75),
+    .addrb(vid_addr),
+    .doutb(world_pixel_level1));
+
+    
+worldmap_level2 worldmap_level2(
+        .clka(clk_out75),
+        .addra(worldmap_addr),
+        .douta(worldmap_data_level2),
+        .clkb(clk_out75),
+        .addrb(vid_addr),
+        .doutb(world_pixel_level2));
+        
+/*worldmap_level3 worldmap_level3(
+            .clka(clk_out75),
+            .addra(worldmap_addr),
+            .douta(worldmap_data_level3),
+            .clkb(clk_out75),
+            .addrb(vid_addr),
+            .doutb(world_pixel_level3));
+  */ 
+// assign LSEL = 2'b10;
+                                            
+always @ (*) begin
+    case(LSEL)
+        2'b01: begin
+            world_pixel <= world_pixel_level1;
+            worldmap_data <= worldmap_data_level1;
+            end
+        2'b10: begin
+            world_pixel <= world_pixel_level2;
+            worldmap_data <= worldmap_data_level2;
+            end
+        2'b11: begin
+            world_pixel <= world_pixel_level3;
+            worldmap_data <= worldmap_data_level3;
+            end
+       default: begin
+            world_pixel <= world_pixel_level1;
+            worldmap_data <= worldmap_data_level1;
+            end
+    endcase
+end
+///////////////////////////////////////////////////////////////// 
+
+   maze_bot maze_bot(
         .clk(clk_out75),
         .ball_direction(ball_dir),
         .LocX_reg(LocX_reg),
@@ -186,22 +253,15 @@ delayWorldPixel delayWorldPixel(
         .soft_rst(soft_rst),
         .x_speed(x_speed),
         .y_speed(y_speed),
-        .mapPixel(worldmap_data_shifted),
+        .mapPixel(worldmap_data),
         .mazeEnd(mazeEnd), 
         .hitMazeWall(hitMazeWall), 
         .deadlock(deadlock),
         .mapAddress(worldmap_addr),
         .internal_ball_direction(ball_direction_internal)
     );                                       
-                                                                
-world_map world_map(
-    .clka(clk_out75),
-    .addra(worldmap_addr),
-    .douta(worldmap_data),
-    .clkb(clk_out75),
-    .addrb(vid_addr),
-    .doutb(world_pixel));
-    
+
+
     dtg dtg (
         .clock(clk_out75), 
         .rst(~pbtn_db[5]),
@@ -218,7 +278,7 @@ world_map world_map(
         
     colorizer colorizer(
         .video_on(video_on),
-        .world_pixel(world_pixel_shifted),
+        .world_pixel(world_pixel),
         .icon(icon),
         .red(VGA_R),
         .green(VGA_G),

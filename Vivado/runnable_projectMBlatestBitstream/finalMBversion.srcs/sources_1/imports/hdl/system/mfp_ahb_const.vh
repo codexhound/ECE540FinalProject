@@ -30,9 +30,11 @@
 `define H_BotInfo_ADDR   	    (32'h1f80000C)
 `define H_BotSoftRest_ADDR   	(32'h1f800010)
 `define H_BotCtrl_ADDR   	    (32'h1f800014)
+`define H_LEVEL_SELECT          (32'h1f800018)
 `define H_ACC_ADDR_X            (32'h1f80001C)
 `define H_ACC_ADDR_Y            (32'h1f800020)
 `define H_ACC_ADDR_Z            (32'h1f800024)
+
 
 `define H_LED_IONUM   			(4'h0)
 `define H_SW_IONUM  			(4'h1)
@@ -40,9 +42,11 @@
 `define H_IO_BotInfo  			(4'h3)
 `define H_IO_SoftReset  	    (4'h4)
 `define H_IO_BotCtrl  			(4'h5)
+`define H_IO_LEVEL_SEL          (4'h6)
 `define H_IO_ACC_X              (4'h7)
 `define H_IO_ACC_Y              (4'h8)
 `define H_IO_ACC_Z              (4'h9)
+
 
 //---------------------------------------------------
 // RAM addresses

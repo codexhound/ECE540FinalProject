@@ -40,7 +40,10 @@ module mfp_ahb
     // final project additions
     input [11:0] x_acc,
     input [11:0] y_acc,                    
-    input [11:0] z_acc
+    input [11:0] z_acc,
+    
+    // World Map Select
+    output [1:0] LSEL
     );
 
 
@@ -63,7 +66,7 @@ module mfp_ahb
                               HTRANS, HWDATA, HWRITE, HRDATA1, HSEL[1]);
   // Module 2 - GPIO
   mfp_ahb_gpio mfp_ahb_gpio(HCLK, HRESETn, HADDR[5:2], HTRANS, HWDATA, HWRITE, HSEL[2], 
-                            HRDATA2, IO_Switch, IO_PB, IO_LED, IO_BotCtrl, IO_BotInfo, soft_reset, x_acc, y_acc, z_acc);
+                            HRDATA2, IO_Switch, IO_PB, IO_LED, IO_BotCtrl, IO_BotInfo, soft_reset, x_acc, y_acc, z_acc, LSEL);
                             
   // Module 3 - DISPLAY
   mfp_ahb_display mfp_ahb_display(HCLK, HRESETn, HADDR, HTRANS, HWDATA, HWRITE, HSEL[3], 

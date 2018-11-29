@@ -27,7 +27,10 @@ module mfp_ahb_gpio(
     // final project additions
     input [11:0] x_acc,
     input [11:0] y_acc,                    
-    input [11:0] z_acc
+    input [11:0] z_acc,
+    
+    // World Map Select
+    output reg [1:0] LSEL
 );
 
   reg  [3:0]  HADDR_d;
@@ -36,6 +39,8 @@ module mfp_ahb_gpio(
   reg  [1:0]  HTRANS_d;
   wire        we;            // write enable
 
+  //assign LSEL = 2'b01;
+  
   // delay HADDR, HWRITE, HSEL, and HTRANS to align with HWDATA for writing
   always @ (posedge HCLK) 
   begin
@@ -59,6 +64,7 @@ module mfp_ahb_gpio(
            `H_LED_IONUM: IO_LED <= HWDATA[`MFP_N_LED-1:0];
            `H_IO_BotCtrl: IO_BotCtrl <= HWDATA[7:0];
            `H_IO_SoftReset: soft_reset <= HWDATA[0];
+           `H_IO_LEVEL_SEL: LSEL <= HWDATA[1:0];
          endcase
     
 	always @(posedge HCLK or negedge HRESETn)
@@ -83,7 +89,7 @@ module mfp_ahb_gpio(
                 HRDATA[11:0] <= z_acc;
                 HRDATA[31:12] <= 0;
             end
-            
+             
             default:    HRDATA <= 32'h00000000;
          endcase
        end

@@ -39,9 +39,10 @@ module mfp_sys(
                     // final project additions
                     input [11:0] x_acc,
                     input [11:0] y_acc,                    
-                    input [11:0] z_acc
+                    input [11:0] z_acc,
                     
-                   
+                    // World Map Select
+                    output [1:0] LSEL
                     );
 
 
@@ -329,7 +330,9 @@ module mfp_sys(
         
         .x_acc(x_acc),
         .y_acc(y_acc),
-        .z_acc(z_acc)
+        .z_acc(z_acc),
+        
+        .LSEL(LSEL)
     );
 
 
