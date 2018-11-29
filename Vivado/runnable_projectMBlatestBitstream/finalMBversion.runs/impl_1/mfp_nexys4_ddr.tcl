@@ -88,6 +88,8 @@ set rc [catch {
   read_ip -quiet C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1.xci
   read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level2/worldmap_level2.xci
+  read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level3/worldmap_level3.xci
+  read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover.xci
   read_xdc C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/constrs_1/imports/constraints/mfp_nexys4_ddr.xdc
   link_design -top mfp_nexys4_ddr -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 29 03:19:25 2018
+# Process ID: 21004
+# Current directory: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level3_synth_1
+# Command line: vivado.exe -log worldmap_level3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source worldmap_level3.tcl
+# Log file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level3_synth_1/worldmap_level3.vds
+# Journal file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source worldmap_level3.tcl -notrace

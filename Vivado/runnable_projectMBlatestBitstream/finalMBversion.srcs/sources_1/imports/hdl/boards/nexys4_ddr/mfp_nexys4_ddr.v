@@ -114,9 +114,11 @@ module mfp_nexys4_ddr(
   wire [1:0] world_pixel_level1;
   wire [1:0] world_pixel_level2;
   wire [1:0] world_pixel_level3;
+  wire [1:0] world_pixel_gameover;
   wire [1:0] worldmap_data_level1;
   wire [1:0] worldmap_data_level2;
   wire [1:0] worldmap_data_level3;
+  wire [1:0] worldmap_data_gameover;
     
   assign pbtn_in[5] = CPU_RESETN;
   assign pbtn_in[4] = BTNC;
@@ -212,18 +214,30 @@ worldmap_level2 worldmap_level2(
         .addrb(vid_addr),
         .doutb(world_pixel_level2));
         
-/*worldmap_level3 worldmap_level3(
+worldmap_level3 worldmap_level3(
             .clka(clk_out75),
             .addra(worldmap_addr),
             .douta(worldmap_data_level3),
             .clkb(clk_out75),
             .addrb(vid_addr),
             .doutb(world_pixel_level3));
-  */ 
-// assign LSEL = 2'b10;
+
+worldmap_gameover worldmap_gameover(
+            .clka(clk_out75),
+            .addra(worldmap_addr),
+            .douta(worldmap_data_gameover),
+            .clkb(clk_out75),
+            .addrb(vid_addr),
+            .doutb(world_pixel_gameover));
+ 
+ assign LSEL = 2'b10;
                                             
 always @ (*) begin
     case(LSEL)
+        2'b00: begin
+            world_pixel <= world_pixel_gameover;
+            worldmap_data <= worldmap_data_gameover;
+            end
         2'b01: begin
             world_pixel <= world_pixel_level1;
             worldmap_data <= worldmap_data_level1;
@@ -237,8 +251,8 @@ always @ (*) begin
             worldmap_data <= worldmap_data_level3;
             end
        default: begin
-            world_pixel <= world_pixel_level1;
-            worldmap_data <= worldmap_data_level1;
+            world_pixel <= world_pixel_gameover;
+            worldmap_data <= worldmap_data_gameover;
             end
     endcase
 end

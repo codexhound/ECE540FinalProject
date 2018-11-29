@@ -43,6 +43,8 @@ set_property ip_output_repo c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject
 set_property ip_cache_permissions {read write} [current_project]
 add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level1.coe
 add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level2.coe
+add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level3.coe
+add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/Gameover.coe
 read_verilog {
   C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/imports/hdl/core/m14k_const.vh
   C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/imports/hdl/core/m14k_config.vh
@@ -246,6 +248,12 @@ set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Docum
 
 read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level2/worldmap_level2.xci
 set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level2/worldmap_level2_ooc.xdc]
+
+read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level3/worldmap_level3.xci
+set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level3/worldmap_level3_ooc.xdc]
+
+read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover.xci
+set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

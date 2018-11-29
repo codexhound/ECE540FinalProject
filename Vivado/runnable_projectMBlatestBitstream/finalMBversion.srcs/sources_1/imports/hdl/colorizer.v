@@ -41,20 +41,20 @@ module colorizer(
        if(video_on) begin
        	if(icon != 0) begin
        	     case(icon)
-       	         2'b01: begin //green
+       	         2'b01: begin //black
+       	             red = 4'h0;
+       	             green = 4'h0;
+       	             blue = 4'h0;
+       	         end
+       	         2'b10: begin //green
        	             red = 4'h0;
        	             green = 4'hf;
        	             blue = 4'h0;
        	         end
-       	         2'b10: begin //blue
-       	             red = 4'h0;
-       	             green = 4'h0;
-       	             blue = 4'hf;
-       	         end
-       	         2'b11: begin //yellow
+       	         2'b11: begin //white
        	             red = 4'hf;
        	             green = 4'hf;
-       	             blue = 4'h8;
+       	             blue = 4'hf;
        	         end 
        	     endcase    
        	end
