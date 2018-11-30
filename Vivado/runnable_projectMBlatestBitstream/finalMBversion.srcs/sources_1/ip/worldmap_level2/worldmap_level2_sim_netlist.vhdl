@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Nov 28 21:52:07 2018
--- Host        : LAPTOP-VQA3KK4R running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Thu Nov 29 10:20:53 2018
+-- Host        : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level2/worldmap_level2_sim_netlist.vhdl
+--               C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level2/worldmap_level2_sim_netlist.vhdl
 -- Design      : worldmap_level2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -689,7 +689,7 @@ entity worldmap_level2 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of worldmap_level2 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of worldmap_level2 : entity is "blk_mem_gen_v8_4_1,Vivado 2018.2";
+  attribute x_core_info of worldmap_level2 : entity is "blk_mem_gen_v8_4_1,Vivado 2018.2.2";
 end worldmap_level2;
 
 architecture STRUCTURE of worldmap_level2 is

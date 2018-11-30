@@ -302,7 +302,6 @@ end
           .clk(clk_out75),
           .locXReg(LocX_reg),
           .locYReg(LocY_reg),
-          .orientation1(ball_direction_internal),
           .pixel_row(pixel_row),
           .pixel_column(pixel_column),
           .icon(icon));

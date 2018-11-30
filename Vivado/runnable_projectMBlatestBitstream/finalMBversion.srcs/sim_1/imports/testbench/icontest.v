@@ -3,7 +3,7 @@
 //
 // Drive the mipsfpga_sys module for simulation testing
 
-`timescale 100ps/1ps
+`timescale 1ps/1ps
 
 module icontest;
     reg clk;
@@ -15,7 +15,6 @@ module icontest;
         .clk(clk),
         .locXReg(locXReg),
         .locYReg(locYReg),
-        .botInfoReg(botInfoReg),
         .pixel_row(pixel_row),
         .pixel_column(pixel_column),
         .icon(icon));
@@ -24,7 +23,7 @@ module icontest;
     begin
         clk = 0;
         forever
-            #50 clk = ~clk;
+            #1 clk = ~clk;
     end
     
     integer row;
@@ -33,7 +32,6 @@ module icontest;
     begin
         locXReg <= 2;
         locYReg <= 2;
-        botInfoReg <= 2;
         for(row = 3; row < 27; row=row+1) begin
             for(col = 4; col < 36; col=col+1) begin
                 pixel_row <= row;

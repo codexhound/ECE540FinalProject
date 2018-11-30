@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Thu Nov 29 15:05:24 2018
+# Process ID: 6324
+# Current directory: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15952 C:\Users\RampantVelcro\Desktop\Class\Fall2018\ECE540\ECE540FinalProject\Vivado\runnable_projectMBlatestBitstream\finalMBversion.xpr
+# Log file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/vivado.log
+# Journal file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server

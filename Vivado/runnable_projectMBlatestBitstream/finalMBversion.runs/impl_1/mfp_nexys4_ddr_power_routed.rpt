@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Nov 29 04:27:15 2018
-| Host             : LAPTOP-VQA3KK4R running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+| Date             : Thu Nov 29 14:48:47 2018
+| Host             : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
 | Command          : report_power -file mfp_nexys4_ddr_power_routed.rpt -pb mfp_nexys4_ddr_power_summary_routed.pb -rpx mfp_nexys4_ddr_power_routed.rpx
 | Design           : mfp_nexys4_ddr
 | Device           : xc7a100tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.362        |
+| Total On-Chip Power (W)  | 0.355        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.260        |
+| Dynamic (W)              | 0.253        |
 | Device Static (W)        | 0.102        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.4         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.018 |       14 |       --- |             --- |
-| Slice Logic              |     0.012 |    22700 |       --- |             --- |
-|   LUT as Logic           |     0.012 |    10719 |     63400 |           16.91 |
-|   Register               |    <0.001 |     8986 |    126800 |            7.09 |
-|   CARRY4                 |    <0.001 |      160 |     15850 |            1.01 |
+| Clocks                   |     0.017 |       14 |       --- |             --- |
+| Slice Logic              |     0.012 |    22274 |       --- |             --- |
+|   LUT as Logic           |     0.011 |    10365 |     63400 |           16.35 |
+|   Register               |    <0.001 |     8973 |    126800 |            7.08 |
+|   CARRY4                 |    <0.001 |      163 |     15850 |            1.03 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   LUT as Shift Register  |    <0.001 |        9 |     19000 |            0.05 |
 |   LUT as Distributed RAM |    <0.001 |        6 |     19000 |            0.03 |
 |   F7/F8 Muxes            |    <0.001 |        3 |     63400 |           <0.01 |
+|   LUT as Shift Register  |    <0.001 |        9 |     19000 |            0.05 |
 |   Others                 |     0.000 |     1434 |       --- |             --- |
-| Signals                  |     0.023 |    18966 |       --- |             --- |
-| Block RAM                |     0.096 |       79 |       135 |           58.52 |
+| Signals                  |     0.023 |    18548 |       --- |             --- |
+| Block RAM                |     0.098 |       79 |       135 |           58.52 |
 | MMCM                     |     0.100 |        1 |         6 |           16.67 |
-| I/O                      |     0.010 |       80 |       210 |           38.10 |
+| I/O                      |     0.003 |       80 |       210 |           38.10 |
 | Static Power             |     0.102 |          |           |                 |
-| Total                    |     0.362 |          |           |                 |
+| Total                    |     0.355 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,8 +78,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.160 |       0.142 |      0.018 |
-| Vccaux    |       1.800 |     0.074 |       0.056 |      0.018 |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vccaux    |       1.800 |     0.074 |       0.055 |      0.018 |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -155,17 +155,17 @@ Table of Contents
 +----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                         | Power (W) |
 +----------------------------------------------------------------------------------------------+-----------+
-| mfp_nexys4_ddr                                                                               |     0.260 |
+| mfp_nexys4_ddr                                                                               |     0.253 |
 |   clk_wiz_0                                                                                  |     0.100 |
 |     inst                                                                                     |     0.100 |
 |   colorizer                                                                                  |    <0.001 |
 |   debounce                                                                                   |    <0.001 |
 |   dtg                                                                                        |    <0.001 |
 |   icon1                                                                                      |    <0.001 |
-|   maze_bot                                                                                   |     0.002 |
-|   mfp_sys                                                                                    |     0.142 |
-|     mfp_ahb_withloader                                                                       |     0.086 |
-|       mfp_ahb                                                                                |     0.084 |
+|   maze_bot                                                                                   |     0.001 |
+|   mfp_sys                                                                                    |     0.144 |
+|     mfp_ahb_withloader                                                                       |     0.087 |
+|       mfp_ahb                                                                                |     0.086 |
 |         mfp_ahb_b_ram                                                                        |     0.003 |
 |           ram_b0                                                                             |    <0.001 |
 |           ram_b1                                                                             |    <0.001 |
@@ -176,7 +176,7 @@ Table of Contents
 |             counter16                                                                        |    <0.001 |
 |             counterSel                                                                       |    <0.001 |
 |         mfp_ahb_gpio                                                                         |    <0.001 |
-|         mfp_ahb_p_ram                                                                        |     0.081 |
+|         mfp_ahb_p_ram                                                                        |     0.082 |
 |           ram_p0                                                                             |     0.020 |
 |           ram_p1                                                                             |     0.020 |
 |           ram_p2                                                                             |     0.020 |
@@ -185,10 +185,10 @@ Table of Contents
 |       mfp_srec_parser_to_ahb_lite_bridge                                                     |    <0.001 |
 |       mfp_uart_receiver                                                                      |    <0.001 |
 |     mfp_ejtag_reset                                                                          |    <0.001 |
-|     top                                                                                      |     0.056 |
-|       cpu                                                                                    |     0.055 |
+|     top                                                                                      |     0.057 |
+|       cpu                                                                                    |     0.056 |
 |         core                                                                                 |     0.042 |
-|           biu                                                                                |     0.002 |
+|           biu                                                                                |     0.003 |
 |             _HADDR_31_0_                                                                     |    <0.001 |
 |               cregister                                                                      |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
@@ -569,7 +569,7 @@ Table of Contents
 |                     cregister                                                                |    <0.001 |
 |                 _pc_ctl_regb_2_0_                                                            |    <0.001 |
 |                 _pc_en_mask_xx                                                               |    <0.001 |
-|           dcc                                                                                |     0.004 |
+|           dcc                                                                                |     0.005 |
 |             _advance_m_reg                                                                   |    <0.001 |
 |             _block_hit_fb_reg                                                                |    <0.001 |
 |             _block_hit_way_reg_3_0_                                                          |    <0.001 |
@@ -1246,7 +1246,7 @@ Table of Contents
 |               _uc_reg_out_20_0_                                                              |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
 |                   register_inst                                                              |    <0.001 |
-|             mdl_dp                                                                           |     0.003 |
+|             mdl_dp                                                                           |     0.002 |
 |               _dm_31_0_                                                                      |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
 |                   cregister                                                                  |    <0.001 |
@@ -1263,7 +1263,7 @@ Table of Contents
 |                 cregister                                                                    |    <0.001 |
 |                   register_inst                                                              |    <0.001 |
 |               mdl_add                                                                        |    <0.001 |
-|           mmu                                                                                |     0.014 |
+|           mmu                                                                                |     0.015 |
 |             mmuc                                                                             |     0.001 |
 |               _dcachem_reg_2_0_                                                              |    <0.001 |
 |                 cregister                                                                    |    <0.001 |
@@ -1272,9 +1272,9 @@ Table of Contents
 |                 cregister                                                                    |    <0.001 |
 |                   register_inst                                                              |    <0.001 |
 |               _mmu_cdmm_kuc_m                                                                |    <0.001 |
-|               _mmu_dva_m_31_0_                                                               |    <0.001 |
-|                 cregister                                                                    |    <0.001 |
-|                   register_inst                                                              |    <0.001 |
+|               _mmu_dva_m_31_0_                                                               |     0.001 |
+|                 cregister                                                                    |     0.001 |
+|                   register_inst                                                              |     0.001 |
 |               _mmu_dva_mapped_m_31_29_                                                       |    <0.001 |
 |               _raw_run_ied                                                                   |    <0.001 |
 |             tlb_cpy                                                                          |     0.001 |
@@ -1527,7 +1527,7 @@ Table of Contents
 |                     _jtlb1entry_pipe_out                                                     |    <0.001 |
 |                       cregister                                                              |    <0.001 |
 |                         cregister                                                            |    <0.001 |
-|           mpc                                                                                |     0.003 |
+|           mpc                                                                                |     0.004 |
 |             mpc_ctl                                                                          |     0.002 |
 |               _alu_sel_m                                                                     |    <0.001 |
 |               _busty_ed_2_0_                                                                 |    <0.001 |

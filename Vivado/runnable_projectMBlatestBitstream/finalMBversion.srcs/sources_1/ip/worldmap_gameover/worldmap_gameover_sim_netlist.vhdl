@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Thu Nov 29 03:26:22 2018
--- Host        : LAPTOP-VQA3KK4R running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Thu Nov 29 10:24:24 2018
+-- Host        : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover_sim_netlist.vhdl
+--               C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover_sim_netlist.vhdl
 -- Design      : worldmap_gameover
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -689,7 +689,7 @@ entity worldmap_gameover is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of worldmap_gameover : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of worldmap_gameover : entity is "blk_mem_gen_v8_4_1,Vivado 2018.2";
+  attribute x_core_info of worldmap_gameover : entity is "blk_mem_gen_v8_4_1,Vivado 2018.2.2";
 end worldmap_gameover;
 
 architecture STRUCTURE of worldmap_gameover is

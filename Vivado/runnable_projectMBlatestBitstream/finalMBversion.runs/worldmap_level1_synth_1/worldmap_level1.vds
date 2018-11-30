@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov 28 21:48:53 2018
-# Process ID: 19916
-# Current directory: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Thu Nov 29 10:17:36 2018
+# Process ID: 12948
+# Current directory: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1
 # Command line: vivado.exe -log worldmap_level1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source worldmap_level1.tcl
-# Log file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.vds
-# Journal file: C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1\vivado.jou
+# Log file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.vds
+# Journal file: C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source worldmap_level1.tcl -notrace
 Command: synth_design -top worldmap_level1 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17948 
+INFO: Helper process launched with PID 1216 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 387.645 ; gain = 99.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 388.020 ; gain = 99.688
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'worldmap_level1' [c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'worldmap_level1' [c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:70]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -93,8 +93,8 @@ INFO: [Synth 8-638] synthesizing module 'worldmap_level1' [c:/Users/Chelsea/Docu
 	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     4.503 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:235]
-INFO: [Synth 8-256] done synthesizing module 'worldmap_level1' (9#1) [c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:70]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:235]
+INFO: [Synth 8-256] done synthesizing module 'worldmap_level1' (9#1) [c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/synth/worldmap_level1.vhd:70]
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init has unconnected port SSRA
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init has unconnected port SSRB
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init has unconnected port SLEEP
@@ -197,7 +197,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth has unconnected port S_A
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth has unconnected port S_AXI_ARID[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 652.379 ; gain = 364.242
+Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 652.758 ; gain = 364.426
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -210,10 +210,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 652.379 ; gain = 364.242
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 652.758 ; gain = 364.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 652.379 ; gain = 364.242
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 652.758 ; gain = 364.426
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -222,35 +222,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 710.434 ; gain = 1.504
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 712.254 ; gain = 1.133
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 710.434 ; gain = 422.297
+Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 712.254 ; gain = 423.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 710.434 ; gain = 422.297
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 712.254 ; gain = 423.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 710.434 ; gain = 422.297
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 712.254 ; gain = 423.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 710.434 ; gain = 422.297
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 712.254 ; gain = 423.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,7 +286,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 710.434 ; gain = 422.297
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 712.254 ; gain = 423.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,13 +298,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 761.367 ; gain = 473.230
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 760.758 ; gain = 472.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 761.367 ; gain = 473.230
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 760.758 ; gain = 472.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +316,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 761.367 ; gain = 473.230
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 760.758 ; gain = 472.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -340,7 +340,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -353,7 +353,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -365,25 +365,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -415,11 +415,11 @@ Report Instance Areas:
 |7     |            \prim_init.ram                   |blk_mem_gen_prim_wrapper_init |     1|
 +------+---------------------------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 762.574 ; gain = 474.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.891 ; gain = 473.559
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 129 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:01:41 . Memory (MB): peak = 762.574 ; gain = 416.383
-Synthesis Optimization Complete : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 762.578 ; gain = 474.438
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:01:15 . Memory (MB): peak = 761.891 ; gain = 414.063
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 761.895 ; gain = 473.559
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -431,13 +431,13 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:01:55 . Memory (MB): peak = 782.719 ; gain = 506.051
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:26 . Memory (MB): peak = 781.914 ; gain = 505.055
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_level1/worldmap_level1.xci
+INFO: [Common 17-1381] The checkpoint 'C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.dcp' has been generated.
+WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.cache/ip/2018.2.2/8bc99a2326950dfb
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/RampantVelcro/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.runs/worldmap_level1_synth_1/worldmap_level1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file worldmap_level1_utilization_synth.rpt -pb worldmap_level1_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 785.480 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 28 21:50:57 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 784.680 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 29 10:19:07 2018...
