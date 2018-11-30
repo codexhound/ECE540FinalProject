@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Thu Nov 29 10:19:07 2018
--- Host        : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Fri Nov 30 00:44:38 2018
+-- Host        : LAPTOP-VQA3KK4R running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
---               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ worldmap_level1_stub.vhdl
--- Design      : worldmap_level1
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ worldmap_level3_stub.vhdl
+-- Design      : worldmap_level3
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
 -- --------------------------------------------------------------------------------
@@ -30,6 +30,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "clka,addra[13:0],douta[1:0],clkb,addrb[13:0],doutb[1:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "blk_mem_gen_v8_4_1,Vivado 2018.2.2";
+attribute x_core_info of stub : architecture is "blk_mem_gen_v8_4_1,Vivado 2018.2";
 begin
 end;
