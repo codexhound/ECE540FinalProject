@@ -47,7 +47,7 @@ module icon(
    	*/
         
     initial begin
-       $readmemh("0deg.dat", iconmap0);
+       $readmemh("icon1.dat", iconmap0);
        /*
        $readmemh("45deg.dat", iconmap45);
        $readmemh("90deg.dat", iconmap90);

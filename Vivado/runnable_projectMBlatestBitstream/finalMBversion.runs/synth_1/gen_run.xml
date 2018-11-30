@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543567531">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543579777">
   <File Type="PA-TCL" Name="mfp_nexys4_ddr.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mfp_nexys4_ddr_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mfp_nexys4_ddr_reports.tcl"/>
@@ -1828,6 +1828,14 @@
     </File>
     <File Path="$PPRDIR/../../Maps/Gameover.coe">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Maps/icon1.dat">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Maps/icon1.dat"/>
+        <Attr Name="ImportTime" Val="1543579580"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
