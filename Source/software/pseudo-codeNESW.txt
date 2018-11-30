@@ -4,7 +4,6 @@ y_value
 x_pos = positive(x_value) # convert to positive value if negative
 y_pos = positive(y_value)
 
-jal UPDATE_LOOP_FUNCTION  # this is a function that just waits for system update
 
 if (x_pos>300 && y_pos<300):
 	if x_value is negative:
@@ -15,14 +14,17 @@ else-if (x_pos<300 && y_pos>300)
 	if y_value is negative:
 		orientation=East
 	else if y_value is positive:
-		orientation=West
-
-clear the acknowledge signal    
-jal UPDATE_LOOP_FUNCTION		
-
+		orientation=West	
 		
-if (x_pos>300 or y_pos>300)
-	move_forward
-
-
-clear the acknowledge signal 
+else-if (x_pos>300 && y_pos>300)
+	if x_value is negative:
+		if y_value is negative:
+			orienation = NORTHEAST
+		else if y_value is postive:
+			orientation = NORTHWEST
+	else if x_value is positive
+		if y_value is negative:
+			orientation = SOUTHEAST
+		else if y_value is positive:
+			orienation = SOUTHWEST
+	

@@ -31,15 +31,16 @@
  *									DP3 = bit[3], DP2 = bit[2], DP1 = bit[1], DP0 = bit[0]
  */
 
- # === BotInfo values ===
-OR_N 		= 0x00		# Orientation is North
-OR_NE 		= 0x01		# Orientation is Northeast
-OR_E 		= 0x02		# Orientation is East
-OR_SE 		= 0x03		# Orientation is Southeast
-OR_S 		= 0x04		# Orientation is South
-OR_SW		= 0x05		# Orientation is Southwest
-OR_W 		= 0x06		# Orientation is West
-OR_NW 		= 0x07		# Orientation is Northwest
+
+
+SOUTH = 0x01
+NORTH = 0x02
+EAST = 0x03
+WEST = 0x04
+SOUTHEAST = 0x05
+SOUTHWEST = 0x08
+NORTHEAST = 0x06
+NORTHWEST = 0x07
 
 # nexys4 addresses
 PORT_SEVENSEG_EN 	= 0xbf700000		# (o) 7 Segment enable
@@ -170,73 +171,10 @@ readIO:
 	add $7, $0, $17						#
 	jal BCD_FUNCTION
 
-# ----------------------------------------------------------------------------------------
-# START: test
-# ----------------------------------------------------------------------------------------
-	li $9, PORT_BOTCTRL			#keep the botcontrol port here
-	li $11, PORT_BOTUPDATE		#keep the botupdate port here
-	li $12, PORT_BOTACK			#keep the ack port here
+	li $12, PORT_BOTCTRL
+	li $7, NORTHWEST
+	sw $7, 0($12)
 
-UPDATE_LOOP_TEMP:
-	lw $7, 0($11)				#load update sync into $7
-
-	beq $7, 0, UPDATE_LOOP_TEMP		#no update, keep looping
-	nop                  		#branch delay slot
-
-	li $7, 1					#load 1 into 7 for ACK signal
-	sw $7, 0($12)				#write to acknowledge signal
-
-	# experiment with new orientations
-	li $7, PORT_NEW_ORIENTATION
-	li $9, OR_NE
-	sw $9, 0($7)
-
-
-	li $7, 0					#load zero into temp 7 for write to ACK
-	sw $7, 0($12)				#reset the ACK signal when done updating controller
-# ----------------------------------------------------------------------------------------
-# END: test
-# ----------------------------------------------------------------------------------------
-
-# ----------------------------------------------------------------------------------------
-# START: control rojobot
-# ----------------------------------------------------------------------------------------
-	li $9, PORT_BOTCTRL			#keep the botcontrol port here
-	li $11, PORT_BOTUPDATE		#keep the botupdate port here
-	li $12, PORT_BOTACK			#keep the ack port here
-
-UPDATE_LOOP:
-	lw $7, 0($11)				#load update sync into $7
-
-	beq $7, 0, UPDATE_LOOP		#no update, keep looping
-	nop                  		#branch delay slot
-
-	li $7, 1					#load 1 into 7 for ACK signal
-	sw $7, 0($12)				#write to acknowledge signal
-
-#------hard-coded debugging stuff----------------
-	li $10, 300					# $10 = 300
-	slt $13, $16, $10 			# if (x_acc_data($16)>300($10) & x_acc_data!= negative) then MOVE_FOWARDS else MOVE_STOP
-
-	andi $14, $16, BIT_12_MASK			# $14 = and(x_acc_data, bit_12_mask)
-	li $7, IDLE_CNT
-	bne $14, 0, MOVE_STOP				# if $14<0 then NEGATIVE; else POSITIVE
-	beq $13, 0, MOVE_FORWARD
-	li $7, IDLE_CNT
-	j MOVE_STOP
-MOVE_FORWARD:
-	li $7, FORWARD_CNT			#read in the forward control value
-MOVE_STOP:
-#------end of hard-coded debugging stuff-----------
-
-	sw $7, 0($9)				#write out forward to bot control
-
-
-	li $7, 0					#load zero into temp 7 for write to ACK
-	sw $7, 0($12)				#reset the ACK signal when done updating controller
-# ----------------------------------------------------------------------------------------
-# END: control rojobot
-# ----------------------------------------------------------------------------------------
 j readIO
 
 
