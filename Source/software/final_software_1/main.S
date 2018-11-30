@@ -117,6 +117,10 @@ main:
 	li $11, PORT_MAPSELECT
     sw $s3, 0($11) #sw LEVEL_REG mapADDR //set to current reg just in case
 
+    li $t3, 0
+	li $t2, PORT_BOTCTRL
+	sw $t3, 0($t2) #initialize bot control to 0
+
 	# make sure SSEG_LOW digits are zero before enabling
 	li $k1, PORT_SEVENSEG_LOW
 	li $k0, 0x0B00000B
@@ -347,7 +351,7 @@ GAMEWINCHECK:
 NOT_DISPLAYING_GAME_WIN:
 	li $t3, LASTLEVEL
 	beq $s3, $t3, DISPLAYGAMEWIN #if level reg is last level display game win
-	j DISPLAYLEVELWIN //else disiplay level win
+	j DISPLAYLEVELWIN ##else disiplay level win
 
 DISPLAYGAMEWIN:
 	li $s3, LEVEL1 #LEVEL_REG = LEVEL1
@@ -385,6 +389,9 @@ SOFTRESET:
 	sw $t3, 0($t2)
 	li $t3, 1
 	sw $t3, 0($t2)
+	li $t3, 0
+	li $t2, PORT_BOTCTRL
+	sw $t3, 0($t2) #reset bot control to 0
 	jr $ra
 
 #####################################################################################
