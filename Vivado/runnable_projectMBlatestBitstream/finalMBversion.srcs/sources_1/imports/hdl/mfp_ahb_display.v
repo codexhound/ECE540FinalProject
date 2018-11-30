@@ -53,6 +53,12 @@ module mfp_ahb_display(
       HSEL_d   <= HSEL;
       HTRANS_d <= HTRANS;
     end
+    
+  initial begin
+    en = 8'hff; //enable low, defaults to off
+    digits = 64'hffffffffffffffff; //all blanks
+    dp = 8'hff; 
+  end
 
 //assign registers en, dp, and digits based on LT-LITE DATA-BUS here
 

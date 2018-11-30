@@ -50,6 +50,13 @@ module mfp_ahb_gpio(
 	HTRANS_d <= HTRANS;
   end
   
+  initial begin
+    IO_LED = `MFP_N_LED'b0; 
+    IO_BotCtrl = 0;
+    soft_reset = 1; //inactive high
+    LSEL = 0; //game over screen default
+  end
+  
   // overall write enable signal
   assign we = (HTRANS_d != `HTRANS_IDLE) & HSEL_d & HWRITE_d;
 
@@ -58,6 +65,7 @@ module mfp_ahb_gpio(
          IO_LED <= `MFP_N_LED'b0; 
          IO_BotCtrl <= 0;
          soft_reset <= 1; //inactive high
+         LSEL <= 0; //game over screen default
        end
        else if (we)
          case (HADDR_d)
@@ -76,7 +84,18 @@ module mfp_ahb_gpio(
            `H_SW_IONUM: HRDATA <= { {32 - `MFP_N_SW {1'b0}}, IO_Switch };
            `H_PB_IONUM: HRDATA <= { {32 - `MFP_N_PB {1'b0}}, IO_PB };
            `H_IO_BotInfo: HRDATA <= IO_BotInfo;
-            
+           `H_IO_BotCtrl: begin
+             HRDATA[31:8] <= 0;
+             HRDATA[7:0] <= IO_BotCtrl;
+           end
+           `H_IO_LEVEL_SEL: begin
+             HRDATA[31:2] <= 0;
+             HRDATA[1:0] <= LSEL;
+            end
+            `H_LED_IONUM: begin
+                HRDATA[31:`MFP_N_LED] <= 0;
+                HRDATA[`MFP_N_LED-1:0] <= IO_LED;
+            end
             `H_IO_ACC_X: begin
                 HRDATA[11:0] <= x_acc;     
                 HRDATA[31:12] <= 0;

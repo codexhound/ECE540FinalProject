@@ -79,18 +79,17 @@ module mfp_nexys4_ddr(
   
   //ball bot signals//////////////////////////////////////
   wire soft_rst, mazeEnd, hitMazeWall, deadlock;  
-  wire [11:0] x_acc_2sComp, y_acc_2sComp;    
-  wire [23:0] xy_acc_2sCmp;
   wire [1:0] x_speed, y_speed;
   wire [7:0] iobotcntr, LocX_reg, LocY_reg, iobotinfo;
   wire [2:0] ball_dir, ball_direction_internal;
+  wire [3:0] speed_info;
+  
+  assign speed_info[3:2] = x_speed;
+  assign speed_info[1:0] = y_speed;
 
   assign y_speed = iobotcntr[7:6];
   assign x_speed = iobotcntr[5:4];
   assign ball_dir = iobotcntr[2:0];
-
-  assign xy_acc_2sCmp[23:12] = x_acc_2sComp;
-  assign xy_acc_2sCmp[11:0] = y_acc_2sComp;
 
   assign iobotinfo[7:6] = 0;
   assign iobotinfo[5] = mazeEnd;
@@ -98,7 +97,8 @@ module mfp_nexys4_ddr(
   assign iobotinfo[3] = deadlock;
   assign iobotinfo[2:0] = ball_direction_internal;
 
-  assign IO_BOTINFO[31:24] = 0;
+  assign IO_BOTINFO[31:28] = 0;
+  assign IO_BOTINFO[27:24] = speed_info;
   assign IO_BOTINFO[23:16] = LocX_reg;
   assign IO_BOTINFO[15:8] = LocY_reg;
   assign IO_BOTINFO[7:0] = iobotinfo;
@@ -229,30 +229,28 @@ worldmap_gameover worldmap_gameover(
             .clkb(clk_out75),
             .addrb(vid_addr),
             .doutb(world_pixel_gameover));
- 
- assign LSEL = 2'b10;
                                             
 always @ (*) begin
     case(LSEL)
         2'b00: begin
-            world_pixel <= world_pixel_gameover;
-            worldmap_data <= worldmap_data_gameover;
+            world_pixel = world_pixel_gameover;
+            worldmap_data = worldmap_data_gameover;
             end
         2'b01: begin
-            world_pixel <= world_pixel_level1;
-            worldmap_data <= worldmap_data_level1;
+            world_pixel = world_pixel_level1;
+            worldmap_data = worldmap_data_level1;
             end
         2'b10: begin
-            world_pixel <= world_pixel_level2;
-            worldmap_data <= worldmap_data_level2;
+            world_pixel = world_pixel_level2;
+            worldmap_data = worldmap_data_level2;
             end
         2'b11: begin
-            world_pixel <= world_pixel_level3;
-            worldmap_data <= worldmap_data_level3;
+            world_pixel = world_pixel_level3;
+            worldmap_data = worldmap_data_level3;
             end
        default: begin
-            world_pixel <= world_pixel_gameover;
-            worldmap_data <= worldmap_data_gameover;
+            world_pixel = world_pixel_gameover;
+            worldmap_data = worldmap_data_gameover;
             end
     endcase
 end

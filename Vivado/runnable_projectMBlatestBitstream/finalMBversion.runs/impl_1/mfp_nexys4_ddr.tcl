@@ -60,6 +60,9 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -ruleid {1}  -id {filemgmt 56-3}  -string {{WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'.}}  -suppress 
 set_msg_config  -ruleid {2}  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/archive_project_summary.txt'.}}  -suppress 
 set_msg_config  -ruleid {3}  -id {IP_Flow 19-2162}  -string {{WARNING: [IP_Flow 19-2162] IP 'rojobot31_0' is locked:
@@ -74,7 +77,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/RampantVelcro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6264-LAPTOP-8RH9CDEQ/incrSyn
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
