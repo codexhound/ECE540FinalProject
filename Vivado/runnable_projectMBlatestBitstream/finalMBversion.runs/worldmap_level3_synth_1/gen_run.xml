@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="worldmap_level3_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543579774">
   <File Type="PA-TCL" Name="worldmap_level3.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="worldmap_level3_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="worldmap_level3_reports.tcl"/>
   <File Type="RDS-RDS" Name="worldmap_level3.vds"/>
   <File Type="RDS-UTIL" Name="worldmap_level3_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="worldmap_level3_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="worldmap_level3.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="worldmap_level3_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="worldmap_level3_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/worldmap_level3">
     <File Path="$PSRCDIR/sources_1/ip/worldmap_level3/worldmap_level3.xci">
       <FileInfo>

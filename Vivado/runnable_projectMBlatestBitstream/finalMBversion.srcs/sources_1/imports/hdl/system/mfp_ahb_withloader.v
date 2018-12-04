@@ -41,7 +41,7 @@ module mfp_ahb_withloader (
     input [11:0] z_acc,
     
     // World Map Select
-    output [1:0] LSEL
+    output [2:0] LSEL
 );
 
     wire [7:0] char_data;

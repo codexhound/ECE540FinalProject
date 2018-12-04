@@ -110,15 +110,21 @@ module mfp_nexys4_ddr(
   
   reg [1:0] worldmap_data, world_pixel;
  
-  wire [1:0] LSEL;                          // Level Select
+  wire [2:0] LSEL;                          // Level Select
   wire [1:0] world_pixel_level1;
   wire [1:0] world_pixel_level2;
   wire [1:0] world_pixel_level3;
   wire [1:0] world_pixel_gameover;
+  wire [1:0] world_pixel_levelcomplete;
+  wire [1:0] world_pixel_youwin;
+  wire [1:0] world_pixel_debug;
   wire [1:0] worldmap_data_level1;
   wire [1:0] worldmap_data_level2;
   wire [1:0] worldmap_data_level3;
   wire [1:0] worldmap_data_gameover;
+  wire [1:0] worldmap_data_levelcomplete;
+  wire [1:0] worldmap_data_youwin;
+  wire [1:0] worldmap_data_debug;
     
   assign pbtn_in[5] = CPU_RESETN;
   assign pbtn_in[4] = BTNC;
@@ -150,39 +156,39 @@ module mfp_nexys4_ddr(
                                  .swtch_db(switch_db));
                                                                                  
   mfp_sys mfp_sys(
-                                                            .SI_Reset_N(pbtn_db[5]),
-                                                            .SI_ClkIn(clk_out50),
-                                                            .HADDR(haddr),
-                                                            .HRDATA(hrdata),
-                                                            .HWDATA(hwdata),
-                                                            .HWRITE(hwrite),
-                                                            .HSIZE(),
-                                                            .EJ_TRST_N_probe(JB[7]),
-                                                            .EJ_TDI(JB[2]),
-                                                            .EJ_TDO(JB[3]),
-                                                            .EJ_TMS(JB[1]),
-                                                            .EJ_TCK(tck),
-                                                            .SI_ColdReset_N(JB[8]),
-                                                            .EJ_DINT(1'b0),
-                                                            .IO_Switch(switch_db),
-                                                            .IO_PB(pbtn_db[4:0]),
-                                                            .IO_LED(LED),
-                                                            .disenout(dispenout),
-                                                            .disout(dispout),
-                                                            .UART_RX(UART_TXD_IN),
-                                                            
-                                                            .x_acc(x_acc_w),
-                                                            .y_acc(y_acc_w),
-                                                            .z_acc(z_acc_w),
+                    .SI_Reset_N(pbtn_db[5]),
+                    .SI_ClkIn(clk_out50),
+                    .HADDR(haddr),
+                    .HRDATA(hrdata),
+                    .HWDATA(hwdata),
+                    .HWRITE(hwrite),
+                    .HSIZE(),
+                    .EJ_TRST_N_probe(JB[7]),
+                    .EJ_TDI(JB[2]),
+                    .EJ_TDO(JB[3]),
+                    .EJ_TMS(JB[1]),
+                    .EJ_TCK(tck),
+                    .SI_ColdReset_N(JB[8]),
+                    .EJ_DINT(1'b0),
+                    .IO_Switch(switch_db),
+                    .IO_PB(pbtn_db[4:0]),
+                    .IO_LED(LED),
+                    .disenout(dispenout),
+                    .disout(dispout),
+                    .UART_RX(UART_TXD_IN),
+                    
+                    .x_acc(x_acc_w),
+                    .y_acc(y_acc_w),
+                    .z_acc(z_acc_w),
 
-                                                            //ball robot inputs/outputs
-                                                            .soft_reset(soft_rst), //(i)
-                                                            .IO_BotCtrl(iobotcntr), //(i)
-                                                            .IO_BotInfo(IO_BOTINFO), //(o)
-                                                            
-                                                            // world map level select
-                                                            .LSEL(LSEL)
-                                                            );                                                          
+                    //ball robot inputs/outputs
+                    .soft_reset(soft_rst), //(i)
+                    .IO_BotCtrl(iobotcntr), //(i)
+                    .IO_BotInfo(IO_BOTINFO), //(o)
+                    
+                    // world map level select
+                    .LSEL(LSEL)
+                    );                                                          
 
 //delay world pixel by 1 more clks after change in display in (2 total)
 //reason is it takes icon pixel 2 clks for valid data after change of display in(pipelining) 
@@ -229,26 +235,62 @@ worldmap_gameover worldmap_gameover(
             .clkb(clk_out75),
             .addrb(vid_addr),
             .doutb(world_pixel_gameover));
+            
+worldmap_debug worldmap_debug(
+            .clka(clk_out75),
+            .addra(worldmap_addr),
+            .douta(worldmap_data_debug),
+            .clkb(clk_out75),
+            .addrb(vid_addr),
+            .doutb(world_pixel_debug));
+            
+worldmap_youwin worldmap_youwin(
+            .clka(clk_out75),
+            .addra(worldmap_addr),
+            .douta(worldmap_data_youwin),
+            .clkb(clk_out75),
+            .addrb(vid_addr),
+            .doutb(world_pixel_youwin));
+
+worldmap_levelcomplete worldmap_levelcomplete(
+            .clka(clk_out75),
+            .addra(worldmap_addr),
+            .douta(worldmap_data_levelcomplete),
+            .clkb(clk_out75),
+            .addrb(vid_addr),
+            .doutb(world_pixel_levelcomplete));
                                             
 always @ (*) begin
     case(LSEL)
-        2'b00: begin
+        3'b000: begin
             world_pixel = world_pixel_gameover;
             worldmap_data = worldmap_data_gameover;
             end
-        2'b01: begin
+        3'b001: begin
             world_pixel = world_pixel_level1;
             worldmap_data = worldmap_data_level1;
             end
-        2'b10: begin
+        3'b010: begin
             world_pixel = world_pixel_level2;
             worldmap_data = worldmap_data_level2;
             end
-        2'b11: begin
+        3'b011: begin
             world_pixel = world_pixel_level3;
             worldmap_data = worldmap_data_level3;
             end
-       default: begin
+        3'b100: begin
+            world_pixel = world_pixel_levelcomplete;
+            worldmap_data = worldmap_data_levelcomplete;
+            end
+        3'b101: begin
+            world_pixel = world_pixel_youwin;
+            worldmap_data = worldmap_data_youwin;
+            end
+        3'b110: begin
+            world_pixel = world_pixel_debug;
+            worldmap_data = worldmap_data_debug;
+            end
+        default: begin
             world_pixel = world_pixel_gameover;
             worldmap_data = worldmap_data_gameover;
             end

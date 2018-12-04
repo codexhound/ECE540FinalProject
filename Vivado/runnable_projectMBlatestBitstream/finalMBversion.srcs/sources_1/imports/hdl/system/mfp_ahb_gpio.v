@@ -30,7 +30,7 @@ module mfp_ahb_gpio(
     input [11:0] z_acc,
     
     // World Map Select
-    output reg [1:0] LSEL
+    output reg [2:0] LSEL
 );
 
   reg  [3:0]  HADDR_d;
@@ -72,7 +72,7 @@ module mfp_ahb_gpio(
            `H_LED_IONUM: IO_LED <= HWDATA[`MFP_N_LED-1:0];
            `H_IO_BotCtrl: IO_BotCtrl <= HWDATA[7:0];
            `H_IO_SoftReset: soft_reset <= HWDATA[0];
-           `H_IO_LEVEL_SEL: LSEL <= HWDATA[1:0];
+           `H_IO_LEVEL_SEL: LSEL <= HWDATA[2:0];
          endcase
     
 	always @(posedge HCLK or negedge HRESETn)
@@ -89,8 +89,8 @@ module mfp_ahb_gpio(
              HRDATA[7:0] <= IO_BotCtrl;
            end
            `H_IO_LEVEL_SEL: begin
-             HRDATA[31:2] <= 0;
-             HRDATA[1:0] <= LSEL;
+             HRDATA[31:3] <= 0;
+             HRDATA[2:0] <= LSEL;
             end
             `H_LED_IONUM: begin
                 HRDATA[31:`MFP_N_LED] <= 0;

@@ -42,7 +42,7 @@ module mfp_sys(
                     input [11:0] z_acc,
                     
                     // World Map Select
-                    output [1:0] LSEL
+                    output [2:0] LSEL
                     );
 
 
