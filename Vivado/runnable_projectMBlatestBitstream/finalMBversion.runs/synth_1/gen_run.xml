@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543579777">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543888784">
   <File Type="PA-TCL" Name="mfp_nexys4_ddr.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mfp_nexys4_ddr_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mfp_nexys4_ddr_reports.tcl"/>
   <File Type="RDS-RDS" Name="mfp_nexys4_ddr.vds"/>
   <File Type="RDS-UTIL" Name="mfp_nexys4_ddr_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mfp_nexys4_ddr_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mfp_nexys4_ddr.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mfp_nexys4_ddr_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mfp_nexys4_ddr_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/hdl/core/RAMB4K_S16.v">
@@ -1837,6 +1840,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Maps/debug.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Maps/youwin.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Maps/levelcomplete.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="mfp_nexys4_ddr"/>
@@ -1864,9 +1885,12 @@
       <Option Id="Directive">3</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="worldmap_level3"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="worldmap_youwin"/>
   <BlockFileSet Type="BlockSrcs" Name="worldmap_level1"/>
-  <BlockFileSet Type="BlockSrcs" Name="worldmap_level2"/>
   <BlockFileSet Type="BlockSrcs" Name="worldmap_gameover"/>
+  <BlockFileSet Type="BlockSrcs" Name="worldmap_level2"/>
+  <BlockFileSet Type="BlockSrcs" Name="worldmap_debug"/>
+  <BlockFileSet Type="BlockSrcs" Name="worldmap_levelcomplete"/>
 </GenRun>

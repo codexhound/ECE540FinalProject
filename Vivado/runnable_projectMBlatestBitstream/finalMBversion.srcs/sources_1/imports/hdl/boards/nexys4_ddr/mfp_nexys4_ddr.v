@@ -148,14 +148,14 @@ module mfp_nexys4_ddr(
  
   ///////////////////////////////////////////////////
                                         
-  debounce debounce(
+ debounce debounce(
                                  .clk(clk_out50),
                                  .pbtn_in(pbtn_in),
                                  .switch_in(SW),
                                  .pbtn_db(pbtn_db),
                                  .swtch_db(switch_db));
                                                                                  
-  mfp_sys mfp_sys(
+ mfp_sys mfp_sys(
                     .SI_Reset_N(pbtn_db[5]),
                     .SI_ClkIn(clk_out50),
                     .HADDR(haddr),
@@ -200,6 +200,7 @@ module mfp_nexys4_ddr(
        .doutb(world_pixel_shifted)
         );                                          
 */
+
 /////////////////////////////WORLD MAPS///////////////////////////////////
 
 
@@ -259,7 +260,7 @@ worldmap_levelcomplete worldmap_levelcomplete(
             .clkb(clk_out75),
             .addrb(vid_addr),
             .doutb(world_pixel_levelcomplete));
-                                            
+assign LSEL = 3'b011;                                          
 always @ (*) begin
     case(LSEL)
         3'b000: begin
