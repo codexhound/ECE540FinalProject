@@ -638,3 +638,9 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nex
 // Elapsed time: 65 seconds
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mfp_nexys4_ddr.v", 1); // k (j, ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 156 MB (+1790kb) [00:19:00]
+// Elapsed time: 39 seconds
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k (n, ResizableWindow)
