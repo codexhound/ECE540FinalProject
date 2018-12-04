@@ -260,7 +260,7 @@ worldmap_levelcomplete worldmap_levelcomplete(
             .clkb(clk_out75),
             .addrb(vid_addr),
             .doutb(world_pixel_levelcomplete));
-assign LSEL = 3'b011;                                          
+//assign LSEL = 3'b011;                                          
 always @ (*) begin
     case(LSEL)
         3'b000: begin

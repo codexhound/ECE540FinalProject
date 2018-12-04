@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_msg_config  -ruleid {1}  -id {filemgmt 56-3}  -string {{WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/ECE540FinalProject.ipdefs/rojobot31_0_0'.}}  -suppress 
 set_msg_config  -ruleid {2}  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Desktop/Class/Fall2018/ECE540/ECE540FinalProject/Vivado/archive_project_summary.txt'.}}  -suppress 
 set_msg_config  -ruleid {3}  -id {IP_Flow 19-2162}  -string {{WARNING: [IP_Flow 19-2162] IP 'rojobot31_0' is locked:
@@ -45,9 +44,9 @@ add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level1.coe
 add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level2.coe
 add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/level3.coe
 add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/Gameover.coe
-add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/debug.coe
-add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/youwin.coe
-add_files c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/levelcomplete.coe
+add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/debug.coe
+add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/youwin.coe
+add_files C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Maps/levelcomplete.coe
 read_verilog {
   C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/imports/hdl/core/m14k_const.vh
   C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/imports/hdl/core/m14k_config.vh
@@ -259,13 +258,13 @@ set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Docum
 read_ip -quiet C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover.xci
 set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_gameover/worldmap_gameover_ooc.xdc]
 
-read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_debug/worldmap_debug.xci
+read_ip -quiet C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_debug/worldmap_debug.xci
 set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_debug/worldmap_debug_ooc.xdc]
 
-read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_youwin/worldmap_youwin.xci
+read_ip -quiet C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_youwin/worldmap_youwin.xci
 set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_youwin/worldmap_youwin_ooc.xdc]
 
-read_ip -quiet c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_levelcomplete/worldmap_levelcomplete.xci
+read_ip -quiet C:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_levelcomplete/worldmap_levelcomplete.xci
 set_property used_in_implementation false [get_files -all c:/Users/Chelsea/Documents/GitHub/ECE540FinalProject/Vivado/runnable_projectMBlatestBitstream/finalMBversion.srcs/sources_1/ip/worldmap_levelcomplete/worldmap_levelcomplete_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
