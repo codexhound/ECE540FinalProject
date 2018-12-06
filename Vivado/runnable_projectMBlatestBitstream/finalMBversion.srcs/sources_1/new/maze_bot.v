@@ -33,7 +33,6 @@ module maze_bot(
     
 reg [29:0] count_limit_x, count_limit_y;
 reg [28:0] counter_x, counter_y;
-reg [7:0] prev_LocX_reg, prev_LocY_reg;
 
 reg wallHit;
 reg [1:0] resetState;
@@ -63,8 +62,6 @@ parameter   SLOWESTCOUNT = 29'd8775000,
 initial begin
     counter_x = 0;
     counter_y = 0;
-    prev_LocX_reg = 64;
-    prev_LocY_reg = 64;
     LocX_reg = 64;
     LocY_reg = 64;
     internal_ball_direction = 0;
@@ -105,8 +102,6 @@ always @(posedge clk) begin
         counter_y <= 0;
         LocX_reg <=  64;
         LocY_reg <= 64;
-        prev_LocX_reg = 64;
-        prev_LocY_reg = 64;
         mazeEnd <= 0;
         hitMazeWall <= 0;
         deadlock <= 0;
@@ -118,16 +113,16 @@ always @(posedge clk) begin
             internal_ball_direction <= ball_direction;
         end
         else begin
-            if(wallHit) begin //a wall was hit, deadlock and move backwards
+            if(wallHit && !deadlock) begin //a wall was hit, deadlock and move backwards
                 deadlock <= 1;
                 counter_x <= 0;
                 counter_y <= 0;
                 if(mapPixel == BLACK) hitMazeWall <= 1;
                 else mazeEnd <= 1;
                 
-                //move back to prev location without wallHit
-                LocX_reg <= prev_LocX_reg;
-                LocY_reg <= prev_LocY_reg;
+                //move icon off screen, make transparent
+                LocX_reg <= 0;
+                LocY_reg <= 0;
             end
             else begin
                 if(!deadlock && (x_speed != IDLE || y_speed != IDLE)) begin
@@ -135,15 +130,12 @@ always @(posedge clk) begin
                         counter_x <= 0;
                         if((internal_ball_direction == EAST || internal_ball_direction == NORTHEAST || internal_ball_direction == SOUTHEAST) && LocX_reg != 127) begin  // move east
                                 LocX_reg <= LocX_reg + 1;
-                                prev_LocX_reg <= LocX_reg;
                         end
                         else if((internal_ball_direction == WEST || internal_ball_direction == SOUTHWEST || internal_ball_direction == NORTHWEST) && LocX_reg != 0) begin  // move west
                                 LocX_reg <= LocX_reg - 1;
-                                prev_LocX_reg <= LocX_reg;
                         end
                         else begin 
                             LocX_reg <= LocX_reg;
-                            prev_LocX_reg <= prev_LocX_reg;
                         end
                     end
                     else if(x_speed != IDLE) counter_x <= counter_x + 1;
@@ -153,15 +145,12 @@ always @(posedge clk) begin
                         counter_y <= 0;
                         if((internal_ball_direction == NORTH || internal_ball_direction == NORTHEAST || internal_ball_direction == NORTHWEST) && LocY_reg != 0) begin  // move north
                                 LocY_reg <= LocY_reg - 1;
-                                prev_LocY_reg <= LocY_reg;
                         end
                         else if((internal_ball_direction == SOUTH || internal_ball_direction == SOUTHEAST || internal_ball_direction == SOUTHWEST) && LocY_reg != 127) begin  // move south
                                 LocY_reg <= LocY_reg + 1;
-                                prev_LocY_reg <= LocY_reg;
                         end
                         else begin 
                             LocY_reg <= LocY_reg;
-                            prev_LocY_reg <= prev_LocY_reg;
                         end
                     end
                     else if(y_speed != IDLE) counter_y <= counter_y + 1; //speed y is not idle, then increment the counter
