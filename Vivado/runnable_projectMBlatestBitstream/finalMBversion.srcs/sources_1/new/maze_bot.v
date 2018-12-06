@@ -62,8 +62,8 @@ parameter   SLOWESTCOUNT = 29'd8775000,
 initial begin
     counter_x = 0;
     counter_y = 0;
-    LocX_reg = 64;
-    LocY_reg = 64;
+    LocX_reg = 68;
+    LocY_reg = 60;
     internal_ball_direction = 0;
     mazeEnd = 0;
     hitMazeWall = 0;
@@ -100,8 +100,8 @@ always @(posedge clk) begin
         internal_ball_direction <= 0;
         counter_x <= 0;
         counter_y <= 0;
-        LocX_reg <=  64;
-        LocY_reg <= 64;
+        LocX_reg <=  68;
+        LocY_reg <= 60;
         mazeEnd <= 0;
         hitMazeWall <= 0;
         deadlock <= 0;

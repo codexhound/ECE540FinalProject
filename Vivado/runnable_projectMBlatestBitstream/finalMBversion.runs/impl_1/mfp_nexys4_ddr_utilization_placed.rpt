@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Fri Nov 30 04:26:59 2018
-| Host         : LAPTOP-8RH9CDEQ running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Dec  3 19:14:28 2018
+| Host         : LAPTOP-VQA3KK4R running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mfp_nexys4_ddr_utilization_placed.rpt -pb mfp_nexys4_ddr_utilization_placed.pb
 | Design       : mfp_nexys4_ddr
 | Device       : 7a100tcsg324-1
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 | 10391 |     0 |     63400 | 16.39 |
-|   LUT as Logic             | 10376 |     0 |     63400 | 16.37 |
+| Slice LUTs                 | 10436 |     0 |     63400 | 16.46 |
+|   LUT as Logic             | 10421 |     0 |     63400 | 16.44 |
 |   LUT as Memory            |    15 |     0 |     19000 |  0.08 |
 |     LUT as Distributed RAM |     6 |     0 |           |       |
 |     LUT as Shift Register  |     9 |     0 |           |       |
-| Slice Registers            |  8995 |     0 |    126800 |  7.09 |
-|   Register as Flip Flop    |  8995 |     0 |    126800 |  7.09 |
+| Slice Registers            |  8993 |     0 |    126800 |  7.09 |
+|   Register as Flip Flop    |  8993 |     0 |    126800 |  7.09 |
 |   Register as Latch        |     0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |     3 |     0 |     31700 | <0.01 |
 | F8 Muxes                   |     0 |     0 |     15850 |  0.00 |
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 71    |          Yes |           - |          Set |
-| 155   |          Yes |           - |        Reset |
-| 56    |          Yes |         Set |            - |
-| 8713  |          Yes |       Reset |            - |
+| 153   |          Yes |           - |        Reset |
+| 64    |          Yes |         Set |            - |
+| 8705  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,13 +69,13 @@ Table of Contents
 +-------------------------------------------+-------+-------+-----------+-------+
 |                 Site Type                 |  Used | Fixed | Available | Util% |
 +-------------------------------------------+-------+-------+-----------+-------+
-| Slice                                     |  3753 |     0 |     15850 | 23.68 |
-|   SLICEL                                  |  2697 |     0 |           |       |
-|   SLICEM                                  |  1056 |     0 |           |       |
-| LUT as Logic                              | 10376 |     0 |     63400 | 16.37 |
-|   using O5 output only                    |     3 |       |           |       |
-|   using O6 output only                    |  9066 |       |           |       |
-|   using O5 and O6                         |  1307 |       |           |       |
+| Slice                                     |  3517 |     0 |     15850 | 22.19 |
+|   SLICEL                                  |  2568 |     0 |           |       |
+|   SLICEM                                  |   949 |     0 |           |       |
+| LUT as Logic                              | 10421 |     0 |     63400 | 16.44 |
+|   using O5 output only                    |     1 |       |           |       |
+|   using O6 output only                    |  9102 |       |           |       |
+|   using O5 and O6                         |  1318 |       |           |       |
 | LUT as Memory                             |    15 |     0 |     19000 |  0.08 |
 |   LUT as Distributed RAM                  |     6 |     0 |           |       |
 |     using O5 output only                  |     0 |       |           |       |
@@ -85,11 +85,11 @@ Table of Contents
 |     using O5 output only                  |     9 |       |           |       |
 |     using O6 output only                  |     0 |       |           |       |
 |     using O5 and O6                       |     0 |       |           |       |
-| LUT Flip Flop Pairs                       |  2553 |     0 |     63400 |  4.03 |
-|   fully used LUT-FF pairs                 |   260 |       |           |       |
-|   LUT-FF pairs with one unused LUT output |  2103 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  |  2099 |       |           |       |
-| Unique Control Sets                       |   355 |       |           |       |
+| LUT Flip Flop Pairs                       |  2590 |     0 |     63400 |  4.09 |
+|   fully used LUT-FF pairs                 |   256 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |  2138 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |  2108 |       |           |       |
+| Unique Control Sets                       |   352 |       |           |       |
 +-------------------------------------------+-------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
 
@@ -100,9 +100,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |   82 |     0 |       135 | 60.74 |
-|   RAMB36/FIFO*    |   68 |     0 |       135 | 50.37 |
-|     RAMB36E1 only |   68 |       |           |       |
+| Block RAM Tile    |   85 |     0 |       135 | 62.96 |
+|   RAMB36/FIFO*    |   71 |     0 |       135 | 52.59 |
+|     RAMB36E1 only |   71 |       |           |       |
 |   RAMB18          |   28 |     0 |       270 | 10.37 |
 |     RAMB18E1 only |   28 |       |           |       |
 +-------------------+------+-------+-----------+-------+
@@ -183,19 +183,19 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 8713 |        Flop & Latch |
-| LUT6       | 4798 |                 LUT |
-| LUT5       | 2812 |                 LUT |
-| LUT4       | 1842 |                 LUT |
-| LUT3       | 1522 |                 LUT |
-| LUT2       |  678 |                 LUT |
+| FDRE       | 8705 |        Flop & Latch |
+| LUT6       | 4792 |                 LUT |
+| LUT5       | 2859 |                 LUT |
+| LUT4       | 1843 |                 LUT |
+| LUT3       | 1527 |                 LUT |
+| LUT2       |  686 |                 LUT |
 | CARRY4     |  163 |          CarryLogic |
-| FDCE       |  155 |        Flop & Latch |
+| FDCE       |  153 |        Flop & Latch |
+| RAMB36E1   |   71 |        Block Memory |
 | FDPE       |   71 |        Flop & Latch |
-| RAMB36E1   |   68 |        Block Memory |
-| FDSE       |   56 |        Flop & Latch |
+| FDSE       |   64 |        Flop & Latch |
 | OBUF       |   50 |                  IO |
-| LUT1       |   31 |                 LUT |
+| LUT1       |   32 |                 LUT |
 | IBUF       |   30 |                  IO |
 | RAMB18E1   |   28 |        Block Memory |
 | SRL16E     |    9 |  Distributed Memory |
@@ -217,14 +217,17 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
-+-------------------+------+
-|      Ref Name     | Used |
-+-------------------+------+
-| worldmap_level3   |    1 |
-| worldmap_level2   |    1 |
-| worldmap_level1   |    1 |
-| worldmap_gameover |    1 |
-| clk_wiz_0         |    1 |
-+-------------------+------+
++------------------------+------+
+|        Ref Name        | Used |
++------------------------+------+
+| worldmap_youwin        |    1 |
+| worldmap_levelcomplete |    1 |
+| worldmap_level3        |    1 |
+| worldmap_level2        |    1 |
+| worldmap_level1        |    1 |
+| worldmap_gameover      |    1 |
+| worldmap_debug         |    1 |
+| clk_wiz_0              |    1 |
++------------------------+------+
 
 
