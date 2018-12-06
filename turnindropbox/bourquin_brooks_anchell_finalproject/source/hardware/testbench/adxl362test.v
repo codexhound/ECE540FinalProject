@@ -1,7 +1,7 @@
-// testbench.v
-// 31 May 2014
-//
-// Drive the mipsfpga_sys module for simulation testing
+// adxl362test.v
+// 13 Nov 2018
+// Engineers: Michael Bourquin, Jonathon Anchell, and Chelsea Brooks
+// Drive the ADXL interface module to test correct driver operation
 
 `timescale 1ps/1ps
 
