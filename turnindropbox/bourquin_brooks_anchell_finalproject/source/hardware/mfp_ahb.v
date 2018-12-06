@@ -6,6 +6,8 @@
 // GPIO (memory-mapped I/O: switches and LEDs from the FPGA board).
 // The module includes an address decoder and multiplexer (for 
 // selecting which slave module produces HRDATA).
+// Modified inputs/outputs passthrough for Toad Maze Game Final Project
+// Edits done by Michael Bourquin, Chelsea Brooks, and Jonathon Ancell
 
 `include "mfp_ahb_const.vh"
 

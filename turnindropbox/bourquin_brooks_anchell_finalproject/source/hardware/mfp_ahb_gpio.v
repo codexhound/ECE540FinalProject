@@ -1,7 +1,18 @@
 // mfp_ahb_gpio.v
-//
-// General-purpose I/O module for Altera's DE2-115 and 
-// Digilent's (Xilinx) Nexys4-DDR board
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Portland State University
+// Engineers: Michael Bourquin, Chelsea Brooks, Jonathon Anchell
+// 
+// Create Date: 10/22/2018 11:15:54 PM
+// Design Name: MIPS GPIO Slave
+// Module Name: mfp_ahb_gpio
+// Project Name: Toad Maze Game Final Project
+// Target Devices: 
+// Tool Versions: 
+// Description: Maps MIPS addresses to GPIO input/output ports
+// Project 2 Continuation Additions:
+// HWDATA Additions: LSEL (Level/Map Mux Select), and soft reset (resets the maze bot)
+// HWRead Additions: LSEL, x, y, z accelerometer outputs, LEDS, and bot control
 
 
 `include "mfp_ahb_const.vh"

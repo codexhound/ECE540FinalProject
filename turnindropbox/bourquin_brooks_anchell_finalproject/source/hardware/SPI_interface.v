@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Portland State University
+// Engineer: Michael Bourquin
 // 
 // Create Date: 11/13/2018 03:30:46 PM
-// Design Name: 
+// Design Name: Acceleromter SPI Interface Module
 // Module Name: spi_interface
-// Project Name: 
+// Project Name: Toad Maze Game Final Project
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: Driver module to initialize the accelerometer chip and read the 12-bit x,y,z acceleromoter values (using SPI protocol)
 // 
 // Dependencies: 
 // 
@@ -64,20 +64,20 @@ module spi_interface(
     
     initial begin
         rw = WRITE;
-                x_acc_reg_temp = 0;
-                y_acc_reg_temp = 0;
-                z_acc_reg_temp = 0;
-                n_CS = 1;
-                instruction_reg = REGISTER_WRITE;
-                address = CON_REG;
-                roundDone = 1;
-                roundDD = 1;
-                SPI_state = BEGIN1;
-                counter = 7; //counts down to 0
-                //reset data for initial control write (measurement mode)
-                accel_data[7:2] = 0;
-                accel_data[1:0] = 2'b10; //measurement mode
-                MOSI = 0;
+        x_acc_reg_temp = 0;
+        y_acc_reg_temp = 0;
+        z_acc_reg_temp = 0;
+        n_CS = 1;
+        instruction_reg = REGISTER_WRITE;
+        address = CON_REG;
+        roundDone = 1; //a read of x,y,z has been completed (ready to be saved to the MIPS regs/syncronized)
+        roundDD = 1; //delayed round done signal
+        SPI_state = BEGIN1;
+        counter = 7; //counts down to 0
+        //reset data for initial control write (measurement mode)
+        accel_data[7:2] = 0;
+        accel_data[1:0] = 2'b10; //measurement mode
+        MOSI = 0;
     end
     
     always@(posedge clk_SPI) begin
@@ -97,8 +97,8 @@ module spi_interface(
             accel_data[7:2] <= 0;
             accel_data[1:0] <= 2'b10; //measurement mode
         end
-        else begin
-            roundDD <= roundDone;
+        else begin //change the read/write state on the posedge, also increment bit counters, also read input data on the posedge, chip outputs on the negedge
+            roundDD <= roundDone; //delay the round done reg 1 cycle for synchronizing
         
             if(SPI_state == INSTRUCTION || SPI_state == ADDRESS || SPI_state == DATAIN || SPI_state == DATAOUT) begin
            		if(counter == 0) begin //counter must reach 0 before moving onto next state          
@@ -166,7 +166,7 @@ module spi_interface(
         end
      end
      
-     always@(negedge clk_SPI) begin //start negedge Logic (output bit on negedge)
+     always@(negedge clk_SPI) begin //start negedge Logic (output bit on negedge, chip reads on the posedge)
         if(!reset) begin
             MOSI <= 0;
         end

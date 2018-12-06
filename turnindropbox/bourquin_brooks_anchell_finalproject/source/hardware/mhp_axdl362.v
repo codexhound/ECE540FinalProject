@@ -1,15 +1,16 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Portland State University
+// Engineer: Michael Bourquin
 // 
 // Create Date: 11/13/2018 03:30:46 PM
-// Design Name: 
+// Design Name: Accelerometer (AXDL362 Top Level)
 // Module Name: mhp_axdl362
-// Project Name: 
+// Project Name: Toad Maze Game Final Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
+// Top Level Interface Module to the Accelerometer Onboard Chipset
 // 
 // Dependencies: 
 // 
@@ -30,6 +31,7 @@ module mhp_axdl362(
     wire spi_reset, roundDD;
     wire [11:0] x_acc_temp, y_acc_temp, z_acc_temp;
     
+    //instantiate the SPI driver (interfaces with the accelerometer chip)
     spi_interface SPI_driver(
         .clk_SPI(clk_SPI), 
         .reset(spi_reset), 
@@ -44,6 +46,7 @@ module mhp_axdl362(
         .SPI_state(SPI_state)
     );
     
+    //instantiate the MIPS synchonizer module (syncs the SPI clock inputs to the MIPS sys)
     sys_sync spi_sync(
        .clk_50(clk_50), 
        .roundDD(roundDD), 

@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Portland State University
+// Engineer: Michael Bourquin
 // 
 // Create Date: 10/23/2018 05:05:14 PM
-// Design Name: 
+// Design Name: icon
 // Module Name: icon
-// Project Name: 
+// Project Name: Toad Maze Game Final Project
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: memory module for the toad icon and mapping logic to the display colorizer
 // 
 // Dependencies: 
 // 
@@ -34,34 +34,15 @@ module icon(
     reg [7:0] ramAddr; //address for the image pixel map RAM 
     reg [3:0] map_col1, map_row1;
     
-   	/*memory maps for the icon, need 0, 45, 90, 135, 180, 225, 270, 315*/
-   	reg [1:0] iconmap0 [255:0]; //forward(0) icon pixel map
-   	/*
-   	reg [1:0] iconmap45 [255:0]; //45 icon pixel map
-   	reg [1:0] iconmap90 [255:0]; //90 icon pixel map
-   	reg [1:0] iconmap135 [255:0]; //135 icon pixel map
-   	reg [1:0] iconmap180 [255:0]; //180 icon pixel map
-   	reg [1:0] iconmap225 [255:0]; //225 icon pixel map
-   	reg [1:0] iconmap270 [255:0]; //270 icon pixel map
-   	reg [1:0] iconmap315 [255:0]; //315 icon pixel map
-   	*/
+   	reg [1:0] iconmap0 [255:0]; //memory map array reg for the toad icon (16X16)
         
     initial begin
        $readmemh("icon1.dat", iconmap0);
-       /*
-       $readmemh("45deg.dat", iconmap45);
-       $readmemh("90deg.dat", iconmap90);
-       $readmemh("135deg.dat", iconmap135);
-       $readmemh("180deg.dat", iconmap180);
-       $readmemh("225deg.dat", iconmap225);
-       $readmemh("270deg.dat", iconmap270);
-       $readmemh("315deg.dat", iconmap315);
-       */
     end  
     
     always@(posedge clk) begin
     	if(readIcon) begin
-    		icon <= iconmap0[ramAddr];
+    		icon <= iconmap0[ramAddr]; output icon pixels when bot overlaps current display pixels
     	end
     	else icon <= 0;
     end

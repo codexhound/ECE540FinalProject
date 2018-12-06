@@ -1,4 +1,5 @@
-
+// Modified inputs/outputs passthrough for Toad Maze Game Final Project
+// Edits done by Michael Bourquin, Chelsea Brooks, and Jonathon Ancell
 `include "mfp_ahb_const.vh"
 
 module mfp_ahb_withloader (

@@ -1,12 +1,19 @@
 // mfp_nexys4_ddr.v
-// January 1, 2017
-//
-// Instantiate the mipsfpga system and rename signals to
-// match the GPIO, LEDs and switches on Digilent's (Xilinx)
-// Nexys4 DDR board
+// Engineers: Michael Bourquin, Chelsea Brooks, and Jonathon Anchell
+// Project: Toad Maze Game Final Project
+// File Description:
+// Defines the top level for the system and instantiates all the lower level modules
+// match the GPIO, LEDs, switches, Segment Display, , Accelerometer and VGA output/inputs on Digilent's (Xilinx) Nexys4 DDR board
+// Also Debounces button and switch inputs
 
 // Outputs:
-// 16 LEDs (IO_LED) 
+// 16 LEDs (IO_LED), 
+// 8 7SegMentDisplay Enables(AN) 
+// 8 7SegmentDisplaySeg Enables(CA,CB,CC,CD,CE,CF,CG,DP)
+// 2 VGA Sync Enables (VGA_HS, VGA_VS)
+// 3 VGA Color Signals (VGA_R, VGA_G, VGA_B)
+// 3 Accelerometer Outputs (Clk, MOSI, CS)
+// 1 Accelerometer Input (MISO)
 // Inputs:
 // 16 Slide switches (IO_Switch),
 // 5 Pushbuttons (IO_PB): {BTNU, BTND, BTNL, BTNC, BTNR}

@@ -2,6 +2,11 @@
 // mfp_ahb_const.vh
 //
 // Verilog include file with AHB definitions
+// Modified by Michael Bourquin, Jonathon Anchell and Chelsea Brooks for Toad Maze Game Final Project
+// Added address mapping for LSEL, Soft Reset, and X, Y, Z Accelerometer values
+// Removed extraneous rojobot mappings from project 2
+//
+// Verilog include file with AHB definitions
 // 
 
 //---------------------------------------------------

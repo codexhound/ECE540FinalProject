@@ -3,6 +3,8 @@
 // This module is an add-on to the MIPS core, m14k_top. It instantiates // the MIPS core (m14k_top) and an AHB module of memories and I/Os on 
 // the AHB-Lite bus. It also taps out the interface signals and 
 // initializes signals required by the core.
+// Modified inputs/outputs passthrough for Toad Maze Game Final Project
+// Edits done by Michael Bourquin, Chelsea Brooks, and Jonathon Ancell
 
 `include "m14k_const.vh"
 `include "mfp_ahb_const.vh"
