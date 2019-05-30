@@ -406,7 +406,7 @@ function [9:0] mmcm_pll_filter_lookup
          10'b0111_1111_11,
          10'b1100_1111_11,
          10'b1101_1111_11,
-         10'b0001_1111_11,
+         10'b1110_1111_11,
          10'b1111_1111_11,
          10'b1111_1111_11,
          10'b1110_0111_11,
@@ -556,9 +556,6 @@ function [37:0] mmcm_frac_count_calc
 			  reg [2:0]			clkout0_divide_frac;
 			  reg	[7:0]			even_part_high;
 			  reg	[7:0]			even_part_low;
-			  reg  [15:0]     drp_reg1;
-			  reg  [15:0]     drp_reg2;
-			  reg  [5:0]     drp_regshared;
 
 			  reg	[7:0]			odd;
 			  reg	[7:0]			odd_and_frac;
@@ -652,12 +649,12 @@ function [37:0] mmcm_frac_count_calc
 
 	div_calc	= mmcm_pll_divider(divide, duty_cycle); //Use to determine edge[7], no count[6]
 	phase_calc	= mmcm_pll_phase(divide, phase);// returns{mx[1:0], phase_mux[2:0], delay_time[5:0]}
-		     
-      drp_regshared[5:0] = { 2'b00, pm_fall_frac_filtered[2:0], wf_fall_frac};	
-      drp_reg2[15:0] = { 1'b0, clkout0_divide_frac[2:0], 1'b1, wf_rise_frac, 4'h0, dt[5:0] };	
-      drp_reg1[15:0] = { pm_rise_frac_filtered[2], pm_rise_frac_filtered[1], pm_rise_frac_filtered[0], 1'b0, ht_frac[5:0], lt_frac[5:0] };	
-      mmcm_frac_count_calc[37:0] =   {drp_regshared, drp_reg2, drp_reg1} ;
-
+		
+      mmcm_frac_count_calc[37:0] =
+         {		2'b00, pm_fall_frac_filtered[2:0], wf_fall_frac,
+			1'b0, clkout0_divide_frac[2:0], 1'b1, wf_rise_frac, phase_calc[10:9], div_calc[13:12], dt[5:0], 
+			pm_rise_frac_filtered[2], pm_rise_frac_filtered[1], pm_rise_frac_filtered[0], 1'b0, ht_frac[5:0], lt_frac[5:0]
+		} ;
 
    `ifdef DEBUG
       $display("-%d.%d p%d>>  :DADDR_9_15 frac30to28.frac_en.wf_r_frac.dt:%b%d%d_%b:DADDR_7_13 pm_f_frac_filtered_29to27.wf_f_frac_26:%b%d:DADDR_8_14.pm_r_frac_filt_15to13.ht_frac.lt_frac:%b%b%b:", divide, frac, phase, clkout0_divide_frac, 1, wf_rise_frac, dt, pm_fall_frac_filtered, wf_fall_frac, pm_rise_frac_filtered, ht_frac, lt_frac);
